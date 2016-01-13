@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8268B4E11C470518002FEC2A /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8268B4E01C470518002FEC2A /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8268B4E81C470518002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4DD1C470518002FEC2A /* CSVImporter.framework */; };
-		8268B4ED1C470518002FEC2A /* CSVImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B4EC1C470518002FEC2A /* CSVImporterTests.swift */; };
+		8268B4ED1C470518002FEC2A /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */; };
+		8268B5061C470618002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4FC1C470618002FEC2A /* CSVImporter.framework */; };
+		8268B5221C470651002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B5181C470651002FEC2A /* CSVImporter.framework */; };
+		8268B5301C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
+		8268B5311C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
+		8268B5321C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
+		8268B53C1C47083C002FEC2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B5381C47083C002FEC2A /* Nimble.framework */; };
+		8268B53E1C47083C002FEC2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B53A1C47083C002FEC2A /* Quick.framework */; };
+		8268B5481C470865002FEC2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B5401C470851002FEC2A /* Nimble.framework */; };
+		8268B5491C47086B002FEC2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B5421C470851002FEC2A /* Quick.framework */; };
+		8268B54E1C47087B002FEC2A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B54A1C47087B002FEC2A /* Nimble.framework */; };
+		8268B5501C47087B002FEC2A /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B54C1C47087B002FEC2A /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +30,46 @@
 			remoteGlobalIDString = 8268B4DC1C470518002FEC2A;
 			remoteInfo = CSVImporter;
 		};
+		8268B5071C470618002FEC2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8268B4D41C470518002FEC2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8268B4FB1C470618002FEC2A;
+			remoteInfo = "CSVImporter tvOS";
+		};
+		8268B5231C470651002FEC2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8268B4D41C470518002FEC2A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8268B5171C470651002FEC2A;
+			remoteInfo = "CSVImporter OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8268B4DD1C470518002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B4E01C470518002FEC2A /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVImporter.h; sourceTree = "<group>"; };
-		8268B4E21C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8268B4E71C470518002FEC2A /* CSVImporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVImporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B4EC1C470518002FEC2A /* CSVImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImporterTests.swift; sourceTree = "<group>"; };
-		8268B4EE1C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8268B4E21C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = SOURCE_ROOT; };
+		8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CSVImporterSpec.swift; path = Tests/CSVImporterSpec.swift; sourceTree = SOURCE_ROOT; };
+		8268B4EE1C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
+		8268B4FC1C470618002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268B5181C470651002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8268B52F1C470772002FEC2A /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
+		8268B5341C4707B8002FEC2A /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		8268B5381C47083C002FEC2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		8268B5391C47083C002FEC2A /* Nimble.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Nimble.framework.dSYM; path = Carthage/Build/iOS/Nimble.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		8268B53A1C47083C002FEC2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = SOURCE_ROOT; };
+		8268B53B1C47083C002FEC2A /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/iOS/Quick.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		8268B5401C470851002FEC2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = SOURCE_ROOT; };
+		8268B5411C470851002FEC2A /* Nimble.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Nimble.framework.dSYM; path = Carthage/Build/Mac/Nimble.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		8268B5421C470851002FEC2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = SOURCE_ROOT; };
+		8268B5431C470851002FEC2A /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/Mac/Quick.framework.dSYM; sourceTree = SOURCE_ROOT; };
+		8268B54A1C47087B002FEC2A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		8268B54B1C47087B002FEC2A /* Nimble.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Nimble.framework.dSYM; path = Carthage/Build/tvOS/Nimble.framework.dSYM; sourceTree = "<group>"; };
+		8268B54C1C47087B002FEC2A /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		8268B54D1C47087B002FEC2A /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/tvOS/Quick.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +85,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				8268B4E81C470518002FEC2A /* CSVImporter.framework in Frameworks */,
+				8268B53C1C47083C002FEC2A /* Nimble.framework in Frameworks */,
+				8268B53E1C47083C002FEC2A /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B4F81C470618002FEC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5021C470618002FEC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8268B5061C470618002FEC2A /* CSVImporter.framework in Frameworks */,
+				8268B54E1C47087B002FEC2A /* Nimble.framework in Frameworks */,
+				8268B5501C47087B002FEC2A /* Quick.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5141C470651002FEC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B51E1C470651002FEC2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8268B5221C470651002FEC2A /* CSVImporter.framework in Frameworks */,
+				8268B5481C470865002FEC2A /* Nimble.framework in Frameworks */,
+				8268B5491C47086B002FEC2A /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +130,10 @@
 		8268B4D31C470518002FEC2A = {
 			isa = PBXGroup;
 			children = (
-				8268B4DF1C470518002FEC2A /* CSVImporter */,
-				8268B4EB1C470518002FEC2A /* CSVImporterTests */,
+				8268B4DF1C470518002FEC2A /* Sources */,
+				8268B4EB1C470518002FEC2A /* Tests */,
 				8268B4DE1C470518002FEC2A /* Products */,
+				8268B5331C47079B002FEC2A /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,27 +141,77 @@
 			isa = PBXGroup;
 			children = (
 				8268B4DD1C470518002FEC2A /* CSVImporter.framework */,
-				8268B4E71C470518002FEC2A /* CSVImporterTests.xctest */,
+				8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */,
+				8268B4FC1C470618002FEC2A /* CSVImporter.framework */,
+				8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */,
+				8268B5181C470651002FEC2A /* CSVImporter.framework */,
+				8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8268B4DF1C470518002FEC2A /* CSVImporter */ = {
+		8268B4DF1C470518002FEC2A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4E01C470518002FEC2A /* CSVImporter.h */,
+				8268B52F1C470772002FEC2A /* CSVImporter.swift */,
 				8268B4E21C470518002FEC2A /* Info.plist */,
 			);
+			name = Sources;
 			path = CSVImporter;
 			sourceTree = "<group>";
 		};
-		8268B4EB1C470518002FEC2A /* CSVImporterTests */ = {
+		8268B4EB1C470518002FEC2A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4EC1C470518002FEC2A /* CSVImporterTests.swift */,
+				8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */,
 				8268B4EE1C470518002FEC2A /* Info.plist */,
 			);
+			name = Tests;
 			path = CSVImporterTests;
+			sourceTree = "<group>";
+		};
+		8268B5331C47079B002FEC2A /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				8268B5341C4707B8002FEC2A /* Cartfile.private */,
+				8268B5351C470811002FEC2A /* iOS */,
+				8268B5361C470817002FEC2A /* tvOS */,
+				8268B5371C47081B002FEC2A /* OSX */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		8268B5351C470811002FEC2A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8268B5381C47083C002FEC2A /* Nimble.framework */,
+				8268B5391C47083C002FEC2A /* Nimble.framework.dSYM */,
+				8268B53A1C47083C002FEC2A /* Quick.framework */,
+				8268B53B1C47083C002FEC2A /* Quick.framework.dSYM */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8268B5361C470817002FEC2A /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				8268B54A1C47087B002FEC2A /* Nimble.framework */,
+				8268B54B1C47087B002FEC2A /* Nimble.framework.dSYM */,
+				8268B54C1C47087B002FEC2A /* Quick.framework */,
+				8268B54D1C47087B002FEC2A /* Quick.framework.dSYM */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		8268B5371C47081B002FEC2A /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				8268B5401C470851002FEC2A /* Nimble.framework */,
+				8268B5411C470851002FEC2A /* Nimble.framework.dSYM */,
+				8268B5421C470851002FEC2A /* Quick.framework */,
+				8268B5431C470851002FEC2A /* Quick.framework.dSYM */,
+			);
+			name = OSX;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,16 +221,29 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B4E11C470518002FEC2A /* CSVImporter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B4F91C470618002FEC2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5151C470651002FEC2A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8268B4DC1C470518002FEC2A /* CSVImporter */ = {
+		8268B4DC1C470518002FEC2A /* CSVImporter iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter" */;
+			buildConfigurationList = 8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */;
 			buildPhases = (
 				8268B4D81C470518002FEC2A /* Sources */,
 				8268B4D91C470518002FEC2A /* Frameworks */,
@@ -113,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = CSVImporter;
+			name = "CSVImporter iOS";
 			productName = CSVImporter;
 			productReference = 8268B4DD1C470518002FEC2A /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8268B4E61C470518002FEC2A /* CSVImporterTests */ = {
+		8268B4E61C470518002FEC2A /* CSVImporter iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporterTests" */;
+			buildConfigurationList = 8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */;
 			buildPhases = (
 				8268B4E31C470518002FEC2A /* Sources */,
 				8268B4E41C470518002FEC2A /* Frameworks */,
@@ -131,9 +272,81 @@
 			dependencies = (
 				8268B4EA1C470518002FEC2A /* PBXTargetDependency */,
 			);
-			name = CSVImporterTests;
+			name = "CSVImporter iOS Tests";
 			productName = CSVImporterTests;
-			productReference = 8268B4E71C470518002FEC2A /* CSVImporterTests.xctest */;
+			productReference = 8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8268B4FB1C470618002FEC2A /* CSVImporter tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8268B50D1C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */;
+			buildPhases = (
+				8268B4F71C470618002FEC2A /* Sources */,
+				8268B4F81C470618002FEC2A /* Frameworks */,
+				8268B4F91C470618002FEC2A /* Headers */,
+				8268B4FA1C470618002FEC2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CSVImporter tvOS";
+			productName = "CSVImporter tvOS";
+			productReference = 8268B4FC1C470618002FEC2A /* CSVImporter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8268B5041C470618002FEC2A /* CSVImporter tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8268B5101C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */;
+			buildPhases = (
+				8268B5011C470618002FEC2A /* Sources */,
+				8268B5021C470618002FEC2A /* Frameworks */,
+				8268B5031C470618002FEC2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8268B5081C470618002FEC2A /* PBXTargetDependency */,
+			);
+			name = "CSVImporter tvOS Tests";
+			productName = "CSVImporter tvOSTests";
+			productReference = 8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8268B5171C470651002FEC2A /* CSVImporter OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8268B5291C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */;
+			buildPhases = (
+				8268B5131C470651002FEC2A /* Sources */,
+				8268B5141C470651002FEC2A /* Frameworks */,
+				8268B5151C470651002FEC2A /* Headers */,
+				8268B5161C470651002FEC2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CSVImporter OSX";
+			productName = "CSVImporter OSX";
+			productReference = 8268B5181C470651002FEC2A /* CSVImporter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8268B5201C470651002FEC2A /* CSVImporter OSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8268B52C1C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */;
+			buildPhases = (
+				8268B51D1C470651002FEC2A /* Sources */,
+				8268B51E1C470651002FEC2A /* Frameworks */,
+				8268B51F1C470651002FEC2A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8268B5241C470651002FEC2A /* PBXTargetDependency */,
+			);
+			name = "CSVImporter OSXTests";
+			productName = "CSVImporter OSXTests";
+			productReference = 8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -152,6 +365,18 @@
 					8268B4E61C470518002FEC2A = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					8268B4FB1C470618002FEC2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8268B5041C470618002FEC2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8268B5171C470651002FEC2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					8268B5201C470651002FEC2A = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = 8268B4D71C470518002FEC2A /* Build configuration list for PBXProject "CSVImporter" */;
@@ -166,8 +391,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8268B4DC1C470518002FEC2A /* CSVImporter */,
-				8268B4E61C470518002FEC2A /* CSVImporterTests */,
+				8268B4DC1C470518002FEC2A /* CSVImporter iOS */,
+				8268B4E61C470518002FEC2A /* CSVImporter iOS Tests */,
+				8268B4FB1C470618002FEC2A /* CSVImporter tvOS */,
+				8268B5041C470618002FEC2A /* CSVImporter tvOS Tests */,
+				8268B5171C470651002FEC2A /* CSVImporter OSX */,
+				8268B5201C470651002FEC2A /* CSVImporter OSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -187,6 +416,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8268B4FA1C470618002FEC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5031C470618002FEC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5161C470651002FEC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B51F1C470651002FEC2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +451,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8268B5301C470772002FEC2A /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +459,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B4ED1C470518002FEC2A /* CSVImporterTests.swift in Sources */,
+				8268B4ED1C470518002FEC2A /* CSVImporterSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B4F71C470618002FEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8268B5311C470772002FEC2A /* CSVImporter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5011C470618002FEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B5131C470651002FEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8268B5321C470772002FEC2A /* CSVImporter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8268B51D1C470651002FEC2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +498,18 @@
 /* Begin PBXTargetDependency section */
 		8268B4EA1C470518002FEC2A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8268B4DC1C470518002FEC2A /* CSVImporter */;
+			target = 8268B4DC1C470518002FEC2A /* CSVImporter iOS */;
 			targetProxy = 8268B4E91C470518002FEC2A /* PBXContainerItemProxy */;
+		};
+		8268B5081C470618002FEC2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8268B4FB1C470618002FEC2A /* CSVImporter tvOS */;
+			targetProxy = 8268B5071C470618002FEC2A /* PBXContainerItemProxy */;
+		};
+		8268B5241C470651002FEC2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8268B5171C470651002FEC2A /* CSVImporter OSX */;
+			targetProxy = 8268B5231C470651002FEC2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -253,7 +551,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -295,7 +594,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -308,31 +608,38 @@
 		8268B4F21C470518002FEC2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CSVImporter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8268B4F31C470518002FEC2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CSVImporter/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -340,9 +647,13 @@
 		8268B4F51C470518002FEC2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CSVImporterTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -350,10 +661,180 @@
 		8268B4F61C470518002FEC2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CSVImporterTests/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8268B50E1C470618002FEC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
+				PRODUCT_NAME = CSVImporter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		8268B50F1C470618002FEC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
+				PRODUCT_NAME = CSVImporter;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		8268B5111C470618002FEC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		8268B5121C470618002FEC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		8268B52A1C470651002FEC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
+				PRODUCT_NAME = CSVImporter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8268B52B1C470651002FEC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
+				PRODUCT_NAME = CSVImporter;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8268B52D1C470651002FEC2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8268B52E1C470651002FEC2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -369,7 +850,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter" */ = {
+		8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8268B4F21C470518002FEC2A /* Debug */,
@@ -377,11 +858,43 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporterTests" */ = {
+		8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8268B4F51C470518002FEC2A /* Debug */,
 				8268B4F61C470518002FEC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8268B50D1C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8268B50E1C470618002FEC2A /* Debug */,
+				8268B50F1C470618002FEC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8268B5101C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8268B5111C470618002FEC2A /* Debug */,
+				8268B5121C470618002FEC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8268B5291C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8268B52A1C470651002FEC2A /* Debug */,
+				8268B52B1C470651002FEC2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8268B52C1C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8268B52D1C470651002FEC2A /* Debug */,
+				8268B52E1C470651002FEC2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
