@@ -94,9 +94,11 @@ public class CSVImporter<T> {
             
             dispatch_async(dispatch_get_main_queue()) {
                 
-                progressClosure(importedDataLinesCount: self.importedRecords.count, totalNumberOfDataLines: <#T##Int#>)
+                // TODO: total number of lines missing
                 
-                progressClosure(currentDurationInSeconds: currentDurationInSeconds, currentQualityInPercent: currentQualityInPercent)
+                let totalNumberOfLines = 10
+                
+                progressClosure(importedDataLinesCount: self.importedRecords.count, totalNumberOfDataLines: totalNumberOfLines)
                 
             }
             
