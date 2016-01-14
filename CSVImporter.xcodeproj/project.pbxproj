@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A821C48404400BDBA1C /* FileKit.framework */; };
+		82088A8C1C48406200BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A8A1C48406200BDBA1C /* FileKit.framework */; };
+		82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A861C48405200BDBA1C /* FileKit.framework */; };
 		8268B4E81C470518002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4DD1C470518002FEC2A /* CSVImporter.framework */; };
 		8268B4ED1C470518002FEC2A /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */; };
 		8268B5061C470618002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4FC1C470618002FEC2A /* CSVImporter.framework */; };
@@ -122,6 +125,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		82088A811C483BB800BDBA1C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		82088A821C48404400BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
+		82088A831C48404400BDBA1C /* FileKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = FileKit.framework.dSYM; path = Carthage/Build/iOS/FileKit.framework.dSYM; sourceTree = "<group>"; };
+		82088A861C48405200BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = "<group>"; };
+		82088A871C48405200BDBA1C /* FileKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = FileKit.framework.dSYM; path = Carthage/Build/Mac/FileKit.framework.dSYM; sourceTree = "<group>"; };
+		82088A8A1C48406200BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = "<group>"; };
+		82088A8B1C48406200BDBA1C /* FileKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = FileKit.framework.dSYM; path = Carthage/Build/tvOS/FileKit.framework.dSYM; sourceTree = "<group>"; };
 		8268B4DD1C470518002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8268B4E21C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82088A8C1C48406200BDBA1C /* FileKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +287,7 @@
 		8268B5331C47079B002FEC2A /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				82088A811C483BB800BDBA1C /* Cartfile */,
 				8268B5341C4707B8002FEC2A /* Cartfile.private */,
 				8268B5351C470811002FEC2A /* iOS */,
 				8268B5361C470817002FEC2A /* tvOS */,
@@ -285,6 +299,8 @@
 		8268B5351C470811002FEC2A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				82088A821C48404400BDBA1C /* FileKit.framework */,
+				82088A831C48404400BDBA1C /* FileKit.framework.dSYM */,
 				8268B5381C47083C002FEC2A /* Nimble.framework */,
 				8268B5391C47083C002FEC2A /* Nimble.framework.dSYM */,
 				8268B53A1C47083C002FEC2A /* Quick.framework */,
@@ -296,6 +312,8 @@
 		8268B5361C470817002FEC2A /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				82088A8A1C48406200BDBA1C /* FileKit.framework */,
+				82088A8B1C48406200BDBA1C /* FileKit.framework.dSYM */,
 				8268B54A1C47087B002FEC2A /* Nimble.framework */,
 				8268B54B1C47087B002FEC2A /* Nimble.framework.dSYM */,
 				8268B54C1C47087B002FEC2A /* Quick.framework */,
@@ -307,6 +325,8 @@
 		8268B5371C47081B002FEC2A /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				82088A861C48405200BDBA1C /* FileKit.framework */,
+				82088A871C48405200BDBA1C /* FileKit.framework.dSYM */,
 				8268B5401C470851002FEC2A /* Nimble.framework */,
 				8268B5411C470851002FEC2A /* Nimble.framework.dSYM */,
 				8268B5421C470851002FEC2A /* Quick.framework */,
@@ -863,6 +883,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -883,6 +907,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -930,6 +958,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -952,6 +985,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

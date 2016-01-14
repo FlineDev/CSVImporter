@@ -1,32 +1,24 @@
 import Foundation
 import CSVImporter
 
-class Team {
-    let yearID: Int, lgID: String, teamID: String
+if let path = NSBundle.mainBundle().pathForResource("Teams", ofType: "csv") {
+    let importer = CSVImporter<[String]>(path: path)
     
-    init(yearID: Int, lgID: String, teamID: String) {
-        self.yearID = yearID
-        self.lgID = lgID
-        self.teamID = teamID
-    }
-}
-
-if let teamsFilePath = NSBundle.mainBundle().pathForResource("Teams", ofType: "csv") {
-    
-    let teamsImporter = CSVImporter<Team>(filePath: teamsFilePath)
-    
-    teamsImporter.startImportingWithMapper { readValuesInLine -> Team in
+    importer.startImportingWithMapper { readValuesInLine -> [String] in
         
-        return Team(yearID: Int(readValuesInLine[0])!, lgID: readValuesInLine[1], teamID: readValuesInLine[2])
+        return readValuesInLine
         
-    }.onProgress { importedDataLinesCount, totalNumberOfDataLines in
+    }.onFail {
         
-        print("Current progress: \(importedDataLinesCount / totalNumberOfDataLines * 100)%")
+        print("Did fail")
+        
+    }.onProgress { importedDataLinesCount in
+        
+        print("Progress: \(importedDataLinesCount)")
         
     }.onFinish { importedRecords in
         
-        // do something with imported records
+        print("Did finish import, first array: \(importedRecords.first)")
         
     }
 }
-

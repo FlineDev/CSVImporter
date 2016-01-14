@@ -7,20 +7,21 @@
 //
 
 import Foundation
+import FileKit
 
 public class CSVImporter<T> {
     
     // MARK: - Stored Instance Properties
     
-    let filePath: String
+    let csvFile: TextFile
+    let delimiter: String
     
     var startedGenerating: NSDate?
     var lastProgressReport: NSDate?
     
-    var importedRecords: [T] = []
-    
-    var progressClosure: ((importedDataLinesCount: Int, totalNumberOfDataLines: Int) -> Void)?
+    var progressClosure: ((importedDataLinesCount: Int) -> Void)?
     var finishClosure: ((importedRecords: [T]) -> Void)?
+    var failClosure: (() -> Void)?
     
     
     // MARK: - Computes Instance Properties
@@ -41,8 +42,11 @@ public class CSVImporter<T> {
     
     // MARK: - Initializers
     
-    public init(filePath: String) {
-        self.filePath = filePath
+    public init(path: String, delimiter: String = ",") {
+
+        self.csvFile = TextFile(path: Path(path))
+        self.delimiter = delimiter
+        
     }
     
     
@@ -54,17 +58,28 @@ public class CSVImporter<T> {
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
 
-            // TODO: read CSV file line
-            
-            let readValuesInLine: [String] = []
-            
-            let newImportedRecord = closure(readValuesInLine: readValuesInLine)
-            self.importedRecords.append(newImportedRecord)
-            
-            if self.shouldReportProgress {
+            if let csvStreamReader = self.csvFile.streamReader() {
                 
-                self.reportProgress()
-                self.lastProgressReport = NSDate()
+                var importedRecords: [T] = []
+                
+                for line in csvStreamReader {
+                    
+                    let readValuesInLine = line.componentsSeparatedByString(self.delimiter)
+                    let newRecord = closure(readValuesInLine: readValuesInLine)
+                    
+                    importedRecords.append(newRecord)
+                    
+                    if self.shouldReportProgress {
+                        
+                        self.reportProgress(importedRecords)
+                        self.lastProgressReport = NSDate()
+                        
+                    }
+                }
+                
+            } else {
+                
+                self.failClosure?()
                 
             }
             
@@ -73,7 +88,15 @@ public class CSVImporter<T> {
         return self
     }
     
-    public func onProgress(closure: (importedDataLinesCount: Int, totalNumberOfDataLines: Int) -> Void) -> Self {
+    public func onFail(closure: () -> Void) -> Self {
+        
+        self.failClosure = closure
+        
+        return self
+        
+    }
+    
+    public func onProgress(closure: (importedDataLinesCount: Int) -> Void) -> Self {
         
         self.progressClosure = closure
         
@@ -86,19 +109,16 @@ public class CSVImporter<T> {
         
     }
     
-    func reportProgress() {
-        
-        
+    
+    // MARK: - Helper Methods
+    
+    func reportProgress(importedRecords: [T]) {
         
         if let progressClosure = self.progressClosure {
             
             dispatch_async(dispatch_get_main_queue()) {
                 
-                // TODO: total number of lines missing
-                
-                let totalNumberOfLines = 10
-                
-                progressClosure(importedDataLinesCount: self.importedRecords.count, totalNumberOfDataLines: totalNumberOfLines)
+                progressClosure(importedDataLinesCount: importedRecords.count)
                 
             }
             

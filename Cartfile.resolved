@@ -1,2 +1,3 @@
+github "nvzqz/FileKit" "8221a7f83f78139e266263cb3097319ac3b8ee47"
 github "Quick/Nimble" "v3.0.0"
 github "Quick/Quick" "v0.8.0"
