@@ -33,6 +33,10 @@
 		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		82239F671C4AF9AE00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
 		82239F681C4AF9AE00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
+		82239F6B1C4AFA0F00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
+		82239F6C1C4AFA0F00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
+		82239F6D1C4AFA1E00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = SOURCE_ROOT; };
+		82239F6E1C4AFA1E00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		82239F651C4AF98C00627674 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				82239F6B1C4AFA0F00627674 /* FileKit.framework */,
+				82239F6C1C4AFA0F00627674 /* HandySwift.framework */,
 			);
 			name = tvOS;
 			sourceTree = "<group>";
@@ -123,6 +129,8 @@
 		82239F661C4AF99400627674 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				82239F6D1C4AFA1E00627674 /* FileKit.framework */,
+				82239F6E1C4AFA1E00627674 /* HandySwift.framework */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
