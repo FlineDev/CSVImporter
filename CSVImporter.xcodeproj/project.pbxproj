@@ -294,8 +294,8 @@
 		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
-				82239F491C4AF70500627674 /* CSVImporter */,
-				82239F551C4AF70500627674 /* CSVImporterTests */,
+				82239F491C4AF70500627674 /* Sources */,
+				82239F551C4AF70500627674 /* Tests */,
 				82239F481C4AF70500627674 /* Products */,
 				82239F631C4AF89600627674 /* Carthage */,
 			);
@@ -314,23 +314,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82239F491C4AF70500627674 /* CSVImporter */ = {
+		82239F491C4AF70500627674 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				82239F701C4AFAA800627674 /* CSVImporter.swift */,
-				82239F4A1C4AF70500627674 /* CSVImporter.h */,
-				82239F4C1C4AF70500627674 /* Info.plist */,
+				8223A03A1C4AFE5D00627674 /* Code */,
+				8223A03B1C4AFE6200627674 /* Supporting Files */,
 			);
+			name = Sources;
 			path = CSVImporter;
 			sourceTree = "<group>";
 		};
-		82239F551C4AF70500627674 /* CSVImporterTests */ = {
+		82239F551C4AF70500627674 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				8223A01A1C4AFC6700627674 /* Code */,
 				82239FB41C4AFC5100627674 /* Assets */,
-				82239F581C4AF70500627674 /* Info.plist */,
+				8223A03C1C4AFE6E00627674 /* Supporting Files */,
 			);
+			name = Tests;
 			path = CSVImporterTests;
 			sourceTree = "<group>";
 		};
@@ -451,6 +452,31 @@
 				8223A02A1C4AFCC900627674 /* Quick.framework */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		8223A03A1C4AFE5D00627674 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				82239F701C4AFAA800627674 /* CSVImporter.swift */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		8223A03B1C4AFE6200627674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82239F4A1C4AF70500627674 /* CSVImporter.h */,
+				82239F4C1C4AF70500627674 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8223A03C1C4AFE6E00627674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82239F581C4AF70500627674 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
