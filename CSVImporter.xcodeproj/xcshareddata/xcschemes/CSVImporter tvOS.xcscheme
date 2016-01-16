@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "82239F761C4AFAFF00627674"
-               BuildableName = "CSVImporter tvOS.framework"
+               BuildableName = "CSVImporter.framework"
                BlueprintName = "CSVImporter tvOS"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82239F761C4AFAFF00627674"
-            BuildableName = "CSVImporter tvOS.framework"
+            BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82239F761C4AFAFF00627674"
-            BuildableName = "CSVImporter tvOS.framework"
+            BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "82239F761C4AFAFF00627674"
-            BuildableName = "CSVImporter tvOS.framework"
+            BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
          </BuildableReference>
