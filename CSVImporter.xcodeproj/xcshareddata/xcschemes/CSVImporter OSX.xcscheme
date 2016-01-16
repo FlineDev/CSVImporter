@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B5171C470651002FEC2A"
+               BlueprintIdentifier = "82239F921C4AFB1000627674"
                BuildableName = "CSVImporter.framework"
                BlueprintName = "CSVImporter OSX"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B5201C470651002FEC2A"
-               BuildableName = "CSVImporter OSXTests.xctest"
-               BlueprintName = "CSVImporter OSXTests"
+               BlueprintIdentifier = "82239F9B1C4AFB1000627674"
+               BuildableName = "CSVImporter OSX Tests.xctest"
+               BlueprintName = "CSVImporter OSX Tests"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B5171C470651002FEC2A"
+            BlueprintIdentifier = "82239F921C4AFB1000627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter OSX"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B5171C470651002FEC2A"
+            BlueprintIdentifier = "82239F921C4AFB1000627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter OSX"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B5171C470651002FEC2A"
+            BlueprintIdentifier = "82239F921C4AFB1000627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter OSX"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
