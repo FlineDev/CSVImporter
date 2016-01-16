@@ -8,6 +8,7 @@
 
 import Foundation
 import FileKit
+import HandySwift
 
 public class CSVImporter<T> {
     
@@ -16,7 +17,6 @@ public class CSVImporter<T> {
     let csvFile: TextFile
     let delimiter: String
     
-    var startedGenerating: NSDate?
     var lastProgressReport: NSDate?
     
     var progressClosure: ((importedDataLinesCount: Int) -> Void)?
@@ -25,12 +25,6 @@ public class CSVImporter<T> {
     
     
     // MARK: - Computes Instance Properties
-    
-    var generationHasStarted: Bool {
-        get {
-            return self.startedGenerating != nil
-        }
-    }
     
     var shouldReportProgress: Bool {
         get {
@@ -52,45 +46,96 @@ public class CSVImporter<T> {
     
     // MARK: - Instance Methods
     
-    public func startImportingWithMapper(closure: (readValuesInLine: [String]) -> T) -> Self {
-        
-        self.startedGenerating = NSDate()
+    public func startImportingRecords(mapper closure: (recordValues: [String]) -> T) -> Self {
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
-
-            if let csvStreamReader = self.csvFile.streamReader() {
+            
+            var importedRecords: [T] = []
+            
+            let importedLinesWithSuccess = self.importLines { valuesInLine in
                 
-                var importedRecords: [T] = []
+                let newRecord = closure(recordValues: valuesInLine)
+                importedRecords.append(newRecord)
                 
-                for line in csvStreamReader {
-                    
-                    let readValuesInLine = line.componentsSeparatedByString(self.delimiter)
-                    let newRecord = closure(readValuesInLine: readValuesInLine)
-                    
-                    importedRecords.append(newRecord)
-                    
-                    if self.shouldReportProgress {
-                        
-                        self.reportProgress(importedRecords)
-                        
-                    }
-                }
+                self.reportProgressIfNeeded(importedRecords)
                 
-                if let finishClosure = self.finishClosure {
-                    
-                    finishClosure(importedRecords: importedRecords)
-                    
-                }
-                
+            }
+            
+            if importedLinesWithSuccess {
+                self.reportFinish(importedRecords)
             } else {
-                
-                self.failClosure?()
-                
+                self.reportFail()
             }
             
         }
         
         return self
+        
+    }
+    
+    public func startImportingRecords(structure structureClosure: (headerValues: [String]) -> Void, recordMapper closure: (recordValues: [String: String]) -> T) -> Self {
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+            
+            var recordStructure: [String]?
+            var importedRecords: [T] = []
+            
+            let importedLinesWithSuccess = self.importLines { valuesInLine in
+                
+                if recordStructure == nil {
+                    
+                    recordStructure = valuesInLine
+                    structureClosure(headerValues: valuesInLine)
+                    
+                } else {
+
+                    if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
+                        
+                        let newRecord = closure(recordValues: structuredValuesInLine)
+                        importedRecords.append(newRecord)
+                        
+                        self.reportProgressIfNeeded(importedRecords)
+                        
+                    } else {
+                        print("Warning: Couldn't structurize line.")
+                    }
+                    
+                }
+                
+            }
+            
+            if importedLinesWithSuccess {
+                self.reportFinish(importedRecords)
+            } else {
+                self.reportFail()
+            }
+            
+        }
+        
+        return self
+        
+    }
+    
+    // Imports all lines one by one and returns true on finish, or returns false if can't read file
+    func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
+        
+        if let csvStreamReader = self.csvFile.streamReader() {
+            
+            for line in csvStreamReader {
+                
+                let valuesInLine = line.componentsSeparatedByString(self.delimiter)
+                closure(valuesInLine: valuesInLine)
+                
+            }
+            
+            return true
+            
+        } else {
+            
+            return false
+            
+        }
+        
     }
     
     public func onFail(closure: () -> Void) -> Self {
@@ -117,16 +162,41 @@ public class CSVImporter<T> {
     
     // MARK: - Helper Methods
     
-    func reportProgress(importedRecords: [T]) {
+    func reportFail() {
         
-        self.lastProgressReport = NSDate()
-        
-        if let progressClosure = self.progressClosure {
+        if let failClosure = self.failClosure {
             
             dispatch_async(dispatch_get_main_queue()) {
+                failClosure()
+            }
+            
+        }
+        
+    }
+    
+    func reportProgressIfNeeded(importedRecords: [T]) {
+        
+        if self.shouldReportProgress {
+            
+            self.lastProgressReport = NSDate()
+            if let progressClosure = self.progressClosure {
                 
-                progressClosure(importedDataLinesCount: importedRecords.count)
+                dispatch_async(dispatch_get_main_queue()) {
+                    progressClosure(importedDataLinesCount: importedRecords.count)
+                }
                 
+            }
+
+        }
+        
+    }
+    
+    func reportFinish(importedRecords: [T]) {
+        
+        if let finishClosure = self.finishClosure {
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                finishClosure(importedRecords: importedRecords)
             }
             
         }

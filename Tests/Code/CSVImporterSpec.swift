@@ -21,34 +21,74 @@ class CSVImporterSpec: QuickSpec {
             
             let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
             
-            var readValues: [[String]]?
+            var recordValues: [[String]]?
             
             if let path = path {
                 let importer = CSVImporter<[String]>(path: path)
                 
-                importer.startImportingWithMapper { readValuesInLine -> [String] in
+                importer.startImportingRecords { recordValues -> [String] in
                     
-                    return readValuesInLine
+                    return recordValues
                     
-                    }.onFail {
+                }.onFail {
                         
                         print("Did fail")
                         
-                    }.onProgress { importedDataLinesCount in
+                }.onProgress { importedDataLinesCount in
                         
                         print("Progress: \(importedDataLinesCount)")
                         
-                    }.onFinish { importedRecords in
+                }.onFinish { importedRecords in
                         
                         print("Did finish import, first array: \(importedRecords.first)")
-                        readValues = importedRecords
+                        recordValues = importedRecords
                         
                 }
             }
 
-            expect(readValues).toEventuallyNot(beNil())
+            expect(recordValues).toEventuallyNot(beNil())
             
         }
+        
+        it("imports data from CSV file with headers") {
+            
+            let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
+            
+            var recordValues: [[String: String]]?
+            
+            if let path = path {
+                let importer = CSVImporter<[String: String]>(path: path)
+                
+                importer.startImportingRecords(structure: { (headerValues) -> Void in
+                    
+                    print(headerValues)
+                    
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    
+                    return recordValues
+                    
+                }).onFail {
+                        
+                        print("Did fail")
+                        
+                }.onProgress { importedDataLinesCount in
+                        
+                        print("Progress: \(importedDataLinesCount)")
+                        
+                }.onFinish { importedRecords in
+                        
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
+                        
+                }
+            }
+            
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 3)
+            
+            
+        }
+        
+        
         
     }
     

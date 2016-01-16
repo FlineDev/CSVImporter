@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A821C48404400BDBA1C /* FileKit.framework */; };
 		82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A861C48405200BDBA1C /* FileKit.framework */; };
+		820FC9991C4A8AE000752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC9981C4A8AE000752788 /* HandySwift.framework */; };
+		820FC99B1C4A8AEF00752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC99A1C4A8AEF00752788 /* HandySwift.framework */; };
+		820FC99D1C4A8AFC00752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC99C1C4A8AFC00752788 /* HandySwift.framework */; };
+		820FC99E1C4A8B1800752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC9981C4A8AE000752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		820FC99F1C4A8B1F00752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC99C1C4A8AFC00752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		820FC9A01C4A8B2400752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC99A1C4A8AEF00752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		825DE13E1C4A4FCA007C2607 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE13C1C4A4FCA007C2607 /* FileKit.framework */; };
 		825DE1421C4A5150007C2607 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1401C4A5150007C2607 /* Nimble.framework */; };
 		825DE1431C4A5150007C2607 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1411C4A5150007C2607 /* Quick.framework */; };
@@ -134,6 +140,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				820FC99E1C4A8B1800752788 /* HandySwift.framework in Copy Framework Dependencies */,
 				8280D7D81C4A601C001172EF /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
@@ -145,6 +152,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				820FC99F1C4A8B1F00752788 /* HandySwift.framework in Copy Framework Dependencies */,
 				8280D7D91C4A6027001172EF /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
@@ -156,6 +164,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				820FC9A01C4A8B2400752788 /* HandySwift.framework in Copy Framework Dependencies */,
 				8280D7DA1C4A602F001172EF /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
@@ -167,6 +176,9 @@
 		82088A811C483BB800BDBA1C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		82088A821C48404400BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
 		82088A861C48405200BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = "<group>"; };
+		820FC9981C4A8AE000752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
+		820FC99A1C4A8AEF00752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = "<group>"; };
+		820FC99C1C4A8AFC00752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = "<group>"; };
 		825DE13C1C4A4FCA007C2607 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = "<group>"; };
 		825DE1401C4A5150007C2607 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		825DE1411C4A5150007C2607 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
@@ -218,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */,
+				820FC9991C4A8AE000752788 /* HandySwift.framework in Frameworks */,
 				825DE1471C4A516C007C2607 /* Nimble.framework in Frameworks */,
 				825DE1481C4A516C007C2607 /* Quick.framework in Frameworks */,
 			);
@@ -236,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				825DE13E1C4A4FCA007C2607 /* FileKit.framework in Frameworks */,
+				820FC99D1C4A8AFC00752788 /* HandySwift.framework in Frameworks */,
 				825DE1421C4A5150007C2607 /* Nimble.framework in Frameworks */,
 				825DE1431C4A5150007C2607 /* Quick.framework in Frameworks */,
 			);
@@ -254,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */,
+				820FC99B1C4A8AEF00752788 /* HandySwift.framework in Frameworks */,
 				825DE14C1C4A5187007C2607 /* Nimble.framework in Frameworks */,
 				825DE14D1C4A5187007C2607 /* Quick.framework in Frameworks */,
 			);
@@ -356,6 +371,7 @@
 		8268B5351C470811002FEC2A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				820FC9981C4A8AE000752788 /* HandySwift.framework */,
 				82088A821C48404400BDBA1C /* FileKit.framework */,
 				825DE1491C4A5170007C2607 /* Tests */,
 			);
@@ -365,6 +381,7 @@
 		8268B5361C470817002FEC2A /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				820FC99C1C4A8AFC00752788 /* HandySwift.framework */,
 				825DE13C1C4A4FCA007C2607 /* FileKit.framework */,
 				825DE1441C4A5155007C2607 /* Tests */,
 			);
@@ -374,6 +391,7 @@
 		8268B5371C47081B002FEC2A /* OSX */ = {
 			isa = PBXGroup;
 			children = (
+				820FC99A1C4A8AEF00752788 /* HandySwift.framework */,
 				82088A861C48405200BDBA1C /* FileKit.framework */,
 				825DE14E1C4A518B007C2607 /* Tests */,
 			);
@@ -777,6 +795,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -792,6 +811,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/FileKit.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/HandySwift.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -807,6 +827,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/FileKit.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/HandySwift.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
