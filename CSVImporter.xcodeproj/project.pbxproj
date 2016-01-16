@@ -27,6 +27,8 @@
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		82239F511C4AF70500627674 /* CSVImporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVImporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		82239F611C4AF89200627674 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				82239F491C4AF70500627674 /* CSVImporter */,
 				82239F551C4AF70500627674 /* CSVImporterTests */,
 				82239F481C4AF70500627674 /* Products */,
+				82239F631C4AF89600627674 /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +84,15 @@
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
 			path = CSVImporterTests;
+			sourceTree = "<group>";
+		};
+		82239F631C4AF89600627674 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				82239F611C4AF89200627674 /* Cartfile */,
+				82239F621C4AF89200627674 /* Cartfile.private */,
+			);
+			name = Carthage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
