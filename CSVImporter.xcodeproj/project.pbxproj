@@ -157,6 +157,7 @@
 				82239F431C4AF70500627674 /* Frameworks */,
 				82239F441C4AF70500627674 /* Headers */,
 				82239F451C4AF70500627674 /* Resources */,
+				82239F6F1C4AFA4900627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +238,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		82239F6F1C4AFA4900627674 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82239F421C4AF70500627674 /* Sources */ = {
