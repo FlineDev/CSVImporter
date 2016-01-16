@@ -25,6 +25,12 @@ And run `carthage update`. Then drag & drop the HandySwift.framework in the Cart
 
 ## Usage
 
+Please have a look at the UsageExamples.playground for a complete list of features provided.
+Open the Playground from within the `.xcworkspace` in order for it to work.
+
+
+### Basic CSV Import
+
 First create an instance of CSVImporter and specify the type the data within a line from the CSV should have. The default data type is an array of `String` objects which would look like this:
 
 ``` Swift
@@ -36,6 +42,8 @@ importer.startImportingRecords{ $0 }.onFinish { importedRecords in
     }
 }
 ```
+
+### Asynchronous with Callbacks
 
 CSVImporter works completely asynchronous and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
 
@@ -54,6 +62,8 @@ importer.startImportingRecords{ $0 }.onFail {
 
 }
 ```
+
+### Easy data mapping
 
 As stated above the default type is a `[String]` but you can provide whatever type you like. For example, let's say you have a class like this
 
@@ -92,6 +102,8 @@ importer.startImportingRecords { recordValues -> Student in
 
 }
 ```
+
+### Header Structure Support
 
 Last but not least some CSV files have the structure of the data specified within the first line like this:
 
