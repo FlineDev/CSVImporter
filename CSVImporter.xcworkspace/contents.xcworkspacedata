@@ -4,4 +4,7 @@
    <FileRef
       location = "container:CSVImporter.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "container:UsageExamples.playground">
+   </FileRef>
 </Workspace>
