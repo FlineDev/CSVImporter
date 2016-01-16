@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
+		82239F521C4AF70500627674 /* CSVImporter iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter iOS.framework */; };
 		82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; };
 		82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; };
 		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
@@ -178,10 +178,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F471C4AF70500627674 /* CSVImporter iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "CSVImporter iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		82239F511C4AF70500627674 /* CSVImporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVImporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		82239F611C4AF89200627674 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
@@ -193,9 +193,9 @@
 		82239F6E1C4AFA1E00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = SOURCE_ROOT; };
 		82239F701C4AFAA800627674 /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
 		82239F771C4AFAFF00627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F801C4AFAFF00627674 /* CSVImporter tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F931C4AFB1000627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F9C1C4AFB1000627674 /* CSVImporter OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239FB61C4AFC5100627674 /* AllstarFull.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllstarFull.csv; sourceTree = "<group>"; };
 		82239FB71C4AFC5100627674 /* Appearances.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appearances.csv; sourceTree = "<group>"; };
 		82239FB81C4AFC5100627674 /* AwardsManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsManagers.csv; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */,
+				82239F521C4AF70500627674 /* CSVImporter iOS.framework in Frameworks */,
 				8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */,
 				8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */,
 			);
@@ -304,12 +304,12 @@
 		82239F481C4AF70500627674 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82239F471C4AF70500627674 /* CSVImporter.framework */,
-				82239F511C4AF70500627674 /* CSVImporterTests.xctest */,
+				82239F471C4AF70500627674 /* CSVImporter iOS.framework */,
+				82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */,
 				82239F771C4AFAFF00627674 /* CSVImporter.framework */,
-				82239F801C4AFAFF00627674 /* CSVImporter tvOSTests.xctest */,
+				82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */,
 				82239F931C4AFB1000627674 /* CSVImporter.framework */,
-				82239F9C1C4AFB1000627674 /* CSVImporter OSXTests.xctest */,
+				82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -509,9 +509,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		82239F461C4AF70500627674 /* CSVImporter */ = {
+		82239F461C4AF70500627674 /* CSVImporter iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter" */;
+			buildConfigurationList = 82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */;
 			buildPhases = (
 				82239F421C4AF70500627674 /* Sources */,
 				82239F431C4AF70500627674 /* Frameworks */,
@@ -523,14 +523,14 @@
 			);
 			dependencies = (
 			);
-			name = CSVImporter;
+			name = "CSVImporter iOS";
 			productName = CSVImporter;
-			productReference = 82239F471C4AF70500627674 /* CSVImporter.framework */;
+			productReference = 82239F471C4AF70500627674 /* CSVImporter iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F501C4AF70500627674 /* CSVImporterTests */ = {
+		82239F501C4AF70500627674 /* CSVImporter iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporterTests" */;
+			buildConfigurationList = 82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */;
 			buildPhases = (
 				82239F4D1C4AF70500627674 /* Sources */,
 				82239F4E1C4AF70500627674 /* Frameworks */,
@@ -543,9 +543,9 @@
 			dependencies = (
 				82239F541C4AF70500627674 /* PBXTargetDependency */,
 			);
-			name = CSVImporterTests;
+			name = "CSVImporter iOS Tests";
 			productName = CSVImporterTests;
-			productReference = 82239F511C4AF70500627674 /* CSVImporterTests.xctest */;
+			productReference = 82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		82239F761C4AFAFF00627674 /* CSVImporter tvOS */ = {
@@ -567,9 +567,9 @@
 			productReference = 82239F771C4AFAFF00627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F7F1C4AFAFF00627674 /* CSVImporter tvOSTests */ = {
+		82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOSTests" */;
+			buildConfigurationList = 82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */;
 			buildPhases = (
 				82239F7C1C4AFAFF00627674 /* Sources */,
 				82239F7D1C4AFAFF00627674 /* Frameworks */,
@@ -582,9 +582,9 @@
 			dependencies = (
 				82239F831C4AFAFF00627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter tvOSTests";
+			name = "CSVImporter tvOS Tests";
 			productName = "CSVImporter tvOSTests";
-			productReference = 82239F801C4AFAFF00627674 /* CSVImporter tvOSTests.xctest */;
+			productReference = 82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		82239F921C4AFB1000627674 /* CSVImporter OSX */ = {
@@ -606,9 +606,9 @@
 			productReference = 82239F931C4AFB1000627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F9B1C4AFB1000627674 /* CSVImporter OSXTests */ = {
+		82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */;
+			buildConfigurationList = 82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */;
 			buildPhases = (
 				82239F981C4AFB1000627674 /* Sources */,
 				82239F991C4AFB1000627674 /* Frameworks */,
@@ -621,9 +621,9 @@
 			dependencies = (
 				82239F9F1C4AFB1000627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter OSXTests";
+			name = "CSVImporter OSX Tests";
 			productName = "CSVImporter OSXTests";
-			productReference = 82239F9C1C4AFB1000627674 /* CSVImporter OSXTests.xctest */;
+			productReference = 82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -668,12 +668,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82239F461C4AF70500627674 /* CSVImporter */,
-				82239F501C4AF70500627674 /* CSVImporterTests */,
+				82239F461C4AF70500627674 /* CSVImporter iOS */,
+				82239F501C4AF70500627674 /* CSVImporter iOS Tests */,
 				82239F761C4AFAFF00627674 /* CSVImporter tvOS */,
-				82239F7F1C4AFAFF00627674 /* CSVImporter tvOSTests */,
+				82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */,
 				82239F921C4AFB1000627674 /* CSVImporter OSX */,
-				82239F9B1C4AFB1000627674 /* CSVImporter OSXTests */,
+				82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -951,7 +951,7 @@
 /* Begin PBXTargetDependency section */
 		82239F541C4AF70500627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 82239F461C4AF70500627674 /* CSVImporter */;
+			target = 82239F461C4AF70500627674 /* CSVImporter iOS */;
 			targetProxy = 82239F531C4AF70500627674 /* PBXContainerItemProxy */;
 		};
 		82239F831C4AFAFF00627674 /* PBXTargetDependency */ = {
@@ -1059,7 +1059,7 @@
 		82239F5C1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1083,7 +1083,7 @@
 		82239F5D1C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1134,7 +1134,7 @@
 		82239F891C4AFAFF00627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1158,7 +1158,7 @@
 		82239F8A1C4AFAFF00627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1214,7 +1214,7 @@
 		82239FA51C4AFB1000627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1240,7 +1240,7 @@
 		82239FA61C4AFB1000627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1311,7 +1311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter" */ = {
+		82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F5C1C4AF70500627674 /* Debug */,
@@ -1320,7 +1320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporterTests" */ = {
+		82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F5F1C4AF70500627674 /* Debug */,
@@ -1337,7 +1337,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOSTests" */ = {
+		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F8C1C4AFAFF00627674 /* Debug */,
@@ -1353,7 +1353,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */ = {
+		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239FA81C4AFB1000627674 /* Debug */,
