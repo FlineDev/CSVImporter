@@ -1146,7 +1146,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1170,7 +1170,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1230,7 +1230,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSX";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1256,7 +1256,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSX";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
