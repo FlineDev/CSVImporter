@@ -72,9 +72,14 @@ public class CSVImporter<T> {
                     if self.shouldReportProgress {
                         
                         self.reportProgress(importedRecords)
-                        self.lastProgressReport = NSDate()
                         
                     }
+                }
+                
+                if let finishClosure = self.finishClosure {
+                    
+                    finishClosure(importedRecords: importedRecords)
+                    
                 }
                 
             } else {
@@ -113,6 +118,8 @@ public class CSVImporter<T> {
     // MARK: - Helper Methods
     
     func reportProgress(importedRecords: [T]) {
+        
+        self.lastProgressReport = NSDate()
         
         if let progressClosure = self.progressClosure {
             

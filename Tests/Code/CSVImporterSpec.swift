@@ -17,9 +17,36 @@ class CSVImporterSpec: QuickSpec {
     
     override func spec() {
         
-        it("makes sure tests are working") {
+        it("imports data from CSV file without headers") {
             
-            expect(true).to(beTrue())
+            let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
+            
+            var readValues: [[String]]?
+            
+            if let path = path {
+                let importer = CSVImporter<[String]>(path: path)
+                
+                importer.startImportingWithMapper { readValuesInLine -> [String] in
+                    
+                    return readValuesInLine
+                    
+                    }.onFail {
+                        
+                        print("Did fail")
+                        
+                    }.onProgress { importedDataLinesCount in
+                        
+                        print("Progress: \(importedDataLinesCount)")
+                        
+                    }.onFinish { importedRecords in
+                        
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        readValues = importedRecords
+                        
+                }
+            }
+
+            expect(readValues).toEventuallyNot(beNil())
             
         }
         
