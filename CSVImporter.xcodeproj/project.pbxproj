@@ -7,165 +7,170 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A821C48404400BDBA1C /* FileKit.framework */; };
-		82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82088A861C48405200BDBA1C /* FileKit.framework */; };
-		820FC9991C4A8AE000752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC9981C4A8AE000752788 /* HandySwift.framework */; };
-		820FC99B1C4A8AEF00752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC99A1C4A8AEF00752788 /* HandySwift.framework */; };
-		820FC99D1C4A8AFC00752788 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820FC99C1C4A8AFC00752788 /* HandySwift.framework */; };
-		820FC99E1C4A8B1800752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC9981C4A8AE000752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		820FC99F1C4A8B1F00752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC99C1C4A8AFC00752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		820FC9A01C4A8B2400752788 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 820FC99A1C4A8AEF00752788 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		825DE13E1C4A4FCA007C2607 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE13C1C4A4FCA007C2607 /* FileKit.framework */; };
-		825DE1421C4A5150007C2607 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1401C4A5150007C2607 /* Nimble.framework */; };
-		825DE1431C4A5150007C2607 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1411C4A5150007C2607 /* Quick.framework */; };
-		825DE1471C4A516C007C2607 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1451C4A516C007C2607 /* Nimble.framework */; };
-		825DE1481C4A516C007C2607 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE1461C4A516C007C2607 /* Quick.framework */; };
-		825DE14C1C4A5187007C2607 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE14A1C4A5187007C2607 /* Nimble.framework */; };
-		825DE14D1C4A5187007C2607 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825DE14B1C4A5187007C2607 /* Quick.framework */; };
-		8268B4E81C470518002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4DD1C470518002FEC2A /* CSVImporter.framework */; };
-		8268B4ED1C470518002FEC2A /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */; };
-		8268B5061C470618002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B4FC1C470618002FEC2A /* CSVImporter.framework */; };
-		8268B5221C470651002FEC2A /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268B5181C470651002FEC2A /* CSVImporter.framework */; };
-		8268B5301C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
-		8268B5311C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
-		8268B5321C470772002FEC2A /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8268B52F1C470772002FEC2A /* CSVImporter.swift */; };
-		8268B56D1C470CA3002FEC2A /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5541C470CA3002FEC2A /* AllstarFull.csv */; };
-		8268B56E1C470CA3002FEC2A /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5541C470CA3002FEC2A /* AllstarFull.csv */; };
-		8268B56F1C470CA3002FEC2A /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5541C470CA3002FEC2A /* AllstarFull.csv */; };
-		8268B5701C470CA3002FEC2A /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5551C470CA3002FEC2A /* Appearances.csv */; };
-		8268B5711C470CA3002FEC2A /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5551C470CA3002FEC2A /* Appearances.csv */; };
-		8268B5721C470CA3002FEC2A /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5551C470CA3002FEC2A /* Appearances.csv */; };
-		8268B5731C470CA3002FEC2A /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5561C470CA3002FEC2A /* AwardsManagers.csv */; };
-		8268B5741C470CA3002FEC2A /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5561C470CA3002FEC2A /* AwardsManagers.csv */; };
-		8268B5751C470CA3002FEC2A /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5561C470CA3002FEC2A /* AwardsManagers.csv */; };
-		8268B5761C470CA3002FEC2A /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5571C470CA3002FEC2A /* AwardsPlayers.csv */; };
-		8268B5771C470CA3002FEC2A /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5571C470CA3002FEC2A /* AwardsPlayers.csv */; };
-		8268B5781C470CA3002FEC2A /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5571C470CA3002FEC2A /* AwardsPlayers.csv */; };
-		8268B5791C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5581C470CA3002FEC2A /* AwardsShareManagers.csv */; };
-		8268B57A1C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5581C470CA3002FEC2A /* AwardsShareManagers.csv */; };
-		8268B57B1C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5581C470CA3002FEC2A /* AwardsShareManagers.csv */; };
-		8268B57C1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5591C470CA3002FEC2A /* AwardsSharePlayers.csv */; };
-		8268B57D1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5591C470CA3002FEC2A /* AwardsSharePlayers.csv */; };
-		8268B57E1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5591C470CA3002FEC2A /* AwardsSharePlayers.csv */; };
-		8268B57F1C470CA3002FEC2A /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55A1C470CA3002FEC2A /* Batting.csv */; };
-		8268B5801C470CA3002FEC2A /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55A1C470CA3002FEC2A /* Batting.csv */; };
-		8268B5811C470CA3002FEC2A /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55A1C470CA3002FEC2A /* Batting.csv */; };
-		8268B5821C470CA3002FEC2A /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55B1C470CA3002FEC2A /* BattingPost.csv */; };
-		8268B5831C470CA3002FEC2A /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55B1C470CA3002FEC2A /* BattingPost.csv */; };
-		8268B5841C470CA3002FEC2A /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55B1C470CA3002FEC2A /* BattingPost.csv */; };
-		8268B5851C470CA3002FEC2A /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55C1C470CA3002FEC2A /* CollegePlaying.csv */; };
-		8268B5861C470CA3002FEC2A /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55C1C470CA3002FEC2A /* CollegePlaying.csv */; };
-		8268B5871C470CA3002FEC2A /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55C1C470CA3002FEC2A /* CollegePlaying.csv */; };
-		8268B5881C470CA3002FEC2A /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55D1C470CA3002FEC2A /* Fielding.csv */; };
-		8268B5891C470CA3002FEC2A /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55D1C470CA3002FEC2A /* Fielding.csv */; };
-		8268B58A1C470CA3002FEC2A /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55D1C470CA3002FEC2A /* Fielding.csv */; };
-		8268B58B1C470CA3002FEC2A /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55E1C470CA3002FEC2A /* FieldingOF.csv */; };
-		8268B58C1C470CA3002FEC2A /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55E1C470CA3002FEC2A /* FieldingOF.csv */; };
-		8268B58D1C470CA3002FEC2A /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55E1C470CA3002FEC2A /* FieldingOF.csv */; };
-		8268B58E1C470CA3002FEC2A /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55F1C470CA3002FEC2A /* FieldingPost.csv */; };
-		8268B58F1C470CA3002FEC2A /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55F1C470CA3002FEC2A /* FieldingPost.csv */; };
-		8268B5901C470CA3002FEC2A /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B55F1C470CA3002FEC2A /* FieldingPost.csv */; };
-		8268B5911C470CA3002FEC2A /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5601C470CA3002FEC2A /* HallOfFame.csv */; };
-		8268B5921C470CA3002FEC2A /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5601C470CA3002FEC2A /* HallOfFame.csv */; };
-		8268B5931C470CA3002FEC2A /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5601C470CA3002FEC2A /* HallOfFame.csv */; };
-		8268B5941C470CA3002FEC2A /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5611C470CA3002FEC2A /* Managers.csv */; };
-		8268B5951C470CA3002FEC2A /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5611C470CA3002FEC2A /* Managers.csv */; };
-		8268B5961C470CA3002FEC2A /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5611C470CA3002FEC2A /* Managers.csv */; };
-		8268B5971C470CA3002FEC2A /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5621C470CA3002FEC2A /* ManagersHalf.csv */; };
-		8268B5981C470CA3002FEC2A /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5621C470CA3002FEC2A /* ManagersHalf.csv */; };
-		8268B5991C470CA3002FEC2A /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5621C470CA3002FEC2A /* ManagersHalf.csv */; };
-		8268B59A1C470CA3002FEC2A /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5631C470CA3002FEC2A /* Master.csv */; };
-		8268B59B1C470CA3002FEC2A /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5631C470CA3002FEC2A /* Master.csv */; };
-		8268B59C1C470CA3002FEC2A /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5631C470CA3002FEC2A /* Master.csv */; };
-		8268B59D1C470CA3002FEC2A /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5641C470CA3002FEC2A /* Pitching.csv */; };
-		8268B59E1C470CA3002FEC2A /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5641C470CA3002FEC2A /* Pitching.csv */; };
-		8268B59F1C470CA3002FEC2A /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5641C470CA3002FEC2A /* Pitching.csv */; };
-		8268B5A01C470CA3002FEC2A /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5651C470CA3002FEC2A /* PitchingPost.csv */; };
-		8268B5A11C470CA3002FEC2A /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5651C470CA3002FEC2A /* PitchingPost.csv */; };
-		8268B5A21C470CA3002FEC2A /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5651C470CA3002FEC2A /* PitchingPost.csv */; };
-		8268B5A31C470CA3002FEC2A /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5661C470CA3002FEC2A /* readme2014.txt */; };
-		8268B5A41C470CA3002FEC2A /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5661C470CA3002FEC2A /* readme2014.txt */; };
-		8268B5A51C470CA3002FEC2A /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5661C470CA3002FEC2A /* readme2014.txt */; };
-		8268B5A61C470CA3002FEC2A /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5671C470CA3002FEC2A /* Salaries.csv */; };
-		8268B5A71C470CA3002FEC2A /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5671C470CA3002FEC2A /* Salaries.csv */; };
-		8268B5A81C470CA3002FEC2A /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5671C470CA3002FEC2A /* Salaries.csv */; };
-		8268B5A91C470CA3002FEC2A /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5681C470CA3002FEC2A /* Schools.csv */; };
-		8268B5AA1C470CA3002FEC2A /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5681C470CA3002FEC2A /* Schools.csv */; };
-		8268B5AB1C470CA3002FEC2A /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5681C470CA3002FEC2A /* Schools.csv */; };
-		8268B5AC1C470CA3002FEC2A /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5691C470CA3002FEC2A /* SeriesPost.csv */; };
-		8268B5AD1C470CA3002FEC2A /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5691C470CA3002FEC2A /* SeriesPost.csv */; };
-		8268B5AE1C470CA3002FEC2A /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B5691C470CA3002FEC2A /* SeriesPost.csv */; };
-		8268B5AF1C470CA3002FEC2A /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56A1C470CA3002FEC2A /* Teams.csv */; };
-		8268B5B01C470CA3002FEC2A /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56A1C470CA3002FEC2A /* Teams.csv */; };
-		8268B5B11C470CA3002FEC2A /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56A1C470CA3002FEC2A /* Teams.csv */; };
-		8268B5B21C470CA3002FEC2A /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56B1C470CA3002FEC2A /* TeamsFranchises.csv */; };
-		8268B5B31C470CA3002FEC2A /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56B1C470CA3002FEC2A /* TeamsFranchises.csv */; };
-		8268B5B41C470CA3002FEC2A /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56B1C470CA3002FEC2A /* TeamsFranchises.csv */; };
-		8268B5B51C470CA3002FEC2A /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56C1C470CA3002FEC2A /* TeamsHalf.csv */; };
-		8268B5B61C470CA3002FEC2A /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56C1C470CA3002FEC2A /* TeamsHalf.csv */; };
-		8268B5B71C470CA3002FEC2A /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 8268B56C1C470CA3002FEC2A /* TeamsHalf.csv */; };
-		8280D7D81C4A601C001172EF /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82088A821C48404400BDBA1C /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8280D7D91C4A6027001172EF /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 825DE13C1C4A4FCA007C2607 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8280D7DA1C4A602F001172EF /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82088A861C48405200BDBA1C /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
+		82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; };
+		82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; };
+		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
+		82239F811C4AFAFF00627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F771C4AFAFF00627674 /* CSVImporter.framework */; };
+		82239F9D1C4AFB1000627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F931C4AFB1000627674 /* CSVImporter.framework */; };
+		82239FAA1C4AFB2A00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6B1C4AFA0F00627674 /* FileKit.framework */; };
+		82239FAB1C4AFB2D00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; };
+		82239FAC1C4AFB2F00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; };
+		82239FAD1C4AFB3200627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; };
+		82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
+		82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
+		82239FB01C4AFB3900627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82239FB11C4AFB3A00627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82239FCF1C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD01C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD11C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD21C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD31C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD41C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD51C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD61C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD71C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD81C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FD91C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FDA1C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FDB1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDC1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDD1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDE1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FDF1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FE01C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FE11C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE21C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE31C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE71C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FE81C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FE91C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FED1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FEE1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FEF1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FF01C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF11C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF21C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF31C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF41C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF51C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF61C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF71C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF81C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF91C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFA1C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFB1C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFC1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFD1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFE1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFF1C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0001C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0011C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0051C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0061C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0071C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0081C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A0091C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A00A1C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A00B1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00C1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00D1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00E1C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A00F1C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A0101C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A0111C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0121C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0131C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0141C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0151C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0161C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0171C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A0181C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A0191C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A01C1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A01D1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A01E1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A01F1C4AFC9300627674 /* Nimble.framework */; };
+		8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0201C4AFC9300627674 /* Quick.framework */; };
+		8223A0261C4AFCAE00627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0241C4AFCAE00627674 /* Nimble.framework */; };
+		8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; };
+		8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; };
+		8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; };
+		8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6B1C4AFA0F00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8268B4E91C470518002FEC2A /* PBXContainerItemProxy */ = {
+		82239F531C4AF70500627674 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8268B4D41C470518002FEC2A /* Project object */;
+			containerPortal = 82239F3E1C4AF70500627674 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8268B4DC1C470518002FEC2A;
+			remoteGlobalIDString = 82239F461C4AF70500627674;
 			remoteInfo = CSVImporter;
 		};
-		8268B5071C470618002FEC2A /* PBXContainerItemProxy */ = {
+		82239F821C4AFAFF00627674 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8268B4D41C470518002FEC2A /* Project object */;
+			containerPortal = 82239F3E1C4AF70500627674 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8268B4FB1C470618002FEC2A;
+			remoteGlobalIDString = 82239F761C4AFAFF00627674;
 			remoteInfo = "CSVImporter tvOS";
 		};
-		8268B5231C470651002FEC2A /* PBXContainerItemProxy */ = {
+		82239F9E1C4AFB1000627674 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8268B4D41C470518002FEC2A /* Project object */;
+			containerPortal = 82239F3E1C4AF70500627674 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8268B5171C470651002FEC2A;
+			remoteGlobalIDString = 82239F921C4AFB1000627674;
 			remoteInfo = "CSVImporter OSX";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8280D7D51C4A5FFF001172EF /* Copy Framework Dependencies */ = {
+		8223A02E1C4AFD1900627674 /* Copy Framework Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				820FC99E1C4A8B1800752788 /* HandySwift.framework in Copy Framework Dependencies */,
-				8280D7D81C4A601C001172EF /* FileKit.framework in Copy Framework Dependencies */,
+				8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8280D7D61C4A6005001172EF /* Copy Framework Dependencies */ = {
+		8223A0311C4AFD3700627674 /* Copy Framework Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				820FC99F1C4A8B1F00752788 /* HandySwift.framework in Copy Framework Dependencies */,
-				8280D7D91C4A6027001172EF /* FileKit.framework in Copy Framework Dependencies */,
+				8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8280D7D71C4A600A001172EF /* Copy Framework Dependencies */ = {
+		8223A0341C4AFD4900627674 /* Copy Framework Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				820FC9A01C4A8B2400752788 /* HandySwift.framework in Copy Framework Dependencies */,
-				8280D7DA1C4A602F001172EF /* FileKit.framework in Copy Framework Dependencies */,
+				8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,340 +178,346 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		82088A811C483BB800BDBA1C /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		82088A821C48404400BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
-		82088A861C48405200BDBA1C /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = "<group>"; };
-		820FC9981C4A8AE000752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = "<group>"; };
-		820FC99A1C4A8AEF00752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = "<group>"; };
-		820FC99C1C4A8AFC00752788 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = "<group>"; };
-		825DE13C1C4A4FCA007C2607 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = "<group>"; };
-		825DE1401C4A5150007C2607 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
-		825DE1411C4A5150007C2607 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
-		825DE1451C4A516C007C2607 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		825DE1461C4A516C007C2607 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		825DE14A1C4A5187007C2607 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
-		825DE14B1C4A5187007C2607 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
-		8268B4DD1C470518002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B4E21C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CSVImporterSpec.swift; path = Tests/Code/CSVImporterSpec.swift; sourceTree = SOURCE_ROOT; };
-		8268B4EE1C470518002FEC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Tests/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		8268B4FC1C470618002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B5181C470651002FEC2A /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8268B52F1C470772002FEC2A /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
-		8268B5341C4707B8002FEC2A /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
-		8268B5541C470CA3002FEC2A /* AllstarFull.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllstarFull.csv; sourceTree = "<group>"; };
-		8268B5551C470CA3002FEC2A /* Appearances.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appearances.csv; sourceTree = "<group>"; };
-		8268B5561C470CA3002FEC2A /* AwardsManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsManagers.csv; sourceTree = "<group>"; };
-		8268B5571C470CA3002FEC2A /* AwardsPlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsPlayers.csv; sourceTree = "<group>"; };
-		8268B5581C470CA3002FEC2A /* AwardsShareManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsShareManagers.csv; sourceTree = "<group>"; };
-		8268B5591C470CA3002FEC2A /* AwardsSharePlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsSharePlayers.csv; sourceTree = "<group>"; };
-		8268B55A1C470CA3002FEC2A /* Batting.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Batting.csv; sourceTree = "<group>"; };
-		8268B55B1C470CA3002FEC2A /* BattingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BattingPost.csv; sourceTree = "<group>"; };
-		8268B55C1C470CA3002FEC2A /* CollegePlaying.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CollegePlaying.csv; sourceTree = "<group>"; };
-		8268B55D1C470CA3002FEC2A /* Fielding.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fielding.csv; sourceTree = "<group>"; };
-		8268B55E1C470CA3002FEC2A /* FieldingOF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingOF.csv; sourceTree = "<group>"; };
-		8268B55F1C470CA3002FEC2A /* FieldingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingPost.csv; sourceTree = "<group>"; };
-		8268B5601C470CA3002FEC2A /* HallOfFame.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HallOfFame.csv; sourceTree = "<group>"; };
-		8268B5611C470CA3002FEC2A /* Managers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Managers.csv; sourceTree = "<group>"; };
-		8268B5621C470CA3002FEC2A /* ManagersHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ManagersHalf.csv; sourceTree = "<group>"; };
-		8268B5631C470CA3002FEC2A /* Master.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Master.csv; sourceTree = "<group>"; };
-		8268B5641C470CA3002FEC2A /* Pitching.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pitching.csv; sourceTree = "<group>"; };
-		8268B5651C470CA3002FEC2A /* PitchingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PitchingPost.csv; sourceTree = "<group>"; };
-		8268B5661C470CA3002FEC2A /* readme2014.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme2014.txt; sourceTree = "<group>"; };
-		8268B5671C470CA3002FEC2A /* Salaries.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Salaries.csv; sourceTree = "<group>"; };
-		8268B5681C470CA3002FEC2A /* Schools.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Schools.csv; sourceTree = "<group>"; };
-		8268B5691C470CA3002FEC2A /* SeriesPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SeriesPost.csv; sourceTree = "<group>"; };
-		8268B56A1C470CA3002FEC2A /* Teams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Teams.csv; sourceTree = "<group>"; };
-		8268B56B1C470CA3002FEC2A /* TeamsFranchises.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsFranchises.csv; sourceTree = "<group>"; };
-		8268B56C1C470CA3002FEC2A /* TeamsHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsHalf.csv; sourceTree = "<group>"; };
+		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
+		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		82239F611C4AF89200627674 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
+		82239F671C4AF9AE00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
+		82239F681C4AF9AE00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
+		82239F6B1C4AFA0F00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
+		82239F6C1C4AFA0F00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
+		82239F6D1C4AFA1E00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = SOURCE_ROOT; };
+		82239F6E1C4AFA1E00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = SOURCE_ROOT; };
+		82239F701C4AFAA800627674 /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
+		82239F771C4AFAFF00627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F931C4AFB1000627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239FB61C4AFC5100627674 /* AllstarFull.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllstarFull.csv; sourceTree = "<group>"; };
+		82239FB71C4AFC5100627674 /* Appearances.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appearances.csv; sourceTree = "<group>"; };
+		82239FB81C4AFC5100627674 /* AwardsManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsManagers.csv; sourceTree = "<group>"; };
+		82239FB91C4AFC5100627674 /* AwardsPlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsPlayers.csv; sourceTree = "<group>"; };
+		82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsShareManagers.csv; sourceTree = "<group>"; };
+		82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsSharePlayers.csv; sourceTree = "<group>"; };
+		82239FBC1C4AFC5100627674 /* Batting.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Batting.csv; sourceTree = "<group>"; };
+		82239FBD1C4AFC5100627674 /* BattingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BattingPost.csv; sourceTree = "<group>"; };
+		82239FBE1C4AFC5100627674 /* CollegePlaying.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CollegePlaying.csv; sourceTree = "<group>"; };
+		82239FBF1C4AFC5100627674 /* Fielding.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fielding.csv; sourceTree = "<group>"; };
+		82239FC01C4AFC5100627674 /* FieldingOF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingOF.csv; sourceTree = "<group>"; };
+		82239FC11C4AFC5100627674 /* FieldingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingPost.csv; sourceTree = "<group>"; };
+		82239FC21C4AFC5100627674 /* HallOfFame.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HallOfFame.csv; sourceTree = "<group>"; };
+		82239FC31C4AFC5100627674 /* Managers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Managers.csv; sourceTree = "<group>"; };
+		82239FC41C4AFC5100627674 /* ManagersHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ManagersHalf.csv; sourceTree = "<group>"; };
+		82239FC51C4AFC5100627674 /* Master.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Master.csv; sourceTree = "<group>"; };
+		82239FC61C4AFC5100627674 /* Pitching.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pitching.csv; sourceTree = "<group>"; };
+		82239FC71C4AFC5100627674 /* PitchingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PitchingPost.csv; sourceTree = "<group>"; };
+		82239FC81C4AFC5100627674 /* readme2014.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme2014.txt; sourceTree = "<group>"; };
+		82239FC91C4AFC5100627674 /* Salaries.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Salaries.csv; sourceTree = "<group>"; };
+		82239FCA1C4AFC5100627674 /* Schools.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Schools.csv; sourceTree = "<group>"; };
+		82239FCB1C4AFC5100627674 /* SeriesPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SeriesPost.csv; sourceTree = "<group>"; };
+		82239FCC1C4AFC5100627674 /* Teams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Teams.csv; sourceTree = "<group>"; };
+		82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsFranchises.csv; sourceTree = "<group>"; };
+		82239FCE1C4AFC5100627674 /* TeamsHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsHalf.csv; sourceTree = "<group>"; };
+		8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterSpec.swift; sourceTree = "<group>"; };
+		8223A01F1C4AFC9300627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		8223A0201C4AFC9300627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		8223A0241C4AFCAE00627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		8223A0251C4AFCAE00627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		8223A0291C4AFCC900627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		8223A02A1C4AFCC900627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8268B4D91C470518002FEC2A /* Frameworks */ = {
+		82239F431C4AF70500627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82088A841C48404400BDBA1C /* FileKit.framework in Frameworks */,
-				820FC9991C4A8AE000752788 /* HandySwift.framework in Frameworks */,
-				825DE1471C4A516C007C2607 /* Nimble.framework in Frameworks */,
-				825DE1481C4A516C007C2607 /* Quick.framework in Frameworks */,
+				82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */,
+				82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4E41C470518002FEC2A /* Frameworks */ = {
+		82239F4E1C4AF70500627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B4E81C470518002FEC2A /* CSVImporter.framework in Frameworks */,
+				82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */,
+				8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */,
+				8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4F81C470618002FEC2A /* Frameworks */ = {
+		82239F731C4AFAFF00627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				825DE13E1C4A4FCA007C2607 /* FileKit.framework in Frameworks */,
-				820FC99D1C4A8AFC00752788 /* HandySwift.framework in Frameworks */,
-				825DE1421C4A5150007C2607 /* Nimble.framework in Frameworks */,
-				825DE1431C4A5150007C2607 /* Quick.framework in Frameworks */,
+				82239FAA1C4AFB2A00627674 /* FileKit.framework in Frameworks */,
+				82239FAB1C4AFB2D00627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B5021C470618002FEC2A /* Frameworks */ = {
+		82239F7D1C4AFAFF00627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5061C470618002FEC2A /* CSVImporter.framework in Frameworks */,
+				82239F811C4AFAFF00627674 /* CSVImporter.framework in Frameworks */,
+				8223A0261C4AFCAE00627674 /* Nimble.framework in Frameworks */,
+				8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B5141C470651002FEC2A /* Frameworks */ = {
+		82239F8F1C4AFB1000627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82088A8E1C48406800BDBA1C /* FileKit.framework in Frameworks */,
-				820FC99B1C4A8AEF00752788 /* HandySwift.framework in Frameworks */,
-				825DE14C1C4A5187007C2607 /* Nimble.framework in Frameworks */,
-				825DE14D1C4A5187007C2607 /* Quick.framework in Frameworks */,
+				82239FAC1C4AFB2F00627674 /* FileKit.framework in Frameworks */,
+				82239FAD1C4AFB3200627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B51E1C470651002FEC2A /* Frameworks */ = {
+		82239F991C4AFB1000627674 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5221C470651002FEC2A /* CSVImporter.framework in Frameworks */,
+				82239F9D1C4AFB1000627674 /* CSVImporter.framework in Frameworks */,
+				8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */,
+				8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		825DE1441C4A5155007C2607 /* Tests */ = {
+		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
-				825DE1401C4A5150007C2607 /* Nimble.framework */,
-				825DE1411C4A5150007C2607 /* Quick.framework */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		825DE1491C4A5170007C2607 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				825DE1451C4A516C007C2607 /* Nimble.framework */,
-				825DE1461C4A516C007C2607 /* Quick.framework */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		825DE14E1C4A518B007C2607 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				825DE14A1C4A5187007C2607 /* Nimble.framework */,
-				825DE14B1C4A5187007C2607 /* Quick.framework */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		8268B4D31C470518002FEC2A = {
-			isa = PBXGroup;
-			children = (
-				8268B4DF1C470518002FEC2A /* Sources */,
-				8268B4EB1C470518002FEC2A /* Tests */,
-				8268B4DE1C470518002FEC2A /* Products */,
-				8268B5331C47079B002FEC2A /* Carthage */,
+				82239F491C4AF70500627674 /* Sources */,
+				82239F551C4AF70500627674 /* Tests */,
+				82239F481C4AF70500627674 /* Products */,
+				82239F631C4AF89600627674 /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
-		8268B4DE1C470518002FEC2A /* Products */ = {
+		82239F481C4AF70500627674 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4DD1C470518002FEC2A /* CSVImporter.framework */,
-				8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */,
-				8268B4FC1C470618002FEC2A /* CSVImporter.framework */,
-				8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */,
-				8268B5181C470651002FEC2A /* CSVImporter.framework */,
-				8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */,
+				82239F471C4AF70500627674 /* CSVImporter.framework */,
+				82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */,
+				82239F771C4AFAFF00627674 /* CSVImporter.framework */,
+				82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */,
+				82239F931C4AFB1000627674 /* CSVImporter.framework */,
+				82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8268B4DF1C470518002FEC2A /* Sources */ = {
+		82239F491C4AF70500627674 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8268B5BA1C470CEE002FEC2A /* Code */,
-				8268B5BB1C470CF2002FEC2A /* Supporting Files */,
+				8223A03A1C4AFE5D00627674 /* Code */,
+				8223A03B1C4AFE6200627674 /* Supporting Files */,
 			);
 			name = Sources;
 			path = CSVImporter;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		8268B4EB1C470518002FEC2A /* Tests */ = {
+		82239F551C4AF70500627674 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8268B5B81C470CDC002FEC2A /* Code */,
-				8268B5521C470CA3002FEC2A /* Assets */,
-				8268B5B91C470CE1002FEC2A /* Supporting Files */,
+				8223A01A1C4AFC6700627674 /* Code */,
+				82239FB41C4AFC5100627674 /* Assets */,
+				8223A03C1C4AFE6E00627674 /* Supporting Files */,
 			);
 			name = Tests;
 			path = CSVImporterTests;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		8268B5331C47079B002FEC2A /* Carthage */ = {
+		82239F631C4AF89600627674 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				82088A811C483BB800BDBA1C /* Cartfile */,
-				8268B5341C4707B8002FEC2A /* Cartfile.private */,
-				8268B5351C470811002FEC2A /* iOS */,
-				8268B5361C470817002FEC2A /* tvOS */,
-				8268B5371C47081B002FEC2A /* OSX */,
+				82239F611C4AF89200627674 /* Cartfile */,
+				82239F621C4AF89200627674 /* Cartfile.private */,
+				82239F641C4AF98800627674 /* iOS */,
+				82239F651C4AF98C00627674 /* tvOS */,
+				82239F661C4AF99400627674 /* OSX */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
 		};
-		8268B5351C470811002FEC2A /* iOS */ = {
+		82239F641C4AF98800627674 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				820FC9981C4A8AE000752788 /* HandySwift.framework */,
-				82088A821C48404400BDBA1C /* FileKit.framework */,
-				825DE1491C4A5170007C2607 /* Tests */,
+				82239F671C4AF9AE00627674 /* FileKit.framework */,
+				82239F681C4AF9AE00627674 /* HandySwift.framework */,
+				8223A0231C4AFC9900627674 /* Tests */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		8268B5361C470817002FEC2A /* tvOS */ = {
+		82239F651C4AF98C00627674 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				820FC99C1C4A8AFC00752788 /* HandySwift.framework */,
-				825DE13C1C4A4FCA007C2607 /* FileKit.framework */,
-				825DE1441C4A5155007C2607 /* Tests */,
+				82239F6B1C4AFA0F00627674 /* FileKit.framework */,
+				82239F6C1C4AFA0F00627674 /* HandySwift.framework */,
+				8223A0281C4AFCB400627674 /* Tests */,
 			);
 			name = tvOS;
 			sourceTree = "<group>";
 		};
-		8268B5371C47081B002FEC2A /* OSX */ = {
+		82239F661C4AF99400627674 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				820FC99A1C4A8AEF00752788 /* HandySwift.framework */,
-				82088A861C48405200BDBA1C /* FileKit.framework */,
-				825DE14E1C4A518B007C2607 /* Tests */,
+				82239F6D1C4AFA1E00627674 /* FileKit.framework */,
+				82239F6E1C4AFA1E00627674 /* HandySwift.framework */,
+				8223A02D1C4AFCCD00627674 /* Tests */,
 			);
 			name = OSX;
 			sourceTree = "<group>";
 		};
-		8268B5521C470CA3002FEC2A /* Assets */ = {
+		82239FB41C4AFC5100627674 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				8268B5531C470CA3002FEC2A /* Lahman's Baseball Database */,
+				82239FB51C4AFC5100627674 /* Lahman's Baseball Database */,
 			);
 			name = Assets;
 			path = Tests/Assets;
 			sourceTree = SOURCE_ROOT;
 		};
-		8268B5531C470CA3002FEC2A /* Lahman's Baseball Database */ = {
+		82239FB51C4AFC5100627674 /* Lahman's Baseball Database */ = {
 			isa = PBXGroup;
 			children = (
-				8268B5541C470CA3002FEC2A /* AllstarFull.csv */,
-				8268B5551C470CA3002FEC2A /* Appearances.csv */,
-				8268B5561C470CA3002FEC2A /* AwardsManagers.csv */,
-				8268B5571C470CA3002FEC2A /* AwardsPlayers.csv */,
-				8268B5581C470CA3002FEC2A /* AwardsShareManagers.csv */,
-				8268B5591C470CA3002FEC2A /* AwardsSharePlayers.csv */,
-				8268B55A1C470CA3002FEC2A /* Batting.csv */,
-				8268B55B1C470CA3002FEC2A /* BattingPost.csv */,
-				8268B55C1C470CA3002FEC2A /* CollegePlaying.csv */,
-				8268B55D1C470CA3002FEC2A /* Fielding.csv */,
-				8268B55E1C470CA3002FEC2A /* FieldingOF.csv */,
-				8268B55F1C470CA3002FEC2A /* FieldingPost.csv */,
-				8268B5601C470CA3002FEC2A /* HallOfFame.csv */,
-				8268B5611C470CA3002FEC2A /* Managers.csv */,
-				8268B5621C470CA3002FEC2A /* ManagersHalf.csv */,
-				8268B5631C470CA3002FEC2A /* Master.csv */,
-				8268B5641C470CA3002FEC2A /* Pitching.csv */,
-				8268B5651C470CA3002FEC2A /* PitchingPost.csv */,
-				8268B5661C470CA3002FEC2A /* readme2014.txt */,
-				8268B5671C470CA3002FEC2A /* Salaries.csv */,
-				8268B5681C470CA3002FEC2A /* Schools.csv */,
-				8268B5691C470CA3002FEC2A /* SeriesPost.csv */,
-				8268B56A1C470CA3002FEC2A /* Teams.csv */,
-				8268B56B1C470CA3002FEC2A /* TeamsFranchises.csv */,
-				8268B56C1C470CA3002FEC2A /* TeamsHalf.csv */,
+				82239FB61C4AFC5100627674 /* AllstarFull.csv */,
+				82239FB71C4AFC5100627674 /* Appearances.csv */,
+				82239FB81C4AFC5100627674 /* AwardsManagers.csv */,
+				82239FB91C4AFC5100627674 /* AwardsPlayers.csv */,
+				82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */,
+				82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */,
+				82239FBC1C4AFC5100627674 /* Batting.csv */,
+				82239FBD1C4AFC5100627674 /* BattingPost.csv */,
+				82239FBE1C4AFC5100627674 /* CollegePlaying.csv */,
+				82239FBF1C4AFC5100627674 /* Fielding.csv */,
+				82239FC01C4AFC5100627674 /* FieldingOF.csv */,
+				82239FC11C4AFC5100627674 /* FieldingPost.csv */,
+				82239FC21C4AFC5100627674 /* HallOfFame.csv */,
+				82239FC31C4AFC5100627674 /* Managers.csv */,
+				82239FC41C4AFC5100627674 /* ManagersHalf.csv */,
+				82239FC51C4AFC5100627674 /* Master.csv */,
+				82239FC61C4AFC5100627674 /* Pitching.csv */,
+				82239FC71C4AFC5100627674 /* PitchingPost.csv */,
+				82239FC81C4AFC5100627674 /* readme2014.txt */,
+				82239FC91C4AFC5100627674 /* Salaries.csv */,
+				82239FCA1C4AFC5100627674 /* Schools.csv */,
+				82239FCB1C4AFC5100627674 /* SeriesPost.csv */,
+				82239FCC1C4AFC5100627674 /* Teams.csv */,
+				82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */,
+				82239FCE1C4AFC5100627674 /* TeamsHalf.csv */,
 			);
 			path = "Lahman's Baseball Database";
 			sourceTree = "<group>";
 		};
-		8268B5B81C470CDC002FEC2A /* Code */ = {
+		8223A01A1C4AFC6700627674 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4EC1C470518002FEC2A /* CSVImporterSpec.swift */,
+				8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */,
 			);
 			name = Code;
+			path = Tests/Code;
 			sourceTree = SOURCE_ROOT;
 		};
-		8268B5B91C470CE1002FEC2A /* Supporting Files */ = {
+		8223A0231C4AFC9900627674 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4EE1C470518002FEC2A /* Info.plist */,
+				8223A01F1C4AFC9300627674 /* Nimble.framework */,
+				8223A0201C4AFC9300627674 /* Quick.framework */,
 			);
-			name = "Supporting Files";
-			sourceTree = SOURCE_ROOT;
+			name = Tests;
+			sourceTree = "<group>";
 		};
-		8268B5BA1C470CEE002FEC2A /* Code */ = {
+		8223A0281C4AFCB400627674 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8268B52F1C470772002FEC2A /* CSVImporter.swift */,
+				8223A0241C4AFCAE00627674 /* Nimble.framework */,
+				8223A0251C4AFCAE00627674 /* Quick.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8223A02D1C4AFCCD00627674 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8223A0291C4AFCC900627674 /* Nimble.framework */,
+				8223A02A1C4AFCC900627674 /* Quick.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8223A03A1C4AFE5D00627674 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				82239F701C4AFAA800627674 /* CSVImporter.swift */,
 			);
 			name = Code;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		8268B5BB1C470CF2002FEC2A /* Supporting Files */ = {
+		8223A03B1C4AFE6200627674 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8268B4E21C470518002FEC2A /* Info.plist */,
+				82239F4A1C4AF70500627674 /* CSVImporter.h */,
+				82239F4C1C4AF70500627674 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
+		};
+		8223A03C1C4AFE6E00627674 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				82239F581C4AF70500627674 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8268B4DA1C470518002FEC2A /* Headers */ = {
+		82239F441C4AF70500627674 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4F91C470618002FEC2A /* Headers */ = {
+		82239F741C4AFAFF00627674 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82239FB01C4AFB3900627674 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B5151C470651002FEC2A /* Headers */ = {
+		82239F901C4AFB1000627674 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82239FB11C4AFB3A00627674 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8268B4DC1C470518002FEC2A /* CSVImporter iOS */ = {
+		82239F461C4AF70500627674 /* CSVImporter iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */;
+			buildConfigurationList = 82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */;
 			buildPhases = (
-				8268B4D81C470518002FEC2A /* Sources */,
-				8268B4D91C470518002FEC2A /* Frameworks */,
-				8268B4DA1C470518002FEC2A /* Headers */,
-				8268B4DB1C470518002FEC2A /* Resources */,
-				825DE1361C4A4D48007C2607 /* Copy Frameworks */,
+				82239F421C4AF70500627674 /* Sources */,
+				82239F431C4AF70500627674 /* Frameworks */,
+				82239F441C4AF70500627674 /* Headers */,
+				82239F451C4AF70500627674 /* Resources */,
+				82239F6F1C4AFA4900627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -514,38 +525,38 @@
 			);
 			name = "CSVImporter iOS";
 			productName = CSVImporter;
-			productReference = 8268B4DD1C470518002FEC2A /* CSVImporter.framework */;
+			productReference = 82239F471C4AF70500627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8268B4E61C470518002FEC2A /* CSVImporter iOS Tests */ = {
+		82239F501C4AF70500627674 /* CSVImporter iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */;
+			buildConfigurationList = 82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */;
 			buildPhases = (
-				8268B4E31C470518002FEC2A /* Sources */,
-				8268B4E41C470518002FEC2A /* Frameworks */,
-				8268B4E51C470518002FEC2A /* Resources */,
-				825DE14F1C4A51F4007C2607 /* Copy Frameworks */,
-				8280D7D51C4A5FFF001172EF /* Copy Framework Dependencies */,
+				82239F4D1C4AF70500627674 /* Sources */,
+				82239F4E1C4AF70500627674 /* Frameworks */,
+				82239F4F1C4AF70500627674 /* Resources */,
+				8223A02E1C4AFD1900627674 /* Copy Framework Dependencies */,
+				8223A0371C4AFD7B00627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8268B4EA1C470518002FEC2A /* PBXTargetDependency */,
+				82239F541C4AF70500627674 /* PBXTargetDependency */,
 			);
 			name = "CSVImporter iOS Tests";
 			productName = CSVImporterTests;
-			productReference = 8268B4E71C470518002FEC2A /* CSVImporter iOS Tests.xctest */;
+			productReference = 82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8268B4FB1C470618002FEC2A /* CSVImporter tvOS */ = {
+		82239F761C4AFAFF00627674 /* CSVImporter tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B50D1C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */;
+			buildConfigurationList = 82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */;
 			buildPhases = (
-				8268B4F71C470618002FEC2A /* Sources */,
-				8268B4F81C470618002FEC2A /* Frameworks */,
-				8268B4F91C470618002FEC2A /* Headers */,
-				8268B4FA1C470618002FEC2A /* Resources */,
-				825DE1391C4A4ECA007C2607 /* Copy Frameworks */,
+				82239F721C4AFAFF00627674 /* Sources */,
+				82239F731C4AFAFF00627674 /* Frameworks */,
+				82239F741C4AFAFF00627674 /* Headers */,
+				82239F751C4AFAFF00627674 /* Resources */,
+				82239FB21C4AFB9200627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,38 +564,38 @@
 			);
 			name = "CSVImporter tvOS";
 			productName = "CSVImporter tvOS";
-			productReference = 8268B4FC1C470618002FEC2A /* CSVImporter.framework */;
+			productReference = 82239F771C4AFAFF00627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8268B5041C470618002FEC2A /* CSVImporter tvOS Tests */ = {
+		82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B5101C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */;
+			buildConfigurationList = 82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */;
 			buildPhases = (
-				8268B5011C470618002FEC2A /* Sources */,
-				8268B5021C470618002FEC2A /* Frameworks */,
-				8268B5031C470618002FEC2A /* Resources */,
-				825DE1501C4A523A007C2607 /* Copy Frameworks */,
-				8280D7D61C4A6005001172EF /* Copy Framework Dependencies */,
+				82239F7C1C4AFAFF00627674 /* Sources */,
+				82239F7D1C4AFAFF00627674 /* Frameworks */,
+				82239F7E1C4AFAFF00627674 /* Resources */,
+				8223A0311C4AFD3700627674 /* Copy Framework Dependencies */,
+				8223A0381C4AFD8300627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8268B5081C470618002FEC2A /* PBXTargetDependency */,
+				82239F831C4AFAFF00627674 /* PBXTargetDependency */,
 			);
 			name = "CSVImporter tvOS Tests";
 			productName = "CSVImporter tvOSTests";
-			productReference = 8268B5051C470618002FEC2A /* CSVImporter tvOS Tests.xctest */;
+			productReference = 82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8268B5171C470651002FEC2A /* CSVImporter OSX */ = {
+		82239F921C4AFB1000627674 /* CSVImporter OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B5291C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */;
+			buildConfigurationList = 82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */;
 			buildPhases = (
-				8268B5131C470651002FEC2A /* Sources */,
-				8268B5141C470651002FEC2A /* Frameworks */,
-				8268B5151C470651002FEC2A /* Headers */,
-				8268B5161C470651002FEC2A /* Resources */,
-				825DE13A1C4A4EE9007C2607 /* Copy Frameworks */,
+				82239F8E1C4AFB1000627674 /* Sources */,
+				82239F8F1C4AFB1000627674 /* Frameworks */,
+				82239F901C4AFB1000627674 /* Headers */,
+				82239F911C4AFB1000627674 /* Resources */,
+				82239FB31C4AFB9700627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -592,210 +603,210 @@
 			);
 			name = "CSVImporter OSX";
 			productName = "CSVImporter OSX";
-			productReference = 8268B5181C470651002FEC2A /* CSVImporter.framework */;
+			productReference = 82239F931C4AFB1000627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8268B5201C470651002FEC2A /* CSVImporter OSXTests */ = {
+		82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8268B52C1C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */;
+			buildConfigurationList = 82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */;
 			buildPhases = (
-				8268B51D1C470651002FEC2A /* Sources */,
-				8268B51E1C470651002FEC2A /* Frameworks */,
-				8268B51F1C470651002FEC2A /* Resources */,
-				825DE1511C4A5242007C2607 /* Copy Frameworks */,
-				8280D7D71C4A600A001172EF /* Copy Framework Dependencies */,
+				82239F981C4AFB1000627674 /* Sources */,
+				82239F991C4AFB1000627674 /* Frameworks */,
+				82239F9A1C4AFB1000627674 /* Resources */,
+				8223A0341C4AFD4900627674 /* Copy Framework Dependencies */,
+				8223A0391C4AFD8800627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8268B5241C470651002FEC2A /* PBXTargetDependency */,
+				82239F9F1C4AFB1000627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter OSXTests";
+			name = "CSVImporter OSX Tests";
 			productName = "CSVImporter OSXTests";
-			productReference = 8268B5211C470651002FEC2A /* CSVImporter OSXTests.xctest */;
+			productReference = 82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8268B4D41C470518002FEC2A /* Project object */ = {
+		82239F3E1C4AF70500627674 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Flinesoft;
 				TargetAttributes = {
-					8268B4DC1C470518002FEC2A = {
+					82239F461C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					8268B4E61C470518002FEC2A = {
+					82239F501C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					8268B4FB1C470618002FEC2A = {
+					82239F761C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					8268B5041C470618002FEC2A = {
+					82239F7F1C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					8268B5171C470651002FEC2A = {
+					82239F921C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
-					8268B5201C470651002FEC2A = {
+					82239F9B1C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
 			};
-			buildConfigurationList = 8268B4D71C470518002FEC2A /* Build configuration list for PBXProject "CSVImporter" */;
+			buildConfigurationList = 82239F411C4AF70500627674 /* Build configuration list for PBXProject "CSVImporter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 8268B4D31C470518002FEC2A;
-			productRefGroup = 8268B4DE1C470518002FEC2A /* Products */;
+			mainGroup = 82239F3D1C4AF70500627674;
+			productRefGroup = 82239F481C4AF70500627674 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8268B4DC1C470518002FEC2A /* CSVImporter iOS */,
-				8268B4E61C470518002FEC2A /* CSVImporter iOS Tests */,
-				8268B4FB1C470618002FEC2A /* CSVImporter tvOS */,
-				8268B5041C470618002FEC2A /* CSVImporter tvOS Tests */,
-				8268B5171C470651002FEC2A /* CSVImporter OSX */,
-				8268B5201C470651002FEC2A /* CSVImporter OSXTests */,
+				82239F461C4AF70500627674 /* CSVImporter iOS */,
+				82239F501C4AF70500627674 /* CSVImporter iOS Tests */,
+				82239F761C4AFAFF00627674 /* CSVImporter tvOS */,
+				82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */,
+				82239F921C4AFB1000627674 /* CSVImporter OSX */,
+				82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8268B4DB1C470518002FEC2A /* Resources */ = {
+		82239F451C4AF70500627674 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4E51C470518002FEC2A /* Resources */ = {
+		82239F4F1C4AF70500627674 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5A01C470CA3002FEC2A /* PitchingPost.csv in Resources */,
-				8268B59A1C470CA3002FEC2A /* Master.csv in Resources */,
-				8268B5881C470CA3002FEC2A /* Fielding.csv in Resources */,
-				8268B5821C470CA3002FEC2A /* BattingPost.csv in Resources */,
-				8268B5941C470CA3002FEC2A /* Managers.csv in Resources */,
-				8268B5701C470CA3002FEC2A /* Appearances.csv in Resources */,
-				8268B5761C470CA3002FEC2A /* AwardsPlayers.csv in Resources */,
-				8268B59D1C470CA3002FEC2A /* Pitching.csv in Resources */,
-				8268B56D1C470CA3002FEC2A /* AllstarFull.csv in Resources */,
-				8268B5AF1C470CA3002FEC2A /* Teams.csv in Resources */,
-				8268B5A31C470CA3002FEC2A /* readme2014.txt in Resources */,
-				8268B5851C470CA3002FEC2A /* CollegePlaying.csv in Resources */,
-				8268B5B51C470CA3002FEC2A /* TeamsHalf.csv in Resources */,
-				8268B58E1C470CA3002FEC2A /* FieldingPost.csv in Resources */,
-				8268B5731C470CA3002FEC2A /* AwardsManagers.csv in Resources */,
-				8268B5AC1C470CA3002FEC2A /* SeriesPost.csv in Resources */,
-				8268B57F1C470CA3002FEC2A /* Batting.csv in Resources */,
-				8268B5A91C470CA3002FEC2A /* Schools.csv in Resources */,
-				8268B5911C470CA3002FEC2A /* HallOfFame.csv in Resources */,
-				8268B5791C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */,
-				8268B57C1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */,
-				8268B5971C470CA3002FEC2A /* ManagersHalf.csv in Resources */,
-				8268B5B21C470CA3002FEC2A /* TeamsFranchises.csv in Resources */,
-				8268B5A61C470CA3002FEC2A /* Salaries.csv in Resources */,
-				8268B58B1C470CA3002FEC2A /* FieldingOF.csv in Resources */,
+				8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFC1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF61C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD21C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FD81C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				82239FFF1C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FCF1C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0111C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0051C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE71C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0171C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF01C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD51C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A00E1C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE11C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00B1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF31C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDB1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FDE1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FF91C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0141C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A0081C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FED1C4AFC5100627674 /* FieldingOF.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4FA1C470618002FEC2A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8268B5031C470618002FEC2A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8268B5A11C470CA3002FEC2A /* PitchingPost.csv in Resources */,
-				8268B59B1C470CA3002FEC2A /* Master.csv in Resources */,
-				8268B5891C470CA3002FEC2A /* Fielding.csv in Resources */,
-				8268B5831C470CA3002FEC2A /* BattingPost.csv in Resources */,
-				8268B5951C470CA3002FEC2A /* Managers.csv in Resources */,
-				8268B5711C470CA3002FEC2A /* Appearances.csv in Resources */,
-				8268B5771C470CA3002FEC2A /* AwardsPlayers.csv in Resources */,
-				8268B59E1C470CA3002FEC2A /* Pitching.csv in Resources */,
-				8268B56E1C470CA3002FEC2A /* AllstarFull.csv in Resources */,
-				8268B5B01C470CA3002FEC2A /* Teams.csv in Resources */,
-				8268B5A41C470CA3002FEC2A /* readme2014.txt in Resources */,
-				8268B5861C470CA3002FEC2A /* CollegePlaying.csv in Resources */,
-				8268B5B61C470CA3002FEC2A /* TeamsHalf.csv in Resources */,
-				8268B58F1C470CA3002FEC2A /* FieldingPost.csv in Resources */,
-				8268B5741C470CA3002FEC2A /* AwardsManagers.csv in Resources */,
-				8268B5AD1C470CA3002FEC2A /* SeriesPost.csv in Resources */,
-				8268B5801C470CA3002FEC2A /* Batting.csv in Resources */,
-				8268B5AA1C470CA3002FEC2A /* Schools.csv in Resources */,
-				8268B5921C470CA3002FEC2A /* HallOfFame.csv in Resources */,
-				8268B57A1C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */,
-				8268B57D1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */,
-				8268B5981C470CA3002FEC2A /* ManagersHalf.csv in Resources */,
-				8268B5B31C470CA3002FEC2A /* TeamsFranchises.csv in Resources */,
-				8268B5A71C470CA3002FEC2A /* Salaries.csv in Resources */,
-				8268B58C1C470CA3002FEC2A /* FieldingOF.csv in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8268B5161C470651002FEC2A /* Resources */ = {
+		82239F751C4AFAFF00627674 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B51F1C470651002FEC2A /* Resources */ = {
+		82239F7E1C4AFAFF00627674 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5A21C470CA3002FEC2A /* PitchingPost.csv in Resources */,
-				8268B59C1C470CA3002FEC2A /* Master.csv in Resources */,
-				8268B58A1C470CA3002FEC2A /* Fielding.csv in Resources */,
-				8268B5841C470CA3002FEC2A /* BattingPost.csv in Resources */,
-				8268B5961C470CA3002FEC2A /* Managers.csv in Resources */,
-				8268B5721C470CA3002FEC2A /* Appearances.csv in Resources */,
-				8268B5781C470CA3002FEC2A /* AwardsPlayers.csv in Resources */,
-				8268B59F1C470CA3002FEC2A /* Pitching.csv in Resources */,
-				8268B56F1C470CA3002FEC2A /* AllstarFull.csv in Resources */,
-				8268B5B11C470CA3002FEC2A /* Teams.csv in Resources */,
-				8268B5A51C470CA3002FEC2A /* readme2014.txt in Resources */,
-				8268B5871C470CA3002FEC2A /* CollegePlaying.csv in Resources */,
-				8268B5B71C470CA3002FEC2A /* TeamsHalf.csv in Resources */,
-				8268B5901C470CA3002FEC2A /* FieldingPost.csv in Resources */,
-				8268B5751C470CA3002FEC2A /* AwardsManagers.csv in Resources */,
-				8268B5AE1C470CA3002FEC2A /* SeriesPost.csv in Resources */,
-				8268B5811C470CA3002FEC2A /* Batting.csv in Resources */,
-				8268B5AB1C470CA3002FEC2A /* Schools.csv in Resources */,
-				8268B5931C470CA3002FEC2A /* HallOfFame.csv in Resources */,
-				8268B57B1C470CA3002FEC2A /* AwardsShareManagers.csv in Resources */,
-				8268B57E1C470CA3002FEC2A /* AwardsSharePlayers.csv in Resources */,
-				8268B5991C470CA3002FEC2A /* ManagersHalf.csv in Resources */,
-				8268B5B41C470CA3002FEC2A /* TeamsFranchises.csv in Resources */,
-				8268B5A81C470CA3002FEC2A /* Salaries.csv in Resources */,
-				8268B58D1C470CA3002FEC2A /* FieldingOF.csv in Resources */,
+				8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFD1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF71C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD31C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FD91C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				8223A0001C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FD01C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0121C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0061C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE81C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0181C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF11C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD61C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A00F1C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE21C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00C1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF41C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDC1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FDF1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FFA1C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0151C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A0091C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FEE1C4AFC5100627674 /* FieldingOF.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82239F911C4AFB1000627674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82239F9A1C4AFB1000627674 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFE1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF81C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD41C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FDA1C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				8223A0011C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FD11C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0131C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0071C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE91C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0191C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF21C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD71C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A0101C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE31C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00D1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF51C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDD1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FE01C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FFB1C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0161C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A00A1C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FEF1C4AFC5100627674 /* FieldingOF.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		825DE1361C4A4D48007C2607 /* Copy Frameworks */ = {
+		82239F6F1C4AFA4900627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -804,14 +815,14 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		825DE1391C4A4ECA007C2607 /* Copy Frameworks */ = {
+		82239FB21C4AFB9200627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/FileKit.framework",
 				"$(SRCROOT)/Carthage/Build/tvOS/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -820,14 +831,14 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		825DE13A1C4A4EE9007C2607 /* Copy Frameworks */ = {
+		82239FB31C4AFB9700627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/FileKit.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/HandySwift.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -836,7 +847,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		825DE14F1C4A51F4007C2607 /* Copy Frameworks */ = {
+		8223A0371C4AFD7B00627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -852,7 +863,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		825DE1501C4A523A007C2607 /* Copy Frameworks */ = {
+		8223A0381C4AFD8300627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -868,14 +879,14 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		825DE1511C4A5242007C2607 /* Copy Frameworks */ = {
+		8223A0391C4AFD8800627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Nimble.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -887,74 +898,76 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8268B4D81C470518002FEC2A /* Sources */ = {
+		82239F421C4AF70500627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5301C470772002FEC2A /* CSVImporter.swift in Sources */,
+				82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4E31C470518002FEC2A /* Sources */ = {
+		82239F4D1C4AF70500627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B4ED1C470518002FEC2A /* CSVImporterSpec.swift in Sources */,
+				8223A01C1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B4F71C470618002FEC2A /* Sources */ = {
+		82239F721C4AFAFF00627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5311C470772002FEC2A /* CSVImporter.swift in Sources */,
+				82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B5011C470618002FEC2A /* Sources */ = {
+		82239F7C1C4AFAFF00627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A01D1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B5131C470651002FEC2A /* Sources */ = {
+		82239F8E1C4AFB1000627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268B5321C470772002FEC2A /* CSVImporter.swift in Sources */,
+				82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8268B51D1C470651002FEC2A /* Sources */ = {
+		82239F981C4AFB1000627674 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A01E1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8268B4EA1C470518002FEC2A /* PBXTargetDependency */ = {
+		82239F541C4AF70500627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8268B4DC1C470518002FEC2A /* CSVImporter iOS */;
-			targetProxy = 8268B4E91C470518002FEC2A /* PBXContainerItemProxy */;
+			target = 82239F461C4AF70500627674 /* CSVImporter iOS */;
+			targetProxy = 82239F531C4AF70500627674 /* PBXContainerItemProxy */;
 		};
-		8268B5081C470618002FEC2A /* PBXTargetDependency */ = {
+		82239F831C4AFAFF00627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8268B4FB1C470618002FEC2A /* CSVImporter tvOS */;
-			targetProxy = 8268B5071C470618002FEC2A /* PBXContainerItemProxy */;
+			target = 82239F761C4AFAFF00627674 /* CSVImporter tvOS */;
+			targetProxy = 82239F821C4AFAFF00627674 /* PBXContainerItemProxy */;
 		};
-		8268B5241C470651002FEC2A /* PBXTargetDependency */ = {
+		82239F9F1C4AFB1000627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8268B5171C470651002FEC2A /* CSVImporter OSX */;
-			targetProxy = 8268B5231C470651002FEC2A /* PBXContainerItemProxy */;
+			target = 82239F921C4AFB1000627674 /* CSVImporter OSX */;
+			targetProxy = 82239F9E1C4AFB1000627674 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		8268B4EF1C470518002FEC2A /* Debug */ = {
+		82239F591C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -975,7 +988,6 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -992,8 +1004,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1004,7 +1015,7 @@
 			};
 			name = Debug;
 		};
-		8268B4F01C470518002FEC2A /* Release */ = {
+		82239F5A1C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1025,7 +1036,6 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1036,8 +1046,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1047,12 +1056,11 @@
 			};
 			name = Release;
 		};
-		8268B4F21C470518002FEC2A /* Debug */ = {
+		82239F5C1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1072,12 +1080,11 @@
 			};
 			name = Debug;
 		};
-		8268B4F31C470518002FEC2A /* Release */ = {
+		82239F5D1C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1096,7 +1103,7 @@
 			};
 			name = Release;
 		};
-		8268B4F51C470518002FEC2A /* Debug */ = {
+		82239F5F1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1105,12 +1112,12 @@
 				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		8268B4F61C470518002FEC2A /* Release */ = {
+		82239F601C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1119,16 +1126,15 @@
 				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-iOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		8268B50E1C470618002FEC2A /* Debug */ = {
+		82239F891C4AFAFF00627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1144,17 +1150,15 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
-		8268B50F1C470618002FEC2A /* Release */ = {
+		82239F8A1C4AFAFF00627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1175,7 +1179,7 @@
 			};
 			name = Release;
 		};
-		8268B5111C470618002FEC2A /* Debug */ = {
+		82239F8C1C4AFAFF00627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1191,7 +1195,7 @@
 			};
 			name = Debug;
 		};
-		8268B5121C470618002FEC2A /* Release */ = {
+		82239F8D1C4AFAFF00627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1207,11 +1211,10 @@
 			};
 			name = Release;
 		};
-		8268B52A1C470651002FEC2A /* Debug */ = {
+		82239FA51C4AFB1000627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1231,15 +1234,13 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		8268B52B1C470651002FEC2A /* Release */ = {
+		82239FA61C4AFB1000627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1262,7 +1263,7 @@
 			};
 			name = Release;
 		};
-		8268B52D1C470651002FEC2A /* Debug */ = {
+		82239FA81C4AFB1000627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
@@ -1280,7 +1281,7 @@
 			};
 			name = Debug;
 		};
-		8268B52E1C470651002FEC2A /* Release */ = {
+		82239FA91C4AFB1000627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
@@ -1301,70 +1302,66 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8268B4D71C470518002FEC2A /* Build configuration list for PBXProject "CSVImporter" */ = {
+		82239F411C4AF70500627674 /* Build configuration list for PBXProject "CSVImporter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B4EF1C470518002FEC2A /* Debug */,
-				8268B4F01C470518002FEC2A /* Release */,
+				82239F591C4AF70500627674 /* Debug */,
+				82239F5A1C4AF70500627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8268B4F11C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */ = {
+		82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B4F21C470518002FEC2A /* Debug */,
-				8268B4F31C470518002FEC2A /* Release */,
+				82239F5C1C4AF70500627674 /* Debug */,
+				82239F5D1C4AF70500627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8268B4F41C470518002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */ = {
+		82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B4F51C470518002FEC2A /* Debug */,
-				8268B4F61C470518002FEC2A /* Release */,
+				82239F5F1C4AF70500627674 /* Debug */,
+				82239F601C4AF70500627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8268B50D1C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */ = {
+		82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B50E1C470618002FEC2A /* Debug */,
-				8268B50F1C470618002FEC2A /* Release */,
+				82239F891C4AFAFF00627674 /* Debug */,
+				82239F8A1C4AFAFF00627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		8268B5101C470618002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
+		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B5111C470618002FEC2A /* Debug */,
-				8268B5121C470618002FEC2A /* Release */,
+				82239F8C1C4AFAFF00627674 /* Debug */,
+				82239F8D1C4AFAFF00627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		8268B5291C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */ = {
+		82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B52A1C470651002FEC2A /* Debug */,
-				8268B52B1C470651002FEC2A /* Release */,
+				82239FA51C4AFB1000627674 /* Debug */,
+				82239FA61C4AFB1000627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		8268B52C1C470651002FEC2A /* Build configuration list for PBXNativeTarget "CSVImporter OSXTests" */ = {
+		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8268B52D1C470651002FEC2A /* Debug */,
-				8268B52E1C470651002FEC2A /* Release */,
+				82239FA81C4AFB1000627674 /* Debug */,
+				82239FA91C4AFB1000627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8268B4D41C470518002FEC2A /* Project object */;
+	rootObject = 82239F3E1C4AF70500627674 /* Project object */;
 }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B4FB1C470618002FEC2A"
+               BlueprintIdentifier = "82239F761C4AFAFF00627674"
                BuildableName = "CSVImporter.framework"
                BlueprintName = "CSVImporter tvOS"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B5041C470618002FEC2A"
+               BlueprintIdentifier = "82239F7F1C4AFAFF00627674"
                BuildableName = "CSVImporter tvOS Tests.xctest"
                BlueprintName = "CSVImporter tvOS Tests"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4FB1C470618002FEC2A"
+            BlueprintIdentifier = "82239F761C4AFAFF00627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4FB1C470618002FEC2A"
+            BlueprintIdentifier = "82239F761C4AFAFF00627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4FB1C470618002FEC2A"
+            BlueprintIdentifier = "82239F761C4AFAFF00627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter tvOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">

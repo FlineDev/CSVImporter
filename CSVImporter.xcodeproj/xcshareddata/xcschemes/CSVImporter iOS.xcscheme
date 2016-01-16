@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B4DC1C470518002FEC2A"
+               BlueprintIdentifier = "82239F461C4AF70500627674"
                BuildableName = "CSVImporter.framework"
                BlueprintName = "CSVImporter iOS"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8268B4E61C470518002FEC2A"
+               BlueprintIdentifier = "82239F501C4AF70500627674"
                BuildableName = "CSVImporter iOS Tests.xctest"
                BlueprintName = "CSVImporter iOS Tests"
                ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4DC1C470518002FEC2A"
+            BlueprintIdentifier = "82239F461C4AF70500627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter iOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4DC1C470518002FEC2A"
+            BlueprintIdentifier = "82239F461C4AF70500627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter iOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8268B4DC1C470518002FEC2A"
+            BlueprintIdentifier = "82239F461C4AF70500627674"
             BuildableName = "CSVImporter.framework"
             BlueprintName = "CSVImporter iOS"
             ReferencedContainer = "container:CSVImporter.xcodeproj">
