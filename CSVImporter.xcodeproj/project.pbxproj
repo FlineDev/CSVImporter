@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
-		82239F571C4AF70500627674 /* CSVImporterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F561C4AF70500627674 /* CSVImporterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +26,7 @@
 		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		82239F511C4AF70500627674 /* CSVImporterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVImporterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F561C4AF70500627674 /* CSVImporterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVImporterTests.swift; sourceTree = "<group>"; };
-		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +78,6 @@
 		82239F551C4AF70500627674 /* CSVImporterTests */ = {
 			isa = PBXGroup;
 			children = (
-				82239F561C4AF70500627674 /* CSVImporterTests.swift */,
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
 			path = CSVImporterTests;
@@ -201,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239F571C4AF70500627674 /* CSVImporterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +336,7 @@
 		82239F5F1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CSVImporterTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,7 +346,7 @@
 		82239F601C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = CSVImporterTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
