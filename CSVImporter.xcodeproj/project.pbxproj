@@ -106,6 +106,12 @@
 		8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; };
 		8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; };
 		8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; };
+		8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6B1C4AFA0F00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +137,45 @@
 			remoteInfo = "CSVImporter OSX";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8223A02E1C4AFD1900627674 /* Copy Framework Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */,
+			);
+			name = "Copy Framework Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8223A0311C4AFD3700627674 /* Copy Framework Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */,
+			);
+			name = "Copy Framework Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8223A0341C4AFD4900627674 /* Copy Framework Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */,
+				8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */,
+			);
+			name = "Copy Framework Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +509,8 @@
 				82239F4D1C4AF70500627674 /* Sources */,
 				82239F4E1C4AF70500627674 /* Frameworks */,
 				82239F4F1C4AF70500627674 /* Resources */,
+				8223A02E1C4AFD1900627674 /* Copy Framework Dependencies */,
+				8223A0371C4AFD7B00627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -501,6 +548,8 @@
 				82239F7C1C4AFAFF00627674 /* Sources */,
 				82239F7D1C4AFAFF00627674 /* Frameworks */,
 				82239F7E1C4AFAFF00627674 /* Resources */,
+				8223A0311C4AFD3700627674 /* Copy Framework Dependencies */,
+				8223A0381C4AFD8300627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -538,6 +587,8 @@
 				82239F981C4AFB1000627674 /* Sources */,
 				82239F991C4AFB1000627674 /* Frameworks */,
 				82239F9A1C4AFB1000627674 /* Resources */,
+				8223A0341C4AFD4900627674 /* Copy Framework Dependencies */,
+				8223A0391C4AFD8800627674 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -762,6 +813,54 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/HandySwift.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/FileKit.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		8223A0371C4AFD7B00627674 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		8223A0381C4AFD8300627674 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Nimble.framework",
+			);
+			name = "Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		8223A0391C4AFD8800627674 /* Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Nimble.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
