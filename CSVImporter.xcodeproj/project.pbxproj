@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82239F521C4AF70500627674 /* CSVImporter iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter iOS.framework */; };
+		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
 		82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; };
 		82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; };
 		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
@@ -178,7 +178,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		82239F471C4AF70500627674 /* CSVImporter iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "CSVImporter iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,7 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239F521C4AF70500627674 /* CSVImporter iOS.framework in Frameworks */,
+				82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */,
 				8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */,
 				8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */,
 			);
@@ -304,7 +304,7 @@
 		82239F481C4AF70500627674 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82239F471C4AF70500627674 /* CSVImporter iOS.framework */,
+				82239F471C4AF70500627674 /* CSVImporter.framework */,
 				82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */,
 				82239F771C4AFAFF00627674 /* CSVImporter.framework */,
 				82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */,
@@ -525,7 +525,7 @@
 			);
 			name = "CSVImporter iOS";
 			productName = CSVImporter;
-			productReference = 82239F471C4AF70500627674 /* CSVImporter iOS.framework */;
+			productReference = 82239F471C4AF70500627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		82239F501C4AF70500627674 /* CSVImporter iOS Tests */ = {
@@ -1074,7 +1074,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1098,7 +1098,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
