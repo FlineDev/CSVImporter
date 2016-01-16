@@ -22,6 +22,90 @@
 		82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
 		82239FB01C4AFB3900627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239FB11C4AFB3A00627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82239FCF1C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD01C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD11C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
+		82239FD21C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD31C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD41C4AFC5100627674 /* Appearances.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB71C4AFC5100627674 /* Appearances.csv */; };
+		82239FD51C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD61C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD71C4AFC5100627674 /* AwardsManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB81C4AFC5100627674 /* AwardsManagers.csv */; };
+		82239FD81C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FD91C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FDA1C4AFC5100627674 /* AwardsPlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB91C4AFC5100627674 /* AwardsPlayers.csv */; };
+		82239FDB1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDC1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDD1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */; };
+		82239FDE1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FDF1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FE01C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */; };
+		82239FE11C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE21C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE31C4AFC5100627674 /* Batting.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBC1C4AFC5100627674 /* Batting.csv */; };
+		82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBD1C4AFC5100627674 /* BattingPost.csv */; };
+		82239FE71C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FE81C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FE91C4AFC5100627674 /* CollegePlaying.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBE1C4AFC5100627674 /* CollegePlaying.csv */; };
+		82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FBF1C4AFC5100627674 /* Fielding.csv */; };
+		82239FED1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FEE1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FEF1C4AFC5100627674 /* FieldingOF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC01C4AFC5100627674 /* FieldingOF.csv */; };
+		82239FF01C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF11C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF21C4AFC5100627674 /* FieldingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC11C4AFC5100627674 /* FieldingPost.csv */; };
+		82239FF31C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF41C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF51C4AFC5100627674 /* HallOfFame.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC21C4AFC5100627674 /* HallOfFame.csv */; };
+		82239FF61C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF71C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF81C4AFC5100627674 /* Managers.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC31C4AFC5100627674 /* Managers.csv */; };
+		82239FF91C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFA1C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFB1C4AFC5100627674 /* ManagersHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC41C4AFC5100627674 /* ManagersHalf.csv */; };
+		82239FFC1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFD1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFE1C4AFC5100627674 /* Master.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC51C4AFC5100627674 /* Master.csv */; };
+		82239FFF1C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0001C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0011C4AFC5100627674 /* Pitching.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC61C4AFC5100627674 /* Pitching.csv */; };
+		8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC71C4AFC5100627674 /* PitchingPost.csv */; };
+		8223A0051C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0061C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0071C4AFC5100627674 /* readme2014.txt in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC81C4AFC5100627674 /* readme2014.txt */; };
+		8223A0081C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A0091C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A00A1C4AFC5100627674 /* Salaries.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FC91C4AFC5100627674 /* Salaries.csv */; };
+		8223A00B1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00C1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00D1C4AFC5100627674 /* Schools.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCA1C4AFC5100627674 /* Schools.csv */; };
+		8223A00E1C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A00F1C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A0101C4AFC5100627674 /* SeriesPost.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCB1C4AFC5100627674 /* SeriesPost.csv */; };
+		8223A0111C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0121C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0131C4AFC5100627674 /* Teams.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCC1C4AFC5100627674 /* Teams.csv */; };
+		8223A0141C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0151C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0161C4AFC5100627674 /* TeamsFranchises.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */; };
+		8223A0171C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A0181C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A0191C4AFC5100627674 /* TeamsHalf.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FCE1C4AFC5100627674 /* TeamsHalf.csv */; };
+		8223A01C1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A01D1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A01E1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */; };
+		8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A01F1C4AFC9300627674 /* Nimble.framework */; };
+		8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0201C4AFC9300627674 /* Quick.framework */; };
+		8223A0261C4AFCAE00627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0241C4AFCAE00627674 /* Nimble.framework */; };
+		8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; };
+		8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; };
+		8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +151,38 @@
 		82239F801C4AFAFF00627674 /* CSVImporter tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F931C4AFB1000627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F9C1C4AFB1000627674 /* CSVImporter OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239FB61C4AFC5100627674 /* AllstarFull.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllstarFull.csv; sourceTree = "<group>"; };
+		82239FB71C4AFC5100627674 /* Appearances.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appearances.csv; sourceTree = "<group>"; };
+		82239FB81C4AFC5100627674 /* AwardsManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsManagers.csv; sourceTree = "<group>"; };
+		82239FB91C4AFC5100627674 /* AwardsPlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsPlayers.csv; sourceTree = "<group>"; };
+		82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsShareManagers.csv; sourceTree = "<group>"; };
+		82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsSharePlayers.csv; sourceTree = "<group>"; };
+		82239FBC1C4AFC5100627674 /* Batting.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Batting.csv; sourceTree = "<group>"; };
+		82239FBD1C4AFC5100627674 /* BattingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BattingPost.csv; sourceTree = "<group>"; };
+		82239FBE1C4AFC5100627674 /* CollegePlaying.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CollegePlaying.csv; sourceTree = "<group>"; };
+		82239FBF1C4AFC5100627674 /* Fielding.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fielding.csv; sourceTree = "<group>"; };
+		82239FC01C4AFC5100627674 /* FieldingOF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingOF.csv; sourceTree = "<group>"; };
+		82239FC11C4AFC5100627674 /* FieldingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FieldingPost.csv; sourceTree = "<group>"; };
+		82239FC21C4AFC5100627674 /* HallOfFame.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HallOfFame.csv; sourceTree = "<group>"; };
+		82239FC31C4AFC5100627674 /* Managers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Managers.csv; sourceTree = "<group>"; };
+		82239FC41C4AFC5100627674 /* ManagersHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ManagersHalf.csv; sourceTree = "<group>"; };
+		82239FC51C4AFC5100627674 /* Master.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Master.csv; sourceTree = "<group>"; };
+		82239FC61C4AFC5100627674 /* Pitching.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Pitching.csv; sourceTree = "<group>"; };
+		82239FC71C4AFC5100627674 /* PitchingPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PitchingPost.csv; sourceTree = "<group>"; };
+		82239FC81C4AFC5100627674 /* readme2014.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme2014.txt; sourceTree = "<group>"; };
+		82239FC91C4AFC5100627674 /* Salaries.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Salaries.csv; sourceTree = "<group>"; };
+		82239FCA1C4AFC5100627674 /* Schools.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Schools.csv; sourceTree = "<group>"; };
+		82239FCB1C4AFC5100627674 /* SeriesPost.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SeriesPost.csv; sourceTree = "<group>"; };
+		82239FCC1C4AFC5100627674 /* Teams.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Teams.csv; sourceTree = "<group>"; };
+		82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsFranchises.csv; sourceTree = "<group>"; };
+		82239FCE1C4AFC5100627674 /* TeamsHalf.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TeamsHalf.csv; sourceTree = "<group>"; };
+		8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporterSpec.swift; sourceTree = "<group>"; };
+		8223A01F1C4AFC9300627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		8223A0201C4AFC9300627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		8223A0241C4AFCAE00627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
+		8223A0251C4AFCAE00627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		8223A0291C4AFCC900627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		8223A02A1C4AFCC900627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +200,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */,
+				8223A0211C4AFC9300627674 /* Nimble.framework in Frameworks */,
+				8223A0221C4AFC9300627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82239F811C4AFAFF00627674 /* CSVImporter.framework in Frameworks */,
+				8223A0261C4AFCAE00627674 /* Nimble.framework in Frameworks */,
+				8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82239F9D1C4AFB1000627674 /* CSVImporter.framework in Frameworks */,
+				8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */,
+				8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +282,8 @@
 		82239F551C4AF70500627674 /* CSVImporterTests */ = {
 			isa = PBXGroup;
 			children = (
+				8223A01A1C4AFC6700627674 /* Code */,
+				82239FB41C4AFC5100627674 /* Assets */,
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
 			path = CSVImporterTests;
@@ -168,11 +292,11 @@
 		82239F631C4AF89600627674 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				82239F611C4AF89200627674 /* Cartfile */,
+				82239F621C4AF89200627674 /* Cartfile.private */,
 				82239F641C4AF98800627674 /* iOS */,
 				82239F651C4AF98C00627674 /* tvOS */,
 				82239F661C4AF99400627674 /* OSX */,
-				82239F611C4AF89200627674 /* Cartfile */,
-				82239F621C4AF89200627674 /* Cartfile.private */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -182,6 +306,7 @@
 			children = (
 				82239F671C4AF9AE00627674 /* FileKit.framework */,
 				82239F681C4AF9AE00627674 /* HandySwift.framework */,
+				8223A0231C4AFC9900627674 /* Tests */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -191,6 +316,7 @@
 			children = (
 				82239F6B1C4AFA0F00627674 /* FileKit.framework */,
 				82239F6C1C4AFA0F00627674 /* HandySwift.framework */,
+				8223A0281C4AFCB400627674 /* Tests */,
 			);
 			name = tvOS;
 			sourceTree = "<group>";
@@ -200,8 +326,86 @@
 			children = (
 				82239F6D1C4AFA1E00627674 /* FileKit.framework */,
 				82239F6E1C4AFA1E00627674 /* HandySwift.framework */,
+				8223A02D1C4AFCCD00627674 /* Tests */,
 			);
 			name = OSX;
+			sourceTree = "<group>";
+		};
+		82239FB41C4AFC5100627674 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				82239FB51C4AFC5100627674 /* Lahman's Baseball Database */,
+			);
+			name = Assets;
+			path = Tests/Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		82239FB51C4AFC5100627674 /* Lahman's Baseball Database */ = {
+			isa = PBXGroup;
+			children = (
+				82239FB61C4AFC5100627674 /* AllstarFull.csv */,
+				82239FB71C4AFC5100627674 /* Appearances.csv */,
+				82239FB81C4AFC5100627674 /* AwardsManagers.csv */,
+				82239FB91C4AFC5100627674 /* AwardsPlayers.csv */,
+				82239FBA1C4AFC5100627674 /* AwardsShareManagers.csv */,
+				82239FBB1C4AFC5100627674 /* AwardsSharePlayers.csv */,
+				82239FBC1C4AFC5100627674 /* Batting.csv */,
+				82239FBD1C4AFC5100627674 /* BattingPost.csv */,
+				82239FBE1C4AFC5100627674 /* CollegePlaying.csv */,
+				82239FBF1C4AFC5100627674 /* Fielding.csv */,
+				82239FC01C4AFC5100627674 /* FieldingOF.csv */,
+				82239FC11C4AFC5100627674 /* FieldingPost.csv */,
+				82239FC21C4AFC5100627674 /* HallOfFame.csv */,
+				82239FC31C4AFC5100627674 /* Managers.csv */,
+				82239FC41C4AFC5100627674 /* ManagersHalf.csv */,
+				82239FC51C4AFC5100627674 /* Master.csv */,
+				82239FC61C4AFC5100627674 /* Pitching.csv */,
+				82239FC71C4AFC5100627674 /* PitchingPost.csv */,
+				82239FC81C4AFC5100627674 /* readme2014.txt */,
+				82239FC91C4AFC5100627674 /* Salaries.csv */,
+				82239FCA1C4AFC5100627674 /* Schools.csv */,
+				82239FCB1C4AFC5100627674 /* SeriesPost.csv */,
+				82239FCC1C4AFC5100627674 /* Teams.csv */,
+				82239FCD1C4AFC5100627674 /* TeamsFranchises.csv */,
+				82239FCE1C4AFC5100627674 /* TeamsHalf.csv */,
+			);
+			path = "Lahman's Baseball Database";
+			sourceTree = "<group>";
+		};
+		8223A01A1C4AFC6700627674 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */,
+			);
+			name = Code;
+			path = Tests/Code;
+			sourceTree = SOURCE_ROOT;
+		};
+		8223A0231C4AFC9900627674 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8223A01F1C4AFC9300627674 /* Nimble.framework */,
+				8223A0201C4AFC9300627674 /* Quick.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8223A0281C4AFCB400627674 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8223A0241C4AFCAE00627674 /* Nimble.framework */,
+				8223A0251C4AFCAE00627674 /* Quick.framework */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		8223A02D1C4AFCCD00627674 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8223A0291C4AFCC900627674 /* Nimble.framework */,
+				8223A02A1C4AFCC900627674 /* Quick.framework */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +613,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFC1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF61C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD21C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FD81C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				82239FFF1C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FCF1C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0111C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0051C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE71C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0171C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF01C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD51C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A00E1C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE11C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00B1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF31C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDB1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FDE1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FF91C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0141C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A0081C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FED1C4AFC5100627674 /* FieldingOF.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +652,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFD1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF71C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD31C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FD91C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				8223A0001C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FD01C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0121C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0061C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE81C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0181C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF11C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD61C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A00F1C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE21C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00C1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF41C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDC1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FDF1C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FFA1C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0151C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A0091C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FEE1C4AFC5100627674 /* FieldingOF.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +691,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				82239FFE1C4AFC5100627674 /* Master.csv in Resources */,
+				82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */,
+				82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */,
+				82239FF81C4AFC5100627674 /* Managers.csv in Resources */,
+				82239FD41C4AFC5100627674 /* Appearances.csv in Resources */,
+				82239FDA1C4AFC5100627674 /* AwardsPlayers.csv in Resources */,
+				8223A0011C4AFC5100627674 /* Pitching.csv in Resources */,
+				82239FD11C4AFC5100627674 /* AllstarFull.csv in Resources */,
+				8223A0131C4AFC5100627674 /* Teams.csv in Resources */,
+				8223A0071C4AFC5100627674 /* readme2014.txt in Resources */,
+				82239FE91C4AFC5100627674 /* CollegePlaying.csv in Resources */,
+				8223A0191C4AFC5100627674 /* TeamsHalf.csv in Resources */,
+				82239FF21C4AFC5100627674 /* FieldingPost.csv in Resources */,
+				82239FD71C4AFC5100627674 /* AwardsManagers.csv in Resources */,
+				8223A0101C4AFC5100627674 /* SeriesPost.csv in Resources */,
+				82239FE31C4AFC5100627674 /* Batting.csv in Resources */,
+				8223A00D1C4AFC5100627674 /* Schools.csv in Resources */,
+				82239FF51C4AFC5100627674 /* HallOfFame.csv in Resources */,
+				82239FDD1C4AFC5100627674 /* AwardsShareManagers.csv in Resources */,
+				82239FE01C4AFC5100627674 /* AwardsSharePlayers.csv in Resources */,
+				82239FFB1C4AFC5100627674 /* ManagersHalf.csv in Resources */,
+				8223A0161C4AFC5100627674 /* TeamsFranchises.csv in Resources */,
+				8223A00A1C4AFC5100627674 /* Salaries.csv in Resources */,
+				82239FEF1C4AFC5100627674 /* FieldingOF.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +785,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A01C1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +801,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A01D1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +817,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8223A01E1C4AFC6700627674 /* CSVImporterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +977,10 @@
 		82239F5F1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
@@ -705,6 +991,10 @@
 		82239F601C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
@@ -761,6 +1051,10 @@
 		82239F8C1C4AFAFF00627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
@@ -773,6 +1067,10 @@
 		82239F8D1C4AFAFF00627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
@@ -837,6 +1135,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -851,6 +1153,10 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
