@@ -14,10 +14,10 @@ import Nimble
 @testable import CSVImporter
 
 class CSVImporterSpec: QuickSpec {
-
+    
     override func spec() {
         
-        it("tests if the tests are working") {
+        it("makes sure tests are working") {
             
             expect(true).to(beTrue())
             
