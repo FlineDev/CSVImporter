@@ -2,14 +2,18 @@
     <img src="Logo.png" width=600 height=167>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/badge/Swift-2.1-DD563C.svg"
-         alt="Swift: 2.1">
+    <a href="#">
+      <img src="https://img.shields.io/badge/Swift-2.1-DD563C.svg"
+           alt="Swift: 2.1">
+    </a>
     <a href="https://github.com/Carthage/Carthage">
       <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg"
            alt="Carthage: compatible">
     </a>
-    <img src="https://img.shields.io/badge/platforms-iOS%7CtvOS%7COSX-lightgrey.svg"
-         alt="platforms: iOS|tvOS|OSX">
+    <a href="#">
+      <img src="https://img.shields.io/badge/platforms-iOS%7CtvOS%7COSX-lightgrey.svg"
+           alt="platforms: iOS|tvOS|OSX">
+    </a>
     <a href="https://github.com/Flinesoft/CSVImporter/blob/develop/LICENSE.md">
         <img src="https://img.shields.io/badge/license-MIT-blue.svg"
              alt="license: MIT">
