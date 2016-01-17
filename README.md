@@ -143,6 +143,7 @@ Contributions are welcome. Please just open an Issue on GitHub to discuss a poin
 
 Pull requests with new features will only be accepted when the following are given:
 - **Tests** for the new feature exist and all tests pass successfully for all targets.
+- **Usage examples** of the new feature are given in the Playgrounds.
 
 ## License
 This library is released under the [MIT License](http://opensource.org/licenses/MIT). See LICENSE for details.
