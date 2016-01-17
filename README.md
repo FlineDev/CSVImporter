@@ -21,7 +21,7 @@ Simply add this line to your Cartfile:
 github "Flinesoft/CSVImporter"
 ```
 
-And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features.
+And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
 
 ## Usage
 
