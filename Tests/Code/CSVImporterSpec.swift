@@ -17,6 +17,33 @@ class CSVImporterSpec: QuickSpec {
     
     override func spec() {
         
+        it("calls onFail block with wrong path") {
+            
+            let invalidPath = "invalid/path"
+            
+            var didFail = false
+            
+            let importer = CSVImporter<[String]>(path: invalidPath)
+            
+            importer.startImportingRecords { $0 }.onFail {
+                    
+                didFail = true
+                print("Did fail")
+                    
+            }.onProgress { importedDataLinesCount in
+                    
+                print("Progress: \(importedDataLinesCount)")
+                    
+            }.onFinish { importedRecords in
+                    
+                print("Did finish import, first array: \(importedRecords.first)")
+                    
+            }
+            
+            expect(didFail).toEventually(beTrue())
+            
+        }
+        
         it("imports data from CSV file without headers") {
             
             let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
