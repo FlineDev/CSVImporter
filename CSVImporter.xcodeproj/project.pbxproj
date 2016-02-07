@@ -294,6 +294,8 @@
 		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
+				82239F611C4AF89200627674 /* Cartfile */,
+				82239F621C4AF89200627674 /* Cartfile.private */,
 				82239F491C4AF70500627674 /* Sources */,
 				82239F551C4AF70500627674 /* Tests */,
 				82239F481C4AF70500627674 /* Products */,
@@ -338,8 +340,6 @@
 		82239F631C4AF89600627674 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				82239F611C4AF89200627674 /* Cartfile */,
-				82239F621C4AF89200627674 /* Cartfile.private */,
 				82239F641C4AF98800627674 /* iOS */,
 				82239F651C4AF98C00627674 /* tvOS */,
 				82239F661C4AF99400627674 /* OSX */,
@@ -1336,6 +1336,7 @@
 				82239F8A1C4AFAFF00627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -1344,6 +1345,7 @@
 				82239F8D1C4AFAFF00627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */ = {
 			isa = XCConfigurationList;
@@ -1352,6 +1354,7 @@
 				82239FA61C4AFB1000627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */ = {
 			isa = XCConfigurationList;
@@ -1360,6 +1363,7 @@
 				82239FA91C4AFB1000627674 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

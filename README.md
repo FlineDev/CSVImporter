@@ -1,6 +1,24 @@
 <p align="center">
     <img src="Logo.png" width=600 height=167>
 </p>
+<p align="center">
+    <a href="#">
+      <img src="https://img.shields.io/badge/Swift-2.1-DD563C.svg"
+           alt="Swift: 2.1">
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg"
+           alt="Carthage: compatible">
+    </a>
+    <a href="#">
+      <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-lightgrey.svg"
+           alt="platforms: iOS | tvOS | OS X">
+    </a>
+    <a href="https://github.com/Flinesoft/CSVImporter/blob/develop/LICENSE.md">
+        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
+             alt="license: MIT">
+    </a>
+</p>
 
 # CSVImporter
 
@@ -21,7 +39,7 @@ Simply add this line to your Cartfile:
 github "Flinesoft/CSVImporter"
 ```
 
-And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features.
+And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
 
 ## Usage
 
@@ -143,6 +161,7 @@ Contributions are welcome. Please just open an Issue on GitHub to discuss a poin
 
 Pull requests with new features will only be accepted when the following are given:
 - **Tests** for the new feature exist and all tests pass successfully for all targets.
+- **Usage examples** of the new feature are given in the Playgrounds.
 
 ## License
 This library is released under the [MIT License](http://opensource.org/licenses/MIT). See LICENSE for details.
