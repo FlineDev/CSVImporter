@@ -2,4 +2,4 @@
 github "nvzqz/FileKit" "d1772be3abad0586cd776f7112cc03b7740507e1"
 
 # Handy Swift features that didn't make it into the Swift standard library.
-github "Flinesoft/HandySwift"
+github "Flinesoft/HandySwift" ~> 0.8
