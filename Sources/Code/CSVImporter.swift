@@ -10,6 +10,7 @@ import Foundation
 import FileKit
 import HandySwift
 
+/// Importer for CSV files that maps your lines to a specified data structure.
 public class CSVImporter<T> {
     
     // MARK: - Stored Instance Properties
@@ -36,6 +37,11 @@ public class CSVImporter<T> {
     
     // MARK: - Initializers
     
+    /// Creates a `CSVImporter` object with required configuration options.
+    /// 
+    /// - Parameters: 
+    ///   - path: The path to the CSV file to import.
+    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     public init(path: String, delimiter: String = ",") {
 
         self.csvFile = TextFile(path: Path(path))
@@ -46,6 +52,11 @@ public class CSVImporter<T> {
     
     // MARK: - Instance Methods
     
+    /// Starts importing the records within the CSV file line by line.
+    ///
+    /// - Parameters:
+    ///   - mapper: A closure to map the data received in a line to your data structure.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(mapper closure: (recordValues: [String]) -> T) -> Self {
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
@@ -73,6 +84,12 @@ public class CSVImporter<T> {
         
     }
     
+    /// Starts importing the records within the CSV file line by line interpreting the first line as the data structure.
+    ///
+    /// - Parameters:
+    ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
+    ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(structure structureClosure: (headerValues: [String]) -> Void, recordMapper closure: (recordValues: [String: String]) -> T) -> Self {
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
@@ -116,7 +133,11 @@ public class CSVImporter<T> {
         
     }
     
-    // Imports all lines one by one and returns true on finish, or returns false if can't read file
+    /// Imports all lines one by one and
+    ///
+    /// - Parameters:
+    ///   - valuesInLine: The values found within a line.
+    /// - Returns: `true` on finish or `false` if can't read file.
     func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
         
         if let csvStreamReader = self.csvFile.streamReader() {
@@ -138,25 +159,33 @@ public class CSVImporter<T> {
         
     }
     
+    /// Defines callback to be called in case reading the CSV file fails.
+    ///
+    /// - Parameters:
+    ///   - closure: The closure to be called on failure.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func onFail(closure: () -> Void) -> Self {
-        
         self.failClosure = closure
-        
         return self
-        
     }
     
+    /// Defines callback to be called from time to time.
+    /// Use this to indicate progress to a user when importing bigger files.
+    ///
+    /// - Parameters:
+    ///   - closure: The closure to be called on progress. Takes the current count of imported lines as argument.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func onProgress(closure: (importedDataLinesCount: Int) -> Void) -> Self {
-        
         self.progressClosure = closure
-        
         return self
     }
     
+    /// Defines callback to be called when the import finishes.
+    ///
+    /// - Parameters:
+    ///   - closure: The closure to be called on finish. Takes the array of all imported records mapped to as its argument.
     public func onFinish(closure: (importedRecords: [T]) -> Void) {
-        
         self.finishClosure = closure
-        
     }
     
     
@@ -165,13 +194,10 @@ public class CSVImporter<T> {
     func reportFail() {
         
         if let failClosure = self.failClosure {
-            
             dispatch_async(dispatch_get_main_queue()) {
                 failClosure()
             }
-            
         }
-        
     }
     
     func reportProgressIfNeeded(importedRecords: [T]) {
@@ -184,9 +210,7 @@ public class CSVImporter<T> {
                 dispatch_async(dispatch_get_main_queue()) {
                     progressClosure(importedDataLinesCount: importedRecords.count)
                 }
-                
             }
-
         }
         
     }
@@ -194,13 +218,10 @@ public class CSVImporter<T> {
     func reportFinish(importedRecords: [T]) {
         
         if let finishClosure = self.finishClosure {
-            
             dispatch_async(dispatch_get_main_queue()) {
                 finishClosure(importedRecords: importedRecords)
             }
-            
         }
-        
     }
 
 

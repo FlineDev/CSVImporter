@@ -1,24 +1,22 @@
 <p align="center">
     <img src="Logo.png" width=600 height=167>
 </p>
+
 <p align="center">
-    <a href="#">
-      <img src="https://img.shields.io/badge/Swift-2.1-DD563C.svg"
-           alt="Swift: 2.1">
+    <a href="https://github.com/Flinesoft/CSVImporter/releases">
+        <img src="https://img.shields.io/badge/Version-0.1.3-blue.svg"
+             alt="Version: 0.1.3">
     </a>
-    <a href="https://github.com/Carthage/Carthage">
-      <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg"
-           alt="Carthage: compatible">
-    </a>
-    <a href="#">
-      <img src="https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-lightgrey.svg"
-           alt="platforms: iOS | tvOS | OS X">
-    </a>
-    <a href="https://github.com/Flinesoft/CSVImporter/blob/develop/LICENSE.md">
-        <img src="https://img.shields.io/badge/license-MIT-blue.svg"
-             alt="license: MIT">
+    <img src="https://img.shields.io/badge/Swift-2.2-DD563C.svg"
+         alt="Swift: 2.2">
+    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-orange.svg"
+        alt="Platforms: iOS | tvOS | OS X">
+    <a href="https://github.com/Flinesoft/CSVImporter/blob/stable/LICENSE.md">
+        <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
+              alt="License: MIT">
     </a>
 </p>
+
 
 # CSVImporter
 
@@ -54,7 +52,7 @@ First create an instance of CSVImporter and specify the type the data within a l
 ``` Swift
 let path = "path/to/your/CSV/file"
 let importer = CSVImporter<[String]>(path: path)
-importer.startImportingRecords{ $0 }.onFinish { importedRecords in
+importer.startImportingRecords { $0 }.onFinish { importedRecords in
     for record in importedRecords {
         // record is of type [String] and contains all data in a line
     }
@@ -66,7 +64,7 @@ importer.startImportingRecords{ $0 }.onFinish { importedRecords in
 CSVImporter works completely asynchronous and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
 
 ``` Swift
-importer.startImportingRecords{ $0 }.onFail {
+importer.startImportingRecords { $0 }.onFail {
 
     print("The CSV file couldn't be read.")
 
@@ -141,7 +139,7 @@ importer.startImportingRecords(structure: { (headerValues) -> Void in
 
     print(headerValues) // => ["firstName", "lastName"]
 
-}){ $0 }.onFinish { importedRecords in
+}) { $0 }.onFinish { importedRecords in
 
     for record in importedRecords {
         print(record) // => e.g. ["firstName": "Harry", "lastName": "Potter"]
