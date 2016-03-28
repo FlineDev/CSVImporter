@@ -4,8 +4,8 @@
 
 <p align="center">
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-0.1.3-blue.svg"
-             alt="Version: 0.1.3">
+        <img src="https://img.shields.io/badge/Version-0.1.4-blue.svg"
+             alt="Version: 0.1.4">
     </a>
     <img src="https://img.shields.io/badge/Swift-2.2-DD563C.svg"
          alt="Swift: 2.2">
