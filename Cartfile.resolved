@@ -1,4 +1,4 @@
 github "Dschee/FileKit" "51c9f5d0b191dd38dbe8e5ef9b89d2dc3285c8f6"
-github "Flinesoft/HandySwift" "0.8.2"
-github "Quick/Nimble" "v3.2.0"
-github "Quick/Quick" "v0.9.1"
+github "Flinesoft/HandySwift" "1.0.0"
+github "Quick/Nimble" "6a4e107f022562a4385bcc8fca14fa0a43f7b318"
+github "Quick/Quick" "24d2df57064f5b679c89f44f1f9beac9d15e55e9"
