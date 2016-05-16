@@ -17,6 +17,14 @@
     </a>
 </p>
 
+<p align="center">
+    <a href="#installation">Installation</a>
+  • <a href="#usage">Usage</a>
+  • <a href="https://github.com/Flinesoft/CSVImporter/issues">Issues</a>
+  • <a href="#contributing">Contributing</a>
+  • <a href="#license">License</a>
+</p>
+
 
 # CSVImporter
 
