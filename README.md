@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+    <a href="https://www.bitrise.io/app/729b6b29afaa23cb">
+        <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
+             alt="Build Status">
+    </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
         <img src="https://img.shields.io/badge/Version-0.1.5-blue.svg"
              alt="Version: 0.1.5">
@@ -66,6 +70,8 @@ importer.startImportingRecords { $0 }.onFinish { importedRecords in
     }
 }
 ```
+
+Note that you can specify an **alternative delimiter** when creating a `CSVImporter` object alongside the path. The delimiter defaults to `,` if you don't specify any.
 
 ### Asynchronous with Callbacks
 
