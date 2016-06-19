@@ -3,13 +3,17 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-0.1.4-blue.svg"
-             alt="Version: 0.1.4">
+    <a href="https://www.bitrise.io/app/729b6b29afaa23cb">
+        <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
+             alt="Build Status">
     </a>
-    <img src="https://img.shields.io/badge/Swift-2.2-DD563C.svg"
+    <a href="https://github.com/Flinesoft/CSVImporter/releases">
+        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
+             alt="Version: 1.0.0">
+    </a>
+    <img src="https://img.shields.io/badge/Swift-2.2-FFAC45.svg"
          alt="Swift: 2.2">
-    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-orange.svg"
+    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-FF69B4.svg"
         alt="Platforms: iOS | tvOS | OS X">
     <a href="https://github.com/Flinesoft/CSVImporter/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
@@ -17,10 +21,24 @@
     </a>
 </p>
 
+<p align="center">
+    <a href="#installation">Installation</a>
+  • <a href="#usage">Usage</a>
+  • <a href="https://github.com/Flinesoft/CSVImporter/issues">Issues</a>
+  • <a href="#contributing">Contributing</a>
+  • <a href="#license">License</a>
+</p>
+
 
 # CSVImporter
 
 Import CSV files line by line with ease.
+
+## Rationale
+
+"Why yet another CSVImporter" you may ask. "There is already [SwiftCSV](https://github.com/naoty/SwiftCSV) and [CSwiftV](https://github.com/Daniel1of1/CSwiftV)" you may say. The truth is that these frameworks work well for **smaller** CSV files. But once you have a really **large CSV file** (or *could* have one, because you let the user import whatever CSV file he desires to) then those solutions will probably cause **delays and memory issues** for some of your users.
+
+**CSVImporter** on the other hand works both **asynchronously** (prevents delays) and reads your CSV file **line by line** instead of loading the entire String into memory (prevents memory issues). On top of that it is **easy to use** and provides **beautiful callbacks** for indicating failure, progress, completion and even **data mapping** if you desire to.
 
 ## Installation
 
@@ -58,6 +76,8 @@ importer.startImportingRecords { $0 }.onFinish { importedRecords in
     }
 }
 ```
+
+Note that you can specify an **alternative delimiter** when creating a `CSVImporter` object alongside the path. The delimiter defaults to `,` if you don't specify any.
 
 ### Asynchronous with Callbacks
 
