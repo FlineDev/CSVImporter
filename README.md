@@ -34,6 +34,12 @@
 
 Import CSV files line by line with ease.
 
+## Rationale
+
+"Why yet another CSVImporter" you may ask. "There is already [SwiftCSV](https://github.com/naoty/SwiftCSV) and [CSwiftV](https://github.com/Daniel1of1/CSwiftV)" you may say. The truth is that these frameworks work well for **smaller** CSV files. But once you have a really **large CSV file** (or *could* have one, because you let the user import whatever CSV file he desires to) then those solutions will probably cause **delays and memory issues** for some of your users.
+
+**CSVImporter** on the other hand works both **asynchronously** (prevents delays) and reads your CSV file **line by line** instead of loading the entire String into memory (prevents memory issues). On top of that it is **easy to use** and provides **beautiful callbacks** for indicating failure, progress, completion and even **data mapping** if you desire to.
+
 ## Installation
 
 Currently the recommended way of installing this library is via [Carthage](https://github.com/Carthage/Carthage).
