@@ -8,12 +8,12 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-0.1.5-blue.svg"
-             alt="Version: 0.1.5">
+        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
+             alt="Version: 1.0.0">
     </a>
-    <img src="https://img.shields.io/badge/Swift-2.2-DD563C.svg"
+    <img src="https://img.shields.io/badge/Swift-2.2-FFAC45.svg"
          alt="Swift: 2.2">
-    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-orange.svg"
+    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20OS%20X-FF69B4.svg"
         alt="Platforms: iOS | tvOS | OS X">
     <a href="https://github.com/Flinesoft/CSVImporter/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
