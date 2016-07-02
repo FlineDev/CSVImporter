@@ -232,6 +232,8 @@
 		8223A0291C4AFCC900627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		8223A02A1C4AFCC900627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommaSemicolonQuotes.csv; sourceTree = "<group>"; };
+		827A24B51D2801580003D6DD /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		827A24B61D2801580003D6DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +301,8 @@
 		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
+				827A24B61D2801580003D6DD /* README.md */,
+				827A24B51D2801580003D6DD /* LICENSE.md */,
 				82239F611C4AF89200627674 /* Cartfile */,
 				82239F621C4AF89200627674 /* Cartfile.private */,
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
