@@ -8,8 +8,8 @@
              alt="Build Status">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
-             alt="Version: 1.0.0">
+        <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg"
+             alt="Version: 1.1.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-2.2-FFAC45.svg"
          alt="Swift: 2.2">
