@@ -112,6 +112,9 @@
 		8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
+		827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
+		827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +231,7 @@
 		8223A0251C4AFCAE00627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
 		8223A0291C4AFCC900627674 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		8223A02A1C4AFCC900627674 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommaSemicolonQuotes.csv; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -382,6 +386,7 @@
 		82239FB41C4AFC5100627674 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */,
 				82239FB51C4AFC5100627674 /* Lahman's Baseball Database */,
 			);
 			name = Assets;
@@ -696,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFC1C4AFC5100627674 /* Master.csv in Resources */,
 				82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */,
@@ -735,6 +741,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFD1C4AFC5100627674 /* Master.csv in Resources */,
 				82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */,
@@ -774,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */,
+				827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFE1C4AFC5100627674 /* Master.csv in Resources */,
 				82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */,
