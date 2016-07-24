@@ -7,6 +7,10 @@
         <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
              alt="Build Status">
     </a>
+    <a href="https://codebeat.co/projects/github-com-flinesoft-csvimporter">
+        <img src="https://codebeat.co/badges/c665ed7c-1f1b-45db-9602-9ac216327edf"
+             alt="codebeat badge">
+    </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
         <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg"
              alt="Version: 1.1.0">
