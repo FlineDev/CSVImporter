@@ -47,6 +47,16 @@ public class CSVImporter<T> {
         self.delimiter = delimiter
     }
 
+    /// Creates a `CSVImporter` object with required configuration options.
+    ///
+    /// - Parameters:
+    ///   - url: File URL for the CSV file to import.
+    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
+    public convenience init?(url: NSURL, delimiter: String = ",") {
+        guard url.fileURL else { return nil }
+        guard url.path != nil else { return nil }
+        self.init(path: url.path!, delimiter: delimiter)
+    }
 
     // MARK: - Instance Methods
 

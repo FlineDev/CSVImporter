@@ -112,6 +112,88 @@ class CSVImporterSpec: QuickSpec {
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
         }
 
+        it("imports data from CSV file with headers using File URL") {
+            let url = NSBundle(forClass: CSVImporterSpec.classForCoder()).URLForResource("Teams.csv", withExtension: nil)
+            var recordValues: [[String: String]]?
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                        }, recordMapper: { (recordValues) -> [String : String] in
+                            return recordValues
+                    }).onFail {
+                        print("Did fail")
+                        }.onProgress { importedDataLinesCount in
+                            print("Progress: \(importedDataLinesCount)")
+                        }.onFinish { importedRecords in
+                            print("Did finish import, first array: \(importedRecords.first)")
+                            recordValues = importedRecords
+                    }
+                }
+            }
+
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+        }
+
+        it("imports data from CSV file with headers using Invalid File URL Fails") {
+            let url = NSURL(fileURLWithPath: "")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let importer = CSVImporter<[String: String]>(url: url) {
+
+                importer.startImportingRecords(structure: { (headerValues) -> Void in
+                    print(headerValues)
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
+                }).onFail {
+                    print("Did fail")
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
+                }
+            } else {
+                didFail = true
+            }
+
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
+
+
+        it("imports data from CSV file with headers using Web URL Fails") {
+            let url = NSURL(string: "https://www.apple.com")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                        }, recordMapper: { (recordValues) -> [String : String] in
+                            return recordValues
+                    }).onFail {
+                        print("Did fail")
+                        }.onProgress { importedDataLinesCount in
+                            print("Progress: \(importedDataLinesCount)")
+                        }.onFinish { importedRecords in
+                            print("Did finish import, first array: \(importedRecords.first)")
+                            recordValues = importedRecords
+                    }
+                } else {
+                    didFail = true
+                }
+            }
+
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
+
         it("zz") { }
     }
 }
