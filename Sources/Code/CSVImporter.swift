@@ -10,9 +10,14 @@ import Foundation
 import FileKit
 import HandySwift
 
-let NL = "\n"
-let CR = "\r"
-let CRLF = "\r\n"
+/// An enum to represent the possible line endings of CSV files.
+public enum LineEnding : String {
+    case NL = "\n"
+    case CR = "\r"
+    case CRLF = "\r\n"
+    case Unknown = ""
+}
+
 private let chunkSize = 4096
 
 /// Importer for CSV files that maps your lines to a specified data structure.
@@ -22,7 +27,7 @@ public class CSVImporter<T> {
 
     let csvFile: TextFile
     let delimiter: String
-    var lineEnding:String?
+    var lineEnding: LineEnding
 
     var lastProgressReport: NSDate?
 
@@ -31,7 +36,7 @@ public class CSVImporter<T> {
     var failClosure: (() -> Void)?
 
 
-    // MARK: - Computes Instance Properties
+    // MARK: - Computed Instance Properties
 
     var shouldReportProgress: Bool {
         get {
@@ -49,7 +54,7 @@ public class CSVImporter<T> {
     ///   - path: The path to the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     ///   - lineEnding: The lineEnding of the file. If not specified will be determined automatically.
-    public init(path: String, delimiter: String = ",", lineEnding: String? = nil) {
+    public init(path: String, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
         self.csvFile = TextFile(path: Path(path))
         self.delimiter = delimiter
         self.lineEnding = lineEnding
@@ -128,10 +133,10 @@ public class CSVImporter<T> {
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
     func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
-        if lineEnding == nil {
+        if lineEnding == .Unknown {
             lineEnding = lineEndingForFile()
         }
-        if let lineEnding = lineEnding, csvStreamReader = self.csvFile.streamReader(lineEnding) {
+        if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
             for line in csvStreamReader {
                 let valuesInLine = readValuesInLine(line)
                 closure(valuesInLine: valuesInLine)
@@ -146,17 +151,17 @@ public class CSVImporter<T> {
     /// Determines the line ending for the CSV file
     ///
     /// - Returns: the lineEnding for the CSV file or default of NL.
-    private func lineEndingForFile() -> String {
-        var lineEnding = NL
+    private func lineEndingForFile() -> LineEnding {
+        var lineEnding: LineEnding = .NL
         if let fileHandle = self.csvFile.handleForReading {
             let data = fileHandle.readDataOfLength(chunkSize).mutableCopy()
             if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: NSUTF8StringEncoding, freeWhenDone: false) {
-                if contents.containsString(CRLF) {
-                    lineEnding = CRLF
-                } else if contents.containsString(NL) {
-                    lineEnding = NL
-                } else if contents.containsString(CR) {
-                    lineEnding = CR
+                if contents.containsString(LineEnding.CRLF.rawValue) {
+                    lineEnding = .CRLF
+                } else if contents.containsString(LineEnding.NL.rawValue) {
+                    lineEnding = .NL
+                } else if contents.containsString(LineEnding.CR.rawValue) {
+                    lineEnding = .CR
                 }
             }
         }

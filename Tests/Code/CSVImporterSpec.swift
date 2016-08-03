@@ -118,7 +118,7 @@ class CSVImporterSpec: QuickSpec {
             var recordValues: [[String: String]]?
 
             if let path = path {
-                let importer = CSVImporter<[String: String]>(path: path, lineEnding: CRLF)
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .CRLF)
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -137,11 +137,11 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers Specifying lineEnding NL") {
-            let path = self.convertTeamsLineEndingTo(NL)
+            let path = self.convertTeamsLineEndingTo(.NL)
             var recordValues: [[String: String]]?
 
             if let path = path {
-               let importer = CSVImporter<[String: String]>(path: path, lineEnding: NL)
+               let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -162,7 +162,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers with lineEnding CR Sniffs lineEnding") {
-            let path = self.convertTeamsLineEndingTo(CR)
+            let path = self.convertTeamsLineEndingTo(.CR)
             var recordValues: [[String: String]]?
 
             if let path = path {
@@ -193,10 +193,10 @@ class CSVImporterSpec: QuickSpec {
             if let path = path {
                 do {
                 let string = try String(contentsOfFile: path)
-                expect(string.containsString(CRLF)).to(beTrue())
+                expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
                 } catch { }
 
-                let importer = CSVImporter<[String: String]>(path: path, lineEnding: NL)    // wrong
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)    // wrong
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -224,12 +224,12 @@ class CSVImporterSpec: QuickSpec {
         return ["H": "426", "SOA": "23", "SO": "19", "WCWin": "", "AB": "1372", "BPF": "103", "IPouts": "828", "PPF": "98", "3B": "37", "BB": "60", "HBP": "", "lgID": "NA", "ER": "109", "CG": "22", "name": "Boston Red Stockings", "yearID": "1871", "divID": "", "teamIDretro": "BS1", "FP": "0.83", "R": "401", "G": "31", "BBA": "42", "HA": "367", "RA": "303", "park": "South End Grounds I", "DivWin": "", "WSWin": "", "HR": "3", "E": "225", "ERA": "3.55", "franchID": "BNA", "DP": "", "L": "10", "LgWin": "N", "W": "20", "SV": "3", "SHO": "1", "Rank": "3", "Ghome": "", "teamID": "BS1", "teamIDlahman45": "BS1", "HRA": "2", "SF": "", "attendance": "", "CS": "", "teamIDBR": "BOS", "SB": "73", "2B": "70"]
     }
 
-    func convertTeamsLineEndingTo(lineEnding:String) -> String? {
+    func convertTeamsLineEndingTo(lineEnding:LineEnding) -> String? {
         if let path = pathForResourceFile("Teams.csv") {
             do {
                 let string = try String(contentsOfFile: path)
-                expect(string.containsString(CRLF)).to(beTrue())
-                let crString = string.stringByReplacingOccurrencesOfString(CRLF, withString: lineEnding)
+                expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
+                let crString = string.stringByReplacingOccurrencesOfString(LineEnding.CRLF.rawValue, withString: lineEnding.rawValue)
                 let tempPath = (NSTemporaryDirectory() as NSString).stringByAppendingPathComponent("TeamsNewLineEnding.csv")
                 try crString.writeToFile(tempPath, atomically: false, encoding: NSUTF8StringEncoding)
                 return tempPath
