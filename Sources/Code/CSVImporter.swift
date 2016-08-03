@@ -170,12 +170,11 @@ public class CSVImporter<T> {
     /// - Returns: An array of values found in line.
     func readValuesInLine(line: String) -> [String] {
         var correctedLine = line.stringByReplacingOccurrencesOfString("\(delimiter)\"\"\(delimiter)", withString: delimiter+delimiter)
-        correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\r\n", withString: "\n")
 
         if correctedLine.hasPrefix("\"\"\(delimiter)") {
             correctedLine = correctedLine.substringFromIndex(correctedLine.startIndex.advancedBy(2))
         }
-        if correctedLine.hasSuffix("\(delimiter)\"\"") || correctedLine.hasSuffix("\(delimiter)\"\"\n") {
+        if correctedLine.hasSuffix("\(delimiter)\"\"") {
             correctedLine = correctedLine.substringToIndex(correctedLine.startIndex.advancedBy(correctedLine.utf16.count - 2))
         }
 
