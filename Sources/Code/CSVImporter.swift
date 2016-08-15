@@ -10,6 +10,16 @@ import Foundation
 import FileKit
 import HandySwift
 
+/// An enum to represent the possible line endings of CSV files.
+public enum LineEnding : String {
+    case NL = "\n"
+    case CR = "\r"
+    case CRLF = "\r\n"
+    case Unknown = ""
+}
+
+private let chunkSize = 4096
+
 /// Importer for CSV files that maps your lines to a specified data structure.
 public class CSVImporter<T> {
 
@@ -17,6 +27,7 @@ public class CSVImporter<T> {
 
     let csvFile: TextFile
     let delimiter: String
+    var lineEnding: LineEnding
 
     var lastProgressReport: NSDate?
 
@@ -25,7 +36,7 @@ public class CSVImporter<T> {
     var failClosure: (() -> Void)?
 
 
-    // MARK: - Computes Instance Properties
+    // MARK: - Computed Instance Properties
 
     var shouldReportProgress: Bool {
         get {
@@ -42,9 +53,11 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - path: The path to the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
-    public init(path: String, delimiter: String = ",") {
+    ///   - lineEnding: The lineEnding of the file. If not specified will be determined automatically.
+    public init(path: String, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
         self.csvFile = TextFile(path: Path(path))
         self.delimiter = delimiter
+        self.lineEnding = lineEnding
     }
 
 
@@ -120,7 +133,10 @@ public class CSVImporter<T> {
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
     func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
-        if let csvStreamReader = self.csvFile.streamReader() {
+        if lineEnding == .Unknown {
+            lineEnding = lineEndingForFile()
+        }
+        if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
             for line in csvStreamReader {
                 let valuesInLine = readValuesInLine(line)
                 closure(valuesInLine: valuesInLine)
@@ -132,6 +148,26 @@ public class CSVImporter<T> {
         }
     }
 
+    /// Determines the line ending for the CSV file
+    ///
+    /// - Returns: the lineEnding for the CSV file or default of NL.
+    private func lineEndingForFile() -> LineEnding {
+        var lineEnding: LineEnding = .NL
+        if let fileHandle = self.csvFile.handleForReading {
+            let data = fileHandle.readDataOfLength(chunkSize).mutableCopy()
+            if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: NSUTF8StringEncoding, freeWhenDone: false) {
+                if contents.containsString(LineEnding.CRLF.rawValue) {
+                    lineEnding = .CRLF
+                } else if contents.containsString(LineEnding.NL.rawValue) {
+                    lineEnding = .NL
+                } else if contents.containsString(LineEnding.CR.rawValue) {
+                    lineEnding = .CR
+                }
+            }
+        }
+        return lineEnding
+    }
+
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
     /// - Parameters:
@@ -139,12 +175,11 @@ public class CSVImporter<T> {
     /// - Returns: An array of values found in line.
     func readValuesInLine(line: String) -> [String] {
         var correctedLine = line.stringByReplacingOccurrencesOfString("\(delimiter)\"\"\(delimiter)", withString: delimiter+delimiter)
-        correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\r\n", withString: "\n")
 
         if correctedLine.hasPrefix("\"\"\(delimiter)") {
             correctedLine = correctedLine.substringFromIndex(correctedLine.startIndex.advancedBy(2))
         }
-        if correctedLine.hasSuffix("\(delimiter)\"\"") || correctedLine.hasSuffix("\(delimiter)\"\"\n") {
+        if correctedLine.hasSuffix("\(delimiter)\"\"") {
             correctedLine = correctedLine.substringToIndex(correctedLine.startIndex.advancedBy(correctedLine.utf16.count - 2))
         }
 
