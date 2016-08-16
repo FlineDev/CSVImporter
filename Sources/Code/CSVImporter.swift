@@ -11,7 +11,7 @@ import FileKit
 import HandySwift
 
 /// An enum to represent the possible line endings of CSV files.
-public enum LineEnding : String {
+public enum LineEnding: String {
     case NL = "\n"
     case CR = "\r"
     case CRLF = "\r\n"

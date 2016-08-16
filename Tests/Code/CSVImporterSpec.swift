@@ -306,15 +306,15 @@ class CSVImporterSpec: QuickSpec {
 
                     importer.startImportingRecords(structure: { (headerValues) -> Void in
                         print(headerValues)
-                        }, recordMapper: { (recordValues) -> [String : String] in
-                            return recordValues
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
                     }).onFail {
                         print("Did fail")
-                        }.onProgress { importedDataLinesCount in
-                            print("Progress: \(importedDataLinesCount)")
-                        }.onFinish { importedRecords in
-                            print("Did finish import, first array: \(importedRecords.first)")
-                            recordValues = importedRecords
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
                     }
                 }
             }
@@ -331,15 +331,15 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
-                    }.onProgress { importedDataLinesCount in
-                        print("Progress: \(importedDataLinesCount)")
-                    }.onFinish { importedRecords in
-                        print("Did finish import, first array: \(importedRecords.first)")
-                        recordValues = importedRecords
+                }.onProgress { importedDataLinesCount in
+                    print("Progress: \(importedDataLinesCount)")
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
                 }
             } else {
                 didFail = true
@@ -360,15 +360,15 @@ class CSVImporterSpec: QuickSpec {
 
                     importer.startImportingRecords(structure: { (headerValues) -> Void in
                         print(headerValues)
-                        }, recordMapper: { (recordValues) -> [String : String] in
-                            return recordValues
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
                     }).onFail {
                         print("Did fail")
-                        }.onProgress { importedDataLinesCount in
-                            print("Progress: \(importedDataLinesCount)")
-                        }.onFinish { importedRecords in
-                            print("Did finish import, first array: \(importedRecords.first)")
-                            recordValues = importedRecords
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
                     }
                 } else {
                     didFail = true
@@ -396,7 +396,7 @@ class CSVImporterSpec: QuickSpec {
                 try crString.writeToFile(tempPath, atomically: false, encoding: NSUTF8StringEncoding)
                 return tempPath
             } catch {
-
+                // TODO: Some kind of error handling
             }
         }
 
