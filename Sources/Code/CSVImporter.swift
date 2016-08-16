@@ -153,8 +153,10 @@ public class CSVImporter<T> {
         }
         if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
             for line in csvStreamReader {
-                let valuesInLine = readValuesInLine(line)
-                closure(valuesInLine: valuesInLine)
+                autoreleasepool {
+                    let valuesInLine = readValuesInLine(line)
+                    closure(valuesInLine: valuesInLine)
+                }
             }
 
             return true
