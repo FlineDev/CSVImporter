@@ -122,13 +122,13 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
+                }, recordMapper: { (recordValues) -> [String : String] in
                         return recordValues
                 }).onFail {
                     print("Did fail")
-                    }.onFinish { importedRecords in
-                        print("Did finish import, first array: \(importedRecords.first)")
-                        recordValues = importedRecords
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
                 }
             }
 
@@ -145,13 +145,13 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
+                }, recordMapper: { (recordValues) -> [String : String] in
                         return recordValues
                 }).onFail {
                     print("Did fail")
-                    }.onFinish { importedRecords in
-                        print("Did finish import, first array: \(importedRecords.first)")
-                        recordValues = importedRecords
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
                 }
             }
 
@@ -170,13 +170,13 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
-                    }.onFinish { importedRecords in
-                        print("Did finish import, first array: \(importedRecords.first)")
-                        recordValues = importedRecords
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
                 }
             }
 
@@ -200,20 +200,18 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
-                    }.onFinish { importedRecords in
-                        print("Did finish import, first array: \(importedRecords.first)")
-                        recordValues = importedRecords
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
                 }
             }
             
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
             expect(recordValues!.first!).toEventuallyNot(equal(self.validTeamsFirstRecord()))
-            
-            self.deleteFileSilently(path)
         }
 
         it("imports data from CSV file with headers using File URL") {
@@ -225,8 +223,8 @@ class CSVImporterSpec: QuickSpec {
 
                     importer.startImportingRecords(structure: { (headerValues) -> Void in
                         print(headerValues)
-                        }, recordMapper: { (recordValues) -> [String : String] in
-                            return recordValues
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
                     }).onFail {
                         print("Did fail")
                     }.onProgress { importedDataLinesCount in
@@ -234,11 +232,12 @@ class CSVImporterSpec: QuickSpec {
                     }.onFinish { importedRecords in
                         print("Did finish import, first array: \(importedRecords.first)")
                         recordValues = importedRecords
-                }
+                    }
                 }
             }
 
-            expect(recordValues).toEventuallyNot(beNil(), timeout: 1000)
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+            expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
         }
 
         it("imports data from CSV file with headers using Invalid File URL Fails") {
@@ -250,8 +249,8 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
                 }.onProgress { importedDataLinesCount in
@@ -279,8 +278,8 @@ class CSVImporterSpec: QuickSpec {
 
                     importer.startImportingRecords(structure: { (headerValues) -> Void in
                         print(headerValues)
-                        }, recordMapper: { (recordValues) -> [String : String] in
-                            return recordValues
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
                     }).onFail {
                         print("Did fail")
                     }.onProgress { importedDataLinesCount in
