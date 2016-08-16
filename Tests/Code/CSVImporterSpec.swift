@@ -122,7 +122,7 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
+                }, recordMapper: { (recordValues) -> [String : String] in
                         return recordValues
                 }).onFail {
                     print("Did fail")
@@ -141,11 +141,11 @@ class CSVImporterSpec: QuickSpec {
             var recordValues: [[String: String]]?
 
             if let path = path {
-               let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
+                }, recordMapper: { (recordValues) -> [String : String] in
                         return recordValues
                 }).onFail {
                     print("Did fail")
@@ -170,8 +170,8 @@ class CSVImporterSpec: QuickSpec {
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
                 }.onFinish { importedRecords in
@@ -184,7 +184,7 @@ class CSVImporterSpec: QuickSpec {
             expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
 
             self.deleteFileSilently(path)
-       }
+        }
 
         it("imports data from CSV file with headers Specifying Wrong lineEnding Fails") {
             let path = self.pathForResourceFile("Teams.csv")
@@ -192,16 +192,16 @@ class CSVImporterSpec: QuickSpec {
 
             if let path = path {
                 do {
-                let string = try String(contentsOfFile: path)
-                expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
+                    let string = try String(contentsOfFile: path)
+                    expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
                 } catch { }
 
                 let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)    // wrong
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
-                    }, recordMapper: { (recordValues) -> [String : String] in
-                        return recordValues
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
                 }).onFail {
                     print("Did fail")
                 }.onFinish { importedRecords in
@@ -209,13 +209,175 @@ class CSVImporterSpec: QuickSpec {
                     recordValues = importedRecords
                 }
             }
-
+            
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
             expect(recordValues!.first!).toEventuallyNot(equal(self.validTeamsFirstRecord()))
-            
-            self.deleteFileSilently(path)
         }
 
+        it("imports data from CSV file with headers using File URL") {
+            let url = NSBundle(forClass: CSVImporterSpec.classForCoder()).URLForResource("Teams.csv", withExtension: nil)
+            var recordValues: [[String: String]]?
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
+                    }).onFail {
+                        print("Did fail")
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
+                    }
+                }
+            }
+
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+            expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
+        }
+
+        it("imports data from CSV file with headers using Invalid File URL Fails") {
+            let url = NSURL(fileURLWithPath: "")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let importer = CSVImporter<[String: String]>(url: url) {
+
+                importer.startImportingRecords(structure: { (headerValues) -> Void in
+                    print(headerValues)
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
+                }).onFail {
+                    print("Did fail")
+                }.onProgress { importedDataLinesCount in
+                    print("Progress: \(importedDataLinesCount)")
+                }.onFinish { importedRecords in
+                    print("Did finish import, first array: \(importedRecords.first)")
+                    recordValues = importedRecords
+                }
+            } else {
+                didFail = true
+            }
+
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
+
+
+        it("imports data from CSV file with headers using Web URL Fails") {
+            let url = NSURL(string: "https://www.apple.com")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
+                    }).onFail {
+                        print("Did fail")
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
+                    }
+                } else {
+                    didFail = true
+                }
+            }
+            
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
+
+        it("imports data from CSV file with headers using File URL") {
+            let url = NSBundle(forClass: CSVImporterSpec.classForCoder()).URLForResource("Teams.csv", withExtension: nil)
+            var recordValues: [[String: String]]?
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                        }, recordMapper: { (recordValues) -> [String : String] in
+                            return recordValues
+                    }).onFail {
+                        print("Did fail")
+                        }.onProgress { importedDataLinesCount in
+                            print("Progress: \(importedDataLinesCount)")
+                        }.onFinish { importedRecords in
+                            print("Did finish import, first array: \(importedRecords.first)")
+                            recordValues = importedRecords
+                    }
+                }
+            }
+
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+        }
+
+        it("imports data from CSV file with headers using Invalid File URL Fails") {
+            let url = NSURL(fileURLWithPath: "")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let importer = CSVImporter<[String: String]>(url: url) {
+
+                importer.startImportingRecords(structure: { (headerValues) -> Void in
+                    print(headerValues)
+                    }, recordMapper: { (recordValues) -> [String : String] in
+                        return recordValues
+                }).onFail {
+                    print("Did fail")
+                    }.onProgress { importedDataLinesCount in
+                        print("Progress: \(importedDataLinesCount)")
+                    }.onFinish { importedRecords in
+                        print("Did finish import, first array: \(importedRecords.first)")
+                        recordValues = importedRecords
+                }
+            } else {
+                didFail = true
+            }
+
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
+
+
+        it("imports data from CSV file with headers using Web URL Fails") {
+            let url = NSURL(string: "https://www.apple.com")
+            var recordValues: [[String: String]]?
+            var didFail = false
+
+            if let url = url {
+                if let importer = CSVImporter<[String: String]>(url: url) {
+
+                    importer.startImportingRecords(structure: { (headerValues) -> Void in
+                        print(headerValues)
+                        }, recordMapper: { (recordValues) -> [String : String] in
+                            return recordValues
+                    }).onFail {
+                        print("Did fail")
+                        }.onProgress { importedDataLinesCount in
+                            print("Progress: \(importedDataLinesCount)")
+                        }.onFinish { importedRecords in
+                            print("Did finish import, first array: \(importedRecords.first)")
+                            recordValues = importedRecords
+                    }
+                } else {
+                    didFail = true
+                }
+            }
+
+            expect(recordValues).toEventually(beNil(), timeout: 10)
+            expect(didFail).toEventually(beTrue())
+        }
 
         it("zz") { }
     }
