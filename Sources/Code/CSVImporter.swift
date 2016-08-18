@@ -58,6 +58,11 @@ public class CSVImporter<T> {
         self.csvFile = TextFile(path: Path(path))
         self.delimiter = delimiter
         self.lineEnding = lineEnding
+
+        delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
+        delimiterDelimiter = delimiter+delimiter
+        quoteDelimiter = "\"\"\(delimiter)"
+        delimiterQuote = "\(delimiter)\"\""
     }
 
     /// Creates a `CSVImporter` object with required configuration options.
@@ -148,8 +153,10 @@ public class CSVImporter<T> {
         }
         if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
             for line in csvStreamReader {
-                let valuesInLine = readValuesInLine(line)
-                closure(valuesInLine: valuesInLine)
+                autoreleasepool {
+                    let valuesInLine = readValuesInLine(line)
+                    closure(valuesInLine: valuesInLine)
+                }
             }
 
             return true
@@ -178,22 +185,31 @@ public class CSVImporter<T> {
         return lineEnding
     }
 
+    // Various private constants used for reading lines
+    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive)
+    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive)
+    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive)
+    private let substitute = "\u{001a}"
+    private let delimiterQuoteDelimiter:String
+    private let delimiterDelimiter:String
+    private let quoteDelimiter:String
+    private let delimiterQuote:String
+
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
     /// - Parameters:
     ///   - line: The line to read values from.
     /// - Returns: An array of values found in line.
     func readValuesInLine(line: String) -> [String] {
-        var correctedLine = line.stringByReplacingOccurrencesOfString("\(delimiter)\"\"\(delimiter)", withString: delimiter+delimiter)
+        var correctedLine = line.stringByReplacingOccurrencesOfString(delimiterQuoteDelimiter, withString: delimiterDelimiter)
 
-        if correctedLine.hasPrefix("\"\"\(delimiter)") {
+        if correctedLine.hasPrefix(quoteDelimiter) {
             correctedLine = correctedLine.substringFromIndex(correctedLine.startIndex.advancedBy(2))
         }
-        if correctedLine.hasSuffix("\(delimiter)\"\"") {
+        if correctedLine.hasSuffix(delimiterQuote) {
             correctedLine = correctedLine.substringToIndex(correctedLine.startIndex.advancedBy(correctedLine.utf16.count - 2))
         }
 
-        let substitute = "\u{001a}"
         correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\"\"", withString: substitute)
         var components = correctedLine.componentsSeparatedByString(delimiter)
 
@@ -201,13 +217,8 @@ public class CSVImporter<T> {
         while index < components.count {
             let element = components[index]
 
-            let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-
             if index < components.count-1 && startPartRegex.firstMatchInString(element, options: .Anchored, range: element.fullRange) != nil {
                 var elementsToMerge = [element]
-
-                let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-                let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
 
                 while middlePartRegex.firstMatchInString(components[index+1], options: .Anchored, range: components[index+1].fullRange) != nil {
                     elementsToMerge.append(components[index+1])
