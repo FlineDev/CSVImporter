@@ -7,9 +7,13 @@
         <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
              alt="Build Status">
     </a>
+    <a href="https://codebeat.co/projects/github-com-flinesoft-csvimporter">
+        <img src="https://codebeat.co/badges/c665ed7c-1f1b-45db-9602-9ac216327edf"
+             alt="codebeat badge">
+    </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.1.0-blue.svg"
-             alt="Version: 1.1.0">
+        <img src="https://img.shields.io/badge/Version-1.2.0-blue.svg"
+             alt="Version: 1.2.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-2.2-FFAC45.svg"
          alt="Swift: 2.2">
@@ -43,7 +47,7 @@ Import CSV files line by line with ease.
 ## Installation
 
 Currently the recommended way of installing this library is via [Carthage](https://github.com/Carthage/Carthage).
-[Cocoapods](https://github.com/CocoaPods/CocoaPods) isn't supported yet (contributions welcome!).
+[Cocoapods](https://github.com/CocoaPods/CocoaPods) is supported too, if you really don't like Carthage. ;)
 
 You can of course also just include this framework manually into your project by downloading it or by using git submodules.
 
@@ -56,6 +60,24 @@ github "Flinesoft/CSVImporter"
 ```
 
 And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
+
+### CocoaPods
+
+Add the line `pod 'CSVImporter'` to your target in your `Podfile` and make sure to include `use_frameworks!`
+at the top. The result might look similar to this:
+
+``` Ruby
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyAppTarget' do
+    pod 'CSVImporter', '~> 1.1'
+end
+```
+
+Now close your project and run `pod install` from the command line. Then open the `.xcworkspace` from within your project folder.
+Build your project once (with `Cmd+B`) to update the frameworks known to Xcode. Now you can `import CSVImporter` in each class you want to use its features.
+Refer to [CocoaPods.org](https://cocoapods.org) for detailed / updates instructions.
 
 ## Usage
 

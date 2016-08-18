@@ -235,6 +235,7 @@
 		827A24B51D2801580003D6DD /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		827A24B61D2801580003D6DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +306,7 @@
 				827A24B51D2801580003D6DD /* LICENSE.md */,
 				82239F611C4AF89200627674 /* Cartfile */,
 				82239F621C4AF89200627674 /* Cartfile.private */,
+				A110355E1D666CFD00214547 /* CSVImporter.podspec */,
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
 				82239F491C4AF70500627674 /* Sources */,
 				82239F551C4AF70500627674 /* Tests */,

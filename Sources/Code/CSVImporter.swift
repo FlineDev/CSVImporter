@@ -10,6 +10,16 @@ import Foundation
 import FileKit
 import HandySwift
 
+/// An enum to represent the possible line endings of CSV files.
+public enum LineEnding: String {
+    case NL = "\n"
+    case CR = "\r"
+    case CRLF = "\r\n"
+    case Unknown = ""
+}
+
+private let chunkSize = 4096
+
 /// Importer for CSV files that maps your lines to a specified data structure.
 public class CSVImporter<T> {
 
@@ -17,6 +27,7 @@ public class CSVImporter<T> {
 
     let csvFile: TextFile
     let delimiter: String
+    var lineEnding: LineEnding
 
     var lastProgressReport: NSDate?
 
@@ -25,7 +36,7 @@ public class CSVImporter<T> {
     var failClosure: (() -> Void)?
 
 
-    // MARK: - Computes Instance Properties
+    // MARK: - Computed Instance Properties
 
     var shouldReportProgress: Bool {
         get {
@@ -42,11 +53,28 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - path: The path to the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
-    public init(path: String, delimiter: String = ",") {
+    ///   - lineEnding: The lineEnding of the file. If not specified will be determined automatically.
+    public init(path: String, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
         self.csvFile = TextFile(path: Path(path))
         self.delimiter = delimiter
+        self.lineEnding = lineEnding
+
+        delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
+        delimiterDelimiter = delimiter+delimiter
+        quoteDelimiter = "\"\"\(delimiter)"
+        delimiterQuote = "\(delimiter)\"\""
     }
 
+    /// Creates a `CSVImporter` object with required configuration options.
+    ///
+    /// - Parameters:
+    ///   - url: File URL for the CSV file to import.
+    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
+    public convenience init?(url: NSURL, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
+        guard url.fileURL else { return nil }
+        guard url.path != nil else { return nil }
+        self.init(path: url.path!, delimiter: delimiter, lineEnding: lineEnding)
+    }
 
     // MARK: - Instance Methods
 
@@ -120,10 +148,15 @@ public class CSVImporter<T> {
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
     func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
-        if let csvStreamReader = self.csvFile.streamReader() {
+        if lineEnding == .Unknown {
+            lineEnding = lineEndingForFile()
+        }
+        if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
             for line in csvStreamReader {
-                let valuesInLine = readValuesInLine(line)
-                closure(valuesInLine: valuesInLine)
+                autoreleasepool {
+                    let valuesInLine = readValuesInLine(line)
+                    closure(valuesInLine: valuesInLine)
+                }
             }
 
             return true
@@ -132,23 +165,51 @@ public class CSVImporter<T> {
         }
     }
 
+    /// Determines the line ending for the CSV file
+    ///
+    /// - Returns: the lineEnding for the CSV file or default of NL.
+    private func lineEndingForFile() -> LineEnding {
+        var lineEnding: LineEnding = .NL
+        if let fileHandle = self.csvFile.handleForReading {
+            let data = fileHandle.readDataOfLength(chunkSize).mutableCopy()
+            if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: NSUTF8StringEncoding, freeWhenDone: false) {
+                if contents.containsString(LineEnding.CRLF.rawValue) {
+                    lineEnding = .CRLF
+                } else if contents.containsString(LineEnding.NL.rawValue) {
+                    lineEnding = .NL
+                } else if contents.containsString(LineEnding.CR.rawValue) {
+                    lineEnding = .CR
+                }
+            }
+        }
+        return lineEnding
+    }
+
+    // Various private constants used for reading lines
+    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
+    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
+    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
+    private let substitute = "\u{001a}"
+    private let delimiterQuoteDelimiter: String
+    private let delimiterDelimiter: String
+    private let quoteDelimiter: String
+    private let delimiterQuote: String
+
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
     /// - Parameters:
     ///   - line: The line to read values from.
     /// - Returns: An array of values found in line.
     func readValuesInLine(line: String) -> [String] {
-        var correctedLine = line.stringByReplacingOccurrencesOfString("\(delimiter)\"\"\(delimiter)", withString: delimiter+delimiter)
-        correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\r\n", withString: "\n")
+        var correctedLine = line.stringByReplacingOccurrencesOfString(delimiterQuoteDelimiter, withString: delimiterDelimiter)
 
-        if correctedLine.hasPrefix("\"\"\(delimiter)") {
+        if correctedLine.hasPrefix(quoteDelimiter) {
             correctedLine = correctedLine.substringFromIndex(correctedLine.startIndex.advancedBy(2))
         }
-        if correctedLine.hasSuffix("\(delimiter)\"\"") || correctedLine.hasSuffix("\(delimiter)\"\"\n") {
+        if correctedLine.hasSuffix(delimiterQuote) {
             correctedLine = correctedLine.substringToIndex(correctedLine.startIndex.advancedBy(correctedLine.utf16.count - 2))
         }
 
-        let substitute = "\u{001a}"
         correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\"\"", withString: substitute)
         var components = correctedLine.componentsSeparatedByString(delimiter)
 
@@ -156,13 +217,8 @@ public class CSVImporter<T> {
         while index < components.count {
             let element = components[index]
 
-            let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-
             if index < components.count-1 && startPartRegex.firstMatchInString(element, options: .Anchored, range: element.fullRange) != nil {
                 var elementsToMerge = [element]
-
-                let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-                let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
 
                 while middlePartRegex.firstMatchInString(components[index+1], options: .Anchored, range: components[index+1].fullRange) != nil {
                     elementsToMerge.append(components[index+1])
