@@ -1,5 +1,5 @@
 # Simple and expressive file management in Swift
-github "Dschee/FileKit" "51c9f5d0b191dd38dbe8e5ef9b89d2dc3285c8f6"
+github "nvzqz/FileKit" ~> 3.0
 
 # Handy Swift features that didn't make it into the Swift standard library.
 github "Flinesoft/HandySwift" ~> 1.0

@@ -186,14 +186,14 @@ public class CSVImporter<T> {
     }
 
     // Various private constants used for reading lines
-    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive)
-    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive)
-    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive)
+    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
+    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
+    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
     private let substitute = "\u{001a}"
-    private let delimiterQuoteDelimiter:String
-    private let delimiterDelimiter:String
-    private let quoteDelimiter:String
-    private let delimiterQuote:String
+    private let delimiterQuoteDelimiter: String
+    private let delimiterDelimiter: String
+    private let quoteDelimiter: String
+    private let delimiterQuote: String
 
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
