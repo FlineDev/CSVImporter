@@ -36,7 +36,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file without headers") {
-            let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "Teams", ofType: "csv")
             var recordValues: [[String]]?
 
             if let path = path {
@@ -58,7 +58,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file special characters") {
-            let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("CommaSemicolonQuotes", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "CommaSemicolonQuotes", ofType: "csv")
             var recordValues: [[String]]?
 
             if let path = path {
@@ -89,7 +89,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers") {
-            let path = NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource("Teams", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "Teams", ofType: "csv")
             var recordValues: [[String: String]]?
 
             if let path = path {
@@ -193,7 +193,7 @@ class CSVImporterSpec: QuickSpec {
             if let path = path {
                 do {
                     let string = try String(contentsOfFile: path)
-                    expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
+                    expect(string.contains(LineEnding.CRLF.rawValue)).to(beTrue())
                 } catch { }
 
                 let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)    // wrong
@@ -215,7 +215,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers using File URL") {
-            let url = NSBundle(forClass: CSVImporterSpec.classForCoder()).URLForResource("Teams.csv", withExtension: nil)
+            let url = Bundle(for: CSVImporterSpec.classForCoder()).url(forResource: "Teams.csv", withExtension: nil)
             var recordValues: [[String: String]]?
 
             if let url = url {
@@ -240,36 +240,8 @@ class CSVImporterSpec: QuickSpec {
             expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
         }
 
-        it("imports data from CSV file with headers using Invalid File URL Fails") {
-            let url = NSURL(fileURLWithPath: "")
-            var recordValues: [[String: String]]?
-            var didFail = false
-
-            if let importer = CSVImporter<[String: String]>(url: url) {
-
-                importer.startImportingRecords(structure: { (headerValues) -> Void in
-                    print(headerValues)
-                }, recordMapper: { (recordValues) -> [String : String] in
-                    return recordValues
-                }).onFail {
-                    print("Did fail")
-                }.onProgress { importedDataLinesCount in
-                    print("Progress: \(importedDataLinesCount)")
-                }.onFinish { importedRecords in
-                    print("Did finish import, first array: \(importedRecords.first)")
-                    recordValues = importedRecords
-                }
-            } else {
-                didFail = true
-            }
-
-            expect(recordValues).toEventually(beNil(), timeout: 10)
-            expect(didFail).toEventually(beTrue())
-        }
-
-
         it("imports data from CSV file with headers using Web URL Fails") {
-            let url = NSURL(string: "https://www.apple.com")
+            let url = URL(string: "https://www.apple.com")
             var recordValues: [[String: String]]?
             var didFail = false
 
@@ -298,7 +270,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers using File URL") {
-            let url = NSBundle(forClass: CSVImporterSpec.classForCoder()).URLForResource("Teams.csv", withExtension: nil)
+            let url = Bundle(for: CSVImporterSpec.classForCoder()).url(forResource: "Teams.csv", withExtension: nil)
             var recordValues: [[String: String]]?
 
             if let url = url {
@@ -322,36 +294,8 @@ class CSVImporterSpec: QuickSpec {
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
         }
 
-        it("imports data from CSV file with headers using Invalid File URL Fails") {
-            let url = NSURL(fileURLWithPath: "")
-            var recordValues: [[String: String]]?
-            var didFail = false
-
-            if let importer = CSVImporter<[String: String]>(url: url) {
-
-                importer.startImportingRecords(structure: { (headerValues) -> Void in
-                    print(headerValues)
-                }, recordMapper: { (recordValues) -> [String : String] in
-                    return recordValues
-                }).onFail {
-                    print("Did fail")
-                }.onProgress { importedDataLinesCount in
-                    print("Progress: \(importedDataLinesCount)")
-                }.onFinish { importedRecords in
-                    print("Did finish import, first array: \(importedRecords.first)")
-                    recordValues = importedRecords
-                }
-            } else {
-                didFail = true
-            }
-
-            expect(recordValues).toEventually(beNil(), timeout: 10)
-            expect(didFail).toEventually(beTrue())
-        }
-
-
         it("imports data from CSV file with headers using Web URL Fails") {
-            let url = NSURL(string: "https://www.apple.com")
+            let url = URL(string: "https://www.apple.com")
             var recordValues: [[String: String]]?
             var didFail = false
 
@@ -386,14 +330,14 @@ class CSVImporterSpec: QuickSpec {
         return ["H": "426", "SOA": "23", "SO": "19", "WCWin": "", "AB": "1372", "BPF": "103", "IPouts": "828", "PPF": "98", "3B": "37", "BB": "60", "HBP": "", "lgID": "NA", "ER": "109", "CG": "22", "name": "Boston Red Stockings", "yearID": "1871", "divID": "", "teamIDretro": "BS1", "FP": "0.83", "R": "401", "G": "31", "BBA": "42", "HA": "367", "RA": "303", "park": "South End Grounds I", "DivWin": "", "WSWin": "", "HR": "3", "E": "225", "ERA": "3.55", "franchID": "BNA", "DP": "", "L": "10", "LgWin": "N", "W": "20", "SV": "3", "SHO": "1", "Rank": "3", "Ghome": "", "teamID": "BS1", "teamIDlahman45": "BS1", "HRA": "2", "SF": "", "attendance": "", "CS": "", "teamIDBR": "BOS", "SB": "73", "2B": "70"]
     }
 
-    func convertTeamsLineEndingTo(lineEnding:LineEnding) -> String? {
+    func convertTeamsLineEndingTo(_ lineEnding:LineEnding) -> String? {
         if let path = pathForResourceFile("Teams.csv") {
             do {
                 let string = try String(contentsOfFile: path)
-                expect(string.containsString(LineEnding.CRLF.rawValue)).to(beTrue())
-                let crString = string.stringByReplacingOccurrencesOfString(LineEnding.CRLF.rawValue, withString: lineEnding.rawValue)
-                let tempPath = (NSTemporaryDirectory() as NSString).stringByAppendingPathComponent("TeamsNewLineEnding.csv")
-                try crString.writeToFile(tempPath, atomically: false, encoding: NSUTF8StringEncoding)
+                expect(string.contains(LineEnding.CRLF.rawValue)).to(beTrue())
+                let crString = string.replacingOccurrences(of: LineEnding.CRLF.rawValue, with: lineEnding.rawValue)
+                let tempPath = (NSTemporaryDirectory() as NSString).appendingPathComponent("TeamsNewLineEnding.csv")
+                try crString.write(toFile: tempPath, atomically: false, encoding: String.Encoding.utf8)
                 return tempPath
             } catch {
                 // TODO: Some kind of error handling
@@ -403,14 +347,14 @@ class CSVImporterSpec: QuickSpec {
         return nil
     }
 
-    func pathForResourceFile(name:String) -> String? {
-        return NSBundle(forClass: CSVImporterSpec.classForCoder()).pathForResource(name, ofType: nil)
+    func pathForResourceFile(_ name:String) -> String? {
+        return Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: name, ofType: nil)
     }
 
-    func deleteFileSilently(path:String?) {
+    func deleteFileSilently(_ path:String?) {
         guard let path = path else { return }
         do {
-            try NSFileManager.defaultManager().removeItemAtPath(path)
+            try FileManager.default.removeItem(atPath: path)
         } catch { }
     }
 

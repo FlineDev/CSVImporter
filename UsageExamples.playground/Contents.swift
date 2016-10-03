@@ -5,7 +5,7 @@ import XCPlayground
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 
 //: Get the path to an example CSV file (see Resources folder of this Playground).
-let path = NSBundle.mainBundle().pathForResource("Teams", ofType: "csv")!
+let path = Bundle.main.path(forResource: "Teams", ofType: "csv")!
 
 //: ## CSVImporter
 //: The CSVImporter class is the class which includes all the import logic.
@@ -20,7 +20,7 @@ let defaultImporter = CSVImporter<[String]>(path: path)
 
 defaultImporter.startImportingRecords{ $0 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count   // number of all records
     importedRecords[100]    // this is a single record
     importedRecords         // array with all records (in this case an array of arrays)
@@ -58,10 +58,10 @@ let structureImporter = CSVImporter<[String: String]>(path: path)
 structureImporter.startImportingRecords(structure: { headerValues in
     
     headerValues // the structural information from the first line as a [String]
-    
+
 }){ $0 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count           // the number of all imported records
     importedRecords[99]             // this is a single record
     
@@ -87,7 +87,7 @@ teamsDefaultImporter.startImportingRecords { recordValues -> Team in
     
 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType     // the type is now [Team]
+    type(of: importedRecords)     // the type is now [Team]
     importedRecords.count           // number of all imported records
 
     let aTeam = importedRecords[100]
@@ -110,7 +110,7 @@ teamsStructuredImporter.startImportingRecords(structure: { headerValues in
     
 }.onFinish { (importedRecords) -> Void in
     
-    importedRecords.dynamicType     // the type is now [Team]
+    type(of: importedRecords)     // the type is now [Team]
     importedRecords.count           // number of all imported records
     
     let aTeam = importedRecords[99]
@@ -123,7 +123,7 @@ teamsStructuredImporter.startImportingRecords(structure: { headerValues in
 
 //: You can also build an importer with a file URL
 //: Get the file URL to an example CSV file (see Resources folder of this Playground).
-let fileURL = NSBundle.mainBundle().URLForResource("Teams.csv", withExtension: nil)!
+let fileURL = Bundle.main.url(forResource: "Teams.csv", withExtension: nil)!
 
 //: ## CSVImporter
 //: The CSVImporter class is the class that includes all the import logic.
@@ -138,7 +138,7 @@ let fileURLImporter = CSVImporter<[String]>(url: fileURL)
 
 fileURLImporter?.startImportingRecords{ $0 }.onFinish { importedRecords in
 
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count   // number of all records
     importedRecords[100]    // this is a single record
     importedRecords         // array with all records (in this case an array of arrays)
