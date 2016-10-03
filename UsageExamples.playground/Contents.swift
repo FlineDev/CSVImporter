@@ -20,7 +20,7 @@ let defaultImporter = CSVImporter<[String]>(path: path)
 
 defaultImporter.startImportingRecords{ $0 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count   // number of all records
     importedRecords[100]    // this is a single record
     importedRecords         // array with all records (in this case an array of arrays)
@@ -61,7 +61,7 @@ structureImporter.startImportingRecords(structure: { headerValues in
     
 }){ $0 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count           // the number of all imported records
     importedRecords[99]             // this is a single record
     
@@ -87,7 +87,7 @@ teamsDefaultImporter.startImportingRecords { recordValues -> Team in
     
 }.onFinish { importedRecords in
     
-    importedRecords.dynamicType     // the type is now [Team]
+    type(of: importedRecords)     // the type is now [Team]
     importedRecords.count           // number of all imported records
 
     let aTeam = importedRecords[100]
@@ -110,7 +110,7 @@ teamsStructuredImporter.startImportingRecords(structure: { headerValues in
     
 }.onFinish { (importedRecords) -> Void in
     
-    importedRecords.dynamicType     // the type is now [Team]
+    type(of: importedRecords)     // the type is now [Team]
     importedRecords.count           // number of all imported records
     
     let aTeam = importedRecords[99]
@@ -138,7 +138,7 @@ let fileURLImporter = CSVImporter<[String]>(url: fileURL)
 
 fileURLImporter?.startImportingRecords{ $0 }.onFinish { importedRecords in
 
-    importedRecords.dynamicType
+    type(of: importedRecords)
     importedRecords.count   // number of all records
     importedRecords[100]    // this is a single record
     importedRecords         // array with all records (in this case an array of arrays)
