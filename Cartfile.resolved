@@ -1,4 +1,4 @@
-github "nvzqz/FileKit" "v3.0.0"
-github "Flinesoft/HandySwift" "1.2.0"
-github "Quick/Nimble" "188caeb094bc342614d8a5c706cd8bb9a6c355eb"
-github "Quick/Quick" "460abe2d43f47f1da7925ef91b414e6c98daae5a"
+github "nvzqz/FileKit" "29e8c684fdb3018b3fe8ca6b84fe4fb06ef891bf"
+github "Flinesoft/HandySwift" "1.3.0"
+github "Quick/Nimble" "8b71ca345b9b41e3555f87dd904c6f23e4ccdc34"
+github "Quick/Quick" "505af8e6f9c85a2e243b36986ee2cf926cda5a7e"

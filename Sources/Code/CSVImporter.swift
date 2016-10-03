@@ -21,7 +21,7 @@ public enum LineEnding: String {
 private let chunkSize = 4096
 
 /// Importer for CSV files that maps your lines to a specified data structure.
-public class CSVImporter<T> {
+open class CSVImporter<T> {
 
     // MARK: - Stored Instance Properties
 
@@ -29,10 +29,10 @@ public class CSVImporter<T> {
     let delimiter: String
     var lineEnding: LineEnding
 
-    var lastProgressReport: NSDate?
+    var lastProgressReport: Date?
 
-    var progressClosure: ((importedDataLinesCount: Int) -> Void)?
-    var finishClosure: ((importedRecords: [T]) -> Void)?
+    var progressClosure: ((_ importedDataLinesCount: Int) -> Void)?
+    var finishClosure: ((_ importedRecords: [T]) -> Void)?
     var failClosure: (() -> Void)?
 
 
@@ -41,7 +41,7 @@ public class CSVImporter<T> {
     var shouldReportProgress: Bool {
         get {
             return self.progressClosure != nil &&
-                (self.lastProgressReport == nil || NSDate().timeIntervalSinceDate(self.lastProgressReport!) > 0.1)
+                (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
         }
     }
 
@@ -70,10 +70,9 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - url: File URL for the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
-    public convenience init?(url: NSURL, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
-        guard url.fileURL else { return nil }
-        guard url.path != nil else { return nil }
-        self.init(path: url.path!, delimiter: delimiter, lineEnding: lineEnding)
+    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
+        guard url.isFileURL else { return nil }
+        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding)
     }
 
     // MARK: - Instance Methods
@@ -83,12 +82,12 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func startImportingRecords(mapper closure: (recordValues: [String]) -> T) -> Self {
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+    open func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             var importedRecords: [T] = []
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
-                let newRecord = closure(recordValues: valuesInLine)
+                let newRecord = closure(valuesInLine)
                 importedRecords.append(newRecord)
 
                 self.reportProgressIfNeeded(importedRecords)
@@ -110,8 +109,8 @@ public class CSVImporter<T> {
     ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func startImportingRecords(structure structureClosure: (headerValues: [String]) -> Void, recordMapper closure: (recordValues: [String: String]) -> T) -> Self {
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0)) {
+    open func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void, recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             var recordStructure: [String]?
             var importedRecords: [T] = []
 
@@ -119,10 +118,10 @@ public class CSVImporter<T> {
 
                 if recordStructure == nil {
                     recordStructure = valuesInLine
-                    structureClosure(headerValues: valuesInLine)
+                    structureClosure(valuesInLine)
                 } else {
                     if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
-                        let newRecord = closure(recordValues: structuredValuesInLine)
+                        let newRecord = closure(structuredValuesInLine)
                         importedRecords.append(newRecord)
 
                         self.reportProgressIfNeeded(importedRecords)
@@ -147,7 +146,7 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
-    func importLines(closure: (valuesInLine: [String]) -> Void) -> Bool {
+    func importLines(_ closure: (_ valuesInLine: [String]) -> Void) -> Bool {
         if lineEnding == .Unknown {
             lineEnding = lineEndingForFile()
         }
@@ -155,7 +154,7 @@ public class CSVImporter<T> {
             for line in csvStreamReader {
                 autoreleasepool {
                     let valuesInLine = readValuesInLine(line)
-                    closure(valuesInLine: valuesInLine)
+                    closure(valuesInLine)
                 }
             }
 
@@ -168,17 +167,18 @@ public class CSVImporter<T> {
     /// Determines the line ending for the CSV file
     ///
     /// - Returns: the lineEnding for the CSV file or default of NL.
-    private func lineEndingForFile() -> LineEnding {
+    fileprivate func lineEndingForFile() -> LineEnding {
         var lineEnding: LineEnding = .NL
         if let fileHandle = self.csvFile.handleForReading {
-            let data = fileHandle.readDataOfLength(chunkSize).mutableCopy()
-            if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: NSUTF8StringEncoding, freeWhenDone: false) {
-                if contents.containsString(LineEnding.CRLF.rawValue) {
-                    lineEnding = .CRLF
-                } else if contents.containsString(LineEnding.NL.rawValue) {
-                    lineEnding = .NL
-                } else if contents.containsString(LineEnding.CR.rawValue) {
-                    lineEnding = .CR
+            if let data = (fileHandle.readData(ofLength: chunkSize) as NSData).mutableCopy() as? NSMutableData {
+                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: String.Encoding.utf8.rawValue, freeWhenDone: false) {
+                    if contents.contains(LineEnding.CRLF.rawValue) {
+                        lineEnding = .CRLF
+                    } else if contents.contains(LineEnding.NL.rawValue) {
+                        lineEnding = .NL
+                    } else if contents.contains(LineEnding.CR.rawValue) {
+                        lineEnding = .CR
+                    }
                 }
             }
         }
@@ -186,49 +186,49 @@ public class CSVImporter<T> {
     }
 
     // Various private constants used for reading lines
-    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .CaseInsensitive) // swiftlint:disable:this force_try
-    private let substitute = "\u{001a}"
-    private let delimiterQuoteDelimiter: String
-    private let delimiterDelimiter: String
-    private let quoteDelimiter: String
-    private let delimiterQuote: String
+    fileprivate let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    fileprivate let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    fileprivate let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    fileprivate let substitute = "\u{001a}"
+    fileprivate let delimiterQuoteDelimiter: String
+    fileprivate let delimiterDelimiter: String
+    fileprivate let quoteDelimiter: String
+    fileprivate let delimiterQuote: String
 
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
     /// - Parameters:
     ///   - line: The line to read values from.
     /// - Returns: An array of values found in line.
-    func readValuesInLine(line: String) -> [String] {
-        var correctedLine = line.stringByReplacingOccurrencesOfString(delimiterQuoteDelimiter, withString: delimiterDelimiter)
+    func readValuesInLine(_ line: String) -> [String] {
+        var correctedLine = line.replacingOccurrences(of: delimiterQuoteDelimiter, with: delimiterDelimiter)
 
         if correctedLine.hasPrefix(quoteDelimiter) {
-            correctedLine = correctedLine.substringFromIndex(correctedLine.startIndex.advancedBy(2))
+            correctedLine = correctedLine.substring(from: correctedLine.characters.index(correctedLine.startIndex, offsetBy: 2))
         }
         if correctedLine.hasSuffix(delimiterQuote) {
-            correctedLine = correctedLine.substringToIndex(correctedLine.startIndex.advancedBy(correctedLine.utf16.count - 2))
+            correctedLine = correctedLine.substring(to: correctedLine.characters.index(correctedLine.startIndex, offsetBy: correctedLine.utf16.count - 2))
         }
 
-        correctedLine = correctedLine.stringByReplacingOccurrencesOfString("\"\"", withString: substitute)
-        var components = correctedLine.componentsSeparatedByString(delimiter)
+        correctedLine = correctedLine.replacingOccurrences(of: "\"\"", with: substitute)
+        var components = correctedLine.components(separatedBy: delimiter)
 
         var index = 0
         while index < components.count {
             let element = components[index]
 
-            if index < components.count-1 && startPartRegex.firstMatchInString(element, options: .Anchored, range: element.fullRange) != nil {
+            if index < components.count-1 && startPartRegex.firstMatch(in: element, options: .anchored, range: element.fullRange) != nil {
                 var elementsToMerge = [element]
 
-                while middlePartRegex.firstMatchInString(components[index+1], options: .Anchored, range: components[index+1].fullRange) != nil {
+                while middlePartRegex.firstMatch(in: components[index+1], options: .anchored, range: components[index+1].fullRange) != nil {
                     elementsToMerge.append(components[index+1])
-                    components.removeAtIndex(index+1)
+                    components.remove(at: index+1)
                 }
 
-                if endPartRegex.firstMatchInString(components[index+1], options: .Anchored, range: components[index+1].fullRange) != nil {
+                if endPartRegex.firstMatch(in: components[index+1], options: .anchored, range: components[index+1].fullRange) != nil {
                     elementsToMerge.append(components[index+1])
-                    components.removeAtIndex(index+1)
-                    components[index] = elementsToMerge.joinWithSeparator(delimiter)
+                    components.remove(at: index+1)
+                    components[index] = elementsToMerge.joined(separator: delimiter)
                 } else {
                     print("Invalid CSV format in line, opening \" must be closed – line: \(line).")
                 }
@@ -237,8 +237,8 @@ public class CSVImporter<T> {
             index += 1
         }
 
-        components = components.map { $0.stringByReplacingOccurrencesOfString("\"", withString: "") }
-        components = components.map { $0.stringByReplacingOccurrencesOfString(substitute, withString: "\"") }
+        components = components.map { $0.replacingOccurrences(of: "\"", with: "") }
+        components = components.map { $0.replacingOccurrences(of: substitute, with: "\"") }
 
         return components
     }
@@ -248,7 +248,7 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - closure: The closure to be called on failure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func onFail(closure: () -> Void) -> Self {
+    open func onFail(_ closure: @escaping () -> Void) -> Self {
         self.failClosure = closure
         return self
     }
@@ -259,7 +259,7 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - closure: The closure to be called on progress. Takes the current count of imported lines as argument.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func onProgress(closure: (importedDataLinesCount: Int) -> Void) -> Self {
+    open func onProgress(_ closure: @escaping (_ importedDataLinesCount: Int) -> Void) -> Self {
         self.progressClosure = closure
         return self
     }
@@ -268,7 +268,7 @@ public class CSVImporter<T> {
     ///
     /// - Parameters:
     ///   - closure: The closure to be called on finish. Takes the array of all imported records mapped to as its argument.
-    public func onFinish(closure: (importedRecords: [T]) -> Void) {
+    open func onFinish(_ closure: @escaping (_ importedRecords: [T]) -> Void) {
         self.finishClosure = closure
     }
 
@@ -277,29 +277,29 @@ public class CSVImporter<T> {
 
     func reportFail() {
         if let failClosure = self.failClosure {
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 failClosure()
             }
         }
     }
 
-    func reportProgressIfNeeded(importedRecords: [T]) {
+    func reportProgressIfNeeded(_ importedRecords: [T]) {
         if self.shouldReportProgress {
-            self.lastProgressReport = NSDate()
+            self.lastProgressReport = Date()
 
             if let progressClosure = self.progressClosure {
-                dispatch_async(dispatch_get_main_queue()) {
-                    progressClosure(importedDataLinesCount: importedRecords.count)
+                DispatchQueue.main.async {
+                    progressClosure(importedRecords.count)
                 }
             }
         }
 
     }
 
-    func reportFinish(importedRecords: [T]) {
+    func reportFinish(_ importedRecords: [T]) {
         if let finishClosure = self.finishClosure {
-            dispatch_async(dispatch_get_main_queue()) {
-                finishClosure(importedRecords: importedRecords)
+            DispatchQueue.main.async {
+                finishClosure(importedRecords)
             }
         }
     }
