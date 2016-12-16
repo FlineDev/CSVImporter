@@ -13,43 +13,32 @@ import Foundation
 /// A representation of a filesystem text file.
 ///
 /// The data type is String.
-open class TextFile {
-
+class TextFile {
     /// The text file's string encoding.
-    open var encoding: String.Encoding
+    fileprivate var encoding: String.Encoding
 
     /// The file's filesystem path.
-    open var path: String
-
-    /// Initializes a text file from a path.
-    ///
-    /// - Parameter path: The path to be created a text file from.
-    public convenience init(path: String) {
-        self.init(path: path, encoding: .utf8)
-    }
+    fileprivate var path: String
 
     /// Initializes a text file from a path with an encoding.
     ///
     /// - Parameter path: The path to be created a text file from.
     /// - Parameter encoding: The encoding to be used for the text file.
-    public init(path: String, encoding: String.Encoding) {
+    init(path: String, encoding: String.Encoding) {
         self.path = path
         self.encoding = encoding
     }
-
 }
 
 // MARK: Line Reader
 extension TextFile {
-
     /// Provide a reader to read line by line.
     ///
     /// - Parameter delimiter: the line delimiter (default: \n)
     /// - Parameter chunkSize: size of buffer (default: 4096)
     ///
     /// - Returns: the `TextFileStreamReader`
-    public func streamReader(_ delimiter: String = "\n",
-                             chunkSize: Int = 4096) -> TextFileStreamReader? {
+    func streamReader(_ delimiter: String = "\n", chunkSize: Int = 4096) -> TextFileStreamReader? {
         return TextFileStreamReader(
             path: self.path,
             delimiter: delimiter,
@@ -57,49 +46,29 @@ extension TextFile {
             chunkSize: chunkSize
         )
     }
-
-    /// Read file and return filtered lines.
-    ///
-    /// - Parameter motif: the motif to compare
-    /// - Parameter include: check if line include motif if true, exclude if not (default: true)
-    /// - Parameter options: optional options  for string comparaison
-    ///
-    /// - Returns: the lines
-    public func grep(_ motif: String, include: Bool = true,
-                     options: NSString.CompareOptions = []) -> [String] {
-        guard let reader = streamReader() else {
-            return []
-        }
-        defer {
-            reader.close()
-        }
-        return reader.filter {($0.range(of: motif, options: options) != nil) == include }
-    }
-
 }
 
 /// A class to read `TextFile` line by line.
-open class TextFileStreamReader {
-
+class TextFileStreamReader {
     /// The text encoding.
-    open let encoding: String.Encoding
+    fileprivate let encoding: String.Encoding
 
     /// The chunk size when reading.
-    open let chunkSize: Int
+    fileprivate let chunkSize: Int
 
     /// Tells if the position is at the end of file.
-    open var atEOF: Bool = false
+    fileprivate var atEOF: Bool = false
 
-    let fileHandle: FileHandle!
-    let buffer: NSMutableData!
-    let delimData: Data!
+    fileprivate let fileHandle: FileHandle!
+    fileprivate let buffer: NSMutableData!
+    fileprivate let delimData: Data!
 
     // MARK: - Initialization
     /// - Parameter path:      the file path
     /// - Parameter delimiter: the line delimiter (default: \n)
     /// - Parameter encoding: file encoding (default: NSUTF8StringEncoding)
     /// - Parameter chunkSize: size of buffer (default: 4096)
-    public init?(
+    fileprivate init?(
         path: String,
         delimiter: String = "\n",
         encoding: String.Encoding = String.Encoding.utf8,
@@ -128,7 +97,7 @@ open class TextFileStreamReader {
 
     // MARK: - public methods
     /// - Returns: The next line, or nil on EOF.
-    open func nextLine() -> String? {
+    fileprivate func nextLine() -> String? {
         if atEOF {
             return nil
         }
@@ -164,36 +133,27 @@ open class TextFileStreamReader {
         return line as? String
     }
 
-    /// Start reading from the beginning of file.
-    open func rewind() -> Void {
-        fileHandle?.seek(toFileOffset: 0)
-        buffer.length = 0
-        atEOF = false
-    }
-
     /// Close the underlying file. No reading must be done after calling this method.
-    open func close() -> Void {
+    fileprivate func close() -> Void {
         fileHandle?.closeFile()
     }
-
 }
+
 
 // MARK: File Handle
 
 extension TextFile {
-
     /// Returns a file handle for reading from `self`, or `nil` if `self`
     /// doesn't exist.
-    open var handleForReading: FileHandle? {
+    var handleForReading: FileHandle? {
         return FileHandle(forReadingAtPath: path)
     }
-
 }
 
 // Implement `SequenceType` for `TextFileStreamReader`
-extension TextFileStreamReader : Sequence {
+extension TextFileStreamReader: Sequence {
     /// - Returns: An iterator to be used for iterating over a `TextFileStreamReader` object.
-    public func makeIterator() -> AnyIterator<String> {
+    func makeIterator() -> AnyIterator<String> {
         return AnyIterator {
             return self.nextLine()
         }

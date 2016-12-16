@@ -112,9 +112,6 @@
 		A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
-		A1EC02DF1E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
-		A1EC02E01E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
-		A1EC02E11E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -232,7 +229,6 @@
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1EC02DA1E0431F20021718E /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = SOURCE_ROOT; };
-		A1EC02DE1E0433070021718E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,7 +489,6 @@
 			isa = PBXGroup;
 			children = (
 				A1EC02DA1E0431F20021718E /* TextFile.swift */,
-				A1EC02DE1E0433070021718E /* File.swift */,
 			);
 			name = "Text Reader";
 			sourceTree = "<group>";
@@ -977,7 +972,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */,
-				A1EC02DF1E0433070021718E /* File.swift in Sources */,
 				82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -995,7 +989,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */,
-				A1EC02E01E0433070021718E /* File.swift in Sources */,
 				82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1013,7 +1006,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */,
-				A1EC02E11E0433070021718E /* File.swift in Sources */,
 				82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

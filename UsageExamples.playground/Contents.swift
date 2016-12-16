@@ -18,7 +18,7 @@ let defaultImporter = CSVImporter<[String]>(path: path)
 //: ### Basic import: .startImportingRecords & .onFinish
 //: For a basic line-by-line import of your file start the import and use the `.onFinish` callback. The import is done asynchronously but all callbacks (like `.onFinish`) are called on the main thread.
 
-defaultImporter.startImportingRecords{ $0 }.onFinish { importedRecords in
+defaultImporter.startImportingRecords { $0 }.onFinish { importedRecords in
     
     type(of: importedRecords)
     importedRecords.count   // number of all records
@@ -31,7 +31,7 @@ defaultImporter.startImportingRecords{ $0 }.onFinish { importedRecords in
 //: In case your path was wrong the chainable `.onFail` callback will be called instead of the `.onFinish`.
 
 let wrongPathImporter = CSVImporter<[String]>(path: "a/wrong/path")
-wrongPathImporter.startImportingRecords{ $0 }.onFail {
+wrongPathImporter.startImportingRecords { $0 }.onFail {
     
     ".onFail called because the path is wrong"
     
@@ -44,7 +44,7 @@ wrongPathImporter.startImportingRecords{ $0 }.onFail {
 //: ### .onProgress
 //: If you want to show progress to your users you can use the `.onProgress` callback. It will be called multiple times a second with the current number of lines already processed.
 
-defaultImporter.startImportingRecords{ $0 }.onProgress { importedDataLinesCount in
+defaultImporter.startImportingRecords { $0 }.onProgress { importedDataLinesCount in
     
     importedDataLinesCount
     "Progress Update in main thread: \(importedDataLinesCount) lines were imported"
@@ -136,7 +136,7 @@ let fileURLImporter = CSVImporter<[String]>(url: fileURL)
 //: ### Basic import: .startImportingRecords & .onFinish
 //: For a basic line-by-line import of your file start the import and use the `.onFinish` callback. The import is done asynchronously but all callbacks (like `.onFinish`) are called on the main thread.
 
-fileURLImporter?.startImportingRecords{ $0 }.onFinish { importedRecords in
+fileURLImporter?.startImportingRecords { $0 }.onFinish { importedRecords in
 
     type(of: importedRecords)
     importedRecords.count   // number of all records

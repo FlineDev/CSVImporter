@@ -4,9 +4,11 @@ opt_in_rules:
 
 disabled_rules:
 - vertical_whitespace # Turn off until configurable to 2 newlines
+- cyclomatic_complexity
 
 included:
 - Sources
+- Tests
 
 excluded:
 - Carthage
