@@ -9,14 +9,11 @@
 /* Begin PBXBuildFile section */
 		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
-		82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; };
 		82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; };
 		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
 		82239F811C4AFAFF00627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F771C4AFAFF00627674 /* CSVImporter.framework */; };
 		82239F9D1C4AFB1000627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F931C4AFB1000627674 /* CSVImporter.framework */; };
-		82239FAA1C4AFB2A00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6B1C4AFA0F00627674 /* FileKit.framework */; };
 		82239FAB1C4AFB2D00627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; };
-		82239FAC1C4AFB2F00627674 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; };
 		82239FAD1C4AFB3200627674 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; };
 		82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
 		82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
@@ -106,15 +103,18 @@
 		8223A0271C4AFCAE00627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; };
 		8223A02B1C4AFCC900627674 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; };
 		8223A02C1C4AFCC900627674 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; };
-		8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F671C4AF9AE00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F681C4AF9AE00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6B1C4AFA0F00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6C1C4AFA0F00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6D1C4AFA1E00627674 /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82239F6E1C4AFA1E00627674 /* HandySwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
+		A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
+		A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
+		A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
+		A1EC02DF1E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
+		A1EC02E01E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
+		A1EC02E11E0433070021718E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DE1E0433070021718E /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,7 +149,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8223A0301C4AFD3200627674 /* HandySwift.framework in Copy Framework Dependencies */,
-				8223A02F1C4AFD2C00627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,7 +160,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8223A0331C4AFD4600627674 /* HandySwift.framework in Copy Framework Dependencies */,
-				8223A0321C4AFD4100627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +171,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8223A0361C4AFD5700627674 /* HandySwift.framework in Copy Framework Dependencies */,
-				8223A0351C4AFD5200627674 /* FileKit.framework in Copy Framework Dependencies */,
 			);
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,11 +185,8 @@
 		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
 		82239F611C4AF89200627674 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
-		82239F671C4AF9AE00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
 		82239F681C4AF9AE00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
-		82239F6B1C4AFA0F00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/tvOS/FileKit.framework; sourceTree = SOURCE_ROOT; };
 		82239F6C1C4AFA0F00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
-		82239F6D1C4AFA1E00627674 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = SOURCE_ROOT; };
 		82239F6E1C4AFA1E00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = SOURCE_ROOT; };
 		82239F701C4AFAA800627674 /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
 		82239F771C4AFAFF00627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,6 +231,8 @@
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		A1EC02DA1E0431F20021718E /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = SOURCE_ROOT; };
+		A1EC02DE1E0433070021718E /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,7 +240,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239F691C4AF9AE00627674 /* FileKit.framework in Frameworks */,
 				82239F6A1C4AF9AE00627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239FAA1C4AFB2A00627674 /* FileKit.framework in Frameworks */,
 				82239FAB1C4AFB2D00627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +276,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239FAC1C4AFB2F00627674 /* FileKit.framework in Frameworks */,
 				82239FAD1C4AFB3200627674 /* HandySwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,8 +323,7 @@
 				8223A03A1C4AFE5D00627674 /* Code */,
 				8223A03B1C4AFE6200627674 /* Supporting Files */,
 			);
-			name = Sources;
-			path = CSVImporter;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		82239F551C4AF70500627674 /* Tests */ = {
@@ -341,8 +333,7 @@
 				82239FB41C4AFC5100627674 /* Assets */,
 				8223A03C1C4AFE6E00627674 /* Supporting Files */,
 			);
-			name = Tests;
-			path = CSVImporterTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		82239F631C4AF89600627674 /* Carthage */ = {
@@ -358,7 +349,6 @@
 		82239F641C4AF98800627674 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				82239F671C4AF9AE00627674 /* FileKit.framework */,
 				82239F681C4AF9AE00627674 /* HandySwift.framework */,
 				8223A0231C4AFC9900627674 /* Tests */,
 			);
@@ -368,7 +358,6 @@
 		82239F651C4AF98C00627674 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				82239F6B1C4AFA0F00627674 /* FileKit.framework */,
 				82239F6C1C4AFA0F00627674 /* HandySwift.framework */,
 				8223A0281C4AFCB400627674 /* Tests */,
 			);
@@ -378,7 +367,6 @@
 		82239F661C4AF99400627674 /* OSX */ = {
 			isa = PBXGroup;
 			children = (
-				82239F6D1C4AFA1E00627674 /* FileKit.framework */,
 				82239F6E1C4AFA1E00627674 /* HandySwift.framework */,
 				8223A02D1C4AFCCD00627674 /* Tests */,
 			);
@@ -391,9 +379,8 @@
 				827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */,
 				82239FB51C4AFC5100627674 /* Lahman's Baseball Database */,
 			);
-			name = Assets;
-			path = Tests/Assets;
-			sourceTree = SOURCE_ROOT;
+			path = Assets;
+			sourceTree = "<group>";
 		};
 		82239FB51C4AFC5100627674 /* Lahman's Baseball Database */ = {
 			isa = PBXGroup;
@@ -432,9 +419,8 @@
 			children = (
 				8223A01B1C4AFC6700627674 /* CSVImporterSpec.swift */,
 			);
-			name = Code;
-			path = Tests/Code;
-			sourceTree = SOURCE_ROOT;
+			path = Code;
+			sourceTree = "<group>";
 		};
 		8223A0231C4AFC9900627674 /* Tests */ = {
 			isa = PBXGroup;
@@ -467,8 +453,9 @@
 			isa = PBXGroup;
 			children = (
 				82239F701C4AFAA800627674 /* CSVImporter.swift */,
+				A1EC02E21E0433300021718E /* Text Reader */,
 			);
-			name = Code;
+			path = Code;
 			sourceTree = "<group>";
 		};
 		8223A03B1C4AFE6200627674 /* Supporting Files */ = {
@@ -477,7 +464,7 @@
 				82239F4A1C4AF70500627674 /* CSVImporter.h */,
 				82239F4C1C4AF70500627674 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8223A03C1C4AFE6E00627674 /* Supporting Files */ = {
@@ -485,7 +472,7 @@
 			children = (
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A1EC02D81E0431A90021718E /* Root Files */ = {
@@ -500,6 +487,15 @@
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
 			);
 			name = "Root Files";
+			sourceTree = "<group>";
+		};
+		A1EC02E21E0433300021718E /* Text Reader */ = {
+			isa = PBXGroup;
+			children = (
+				A1EC02DA1E0431F20021718E /* TextFile.swift */,
+				A1EC02DE1E0433070021718E /* File.swift */,
+			);
+			name = "Text Reader";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,7 +841,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/HandySwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -861,7 +856,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/HandySwift.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -877,7 +871,6 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/HandySwift.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/FileKit.framework",
 			);
 			name = "Copy Frameworks";
 			outputPaths = (
@@ -983,6 +976,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */,
+				A1EC02DF1E0433070021718E /* File.swift in Sources */,
 				82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -999,6 +994,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */,
+				A1EC02E01E0433070021718E /* File.swift in Sources */,
 				82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,6 +1012,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */,
+				A1EC02E11E0433070021718E /* File.swift in Sources */,
 				82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

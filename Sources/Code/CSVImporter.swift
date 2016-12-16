@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FileKit
 import HandySwift
 
 /// An enum to represent the possible line endings of CSV files.
@@ -39,10 +38,7 @@ open class CSVImporter<T> {
     // MARK: - Computed Instance Properties
 
     var shouldReportProgress: Bool {
-        get {
-            return self.progressClosure != nil &&
-                (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
-        }
+        return self.progressClosure != nil && (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
     }
 
 
@@ -55,7 +51,7 @@ open class CSVImporter<T> {
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     ///   - lineEnding: The lineEnding of the file. If not specified will be determined automatically.
     public init(path: String, delimiter: String = ",", lineEnding: LineEnding = .Unknown) {
-        self.csvFile = TextFile(path: Path(path))
+        self.csvFile = TextFile(path: path)
         self.delimiter = delimiter
         self.lineEnding = lineEnding
 
