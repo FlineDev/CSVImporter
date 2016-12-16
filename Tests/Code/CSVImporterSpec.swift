@@ -1,4 +1,3 @@
-
 //
 //  CSVImporterSpec.swift
 //  CSVImporterSpec
@@ -14,8 +13,8 @@ import Nimble
 
 @testable import CSVImporter
 
-class CSVImporterSpec: QuickSpec {
-    override func spec() {
+class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
+    override func spec() { // swiftlint:disable:this function_body_length
 
         it("calls onFail block with wrong path") {
             let invalidPath = "invalid/path"
@@ -118,7 +117,7 @@ class CSVImporterSpec: QuickSpec {
             var recordValues: [[String: String]]?
 
             if let path = path {
-                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .CRLF)
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .crlf)
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -137,11 +136,11 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers Specifying lineEnding NL") {
-            let path = self.convertTeamsLineEndingTo(.NL)
+            let path = self.convertTeamsLineEndingTo(.nl)
             var recordValues: [[String: String]]?
 
             if let path = path {
-                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .nl)
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -162,7 +161,7 @@ class CSVImporterSpec: QuickSpec {
         }
 
         it("imports data from CSV file with headers with lineEnding CR Sniffs lineEnding") {
-            let path = self.convertTeamsLineEndingTo(.CR)
+            let path = self.convertTeamsLineEndingTo(.cr)
             var recordValues: [[String: String]]?
 
             if let path = path {
@@ -193,10 +192,10 @@ class CSVImporterSpec: QuickSpec {
             if let path = path {
                 do {
                     let string = try String(contentsOfFile: path)
-                    expect(string.contains(LineEnding.CRLF.rawValue)).to(beTrue())
+                    expect(string.contains(LineEnding.crlf.rawValue)).to(beTrue())
                 } catch { }
 
-                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .NL)    // wrong
+                let importer = CSVImporter<[String: String]>(path: path, lineEnding: .nl)    // wrong
 
                 importer.startImportingRecords(structure: { (headerValues) -> Void in
                     print(headerValues)
@@ -209,7 +208,7 @@ class CSVImporterSpec: QuickSpec {
                     recordValues = importedRecords
                 }
             }
-            
+
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
             expect(recordValues!.first!).toEventuallyNot(equal(self.validTeamsFirstRecord()))
         }
@@ -264,7 +263,7 @@ class CSVImporterSpec: QuickSpec {
                     didFail = true
                 }
             }
-            
+
             expect(recordValues).toEventually(beNil(), timeout: 10)
             expect(didFail).toEventually(beTrue())
         }
@@ -327,15 +326,16 @@ class CSVImporterSpec: QuickSpec {
     }
 
     func validTeamsFirstRecord() -> [String:String] {
+        // swiftlint:disable:next line_length
         return ["H": "426", "SOA": "23", "SO": "19", "WCWin": "", "AB": "1372", "BPF": "103", "IPouts": "828", "PPF": "98", "3B": "37", "BB": "60", "HBP": "", "lgID": "NA", "ER": "109", "CG": "22", "name": "Boston Red Stockings", "yearID": "1871", "divID": "", "teamIDretro": "BS1", "FP": "0.83", "R": "401", "G": "31", "BBA": "42", "HA": "367", "RA": "303", "park": "South End Grounds I", "DivWin": "", "WSWin": "", "HR": "3", "E": "225", "ERA": "3.55", "franchID": "BNA", "DP": "", "L": "10", "LgWin": "N", "W": "20", "SV": "3", "SHO": "1", "Rank": "3", "Ghome": "", "teamID": "BS1", "teamIDlahman45": "BS1", "HRA": "2", "SF": "", "attendance": "", "CS": "", "teamIDBR": "BOS", "SB": "73", "2B": "70"]
     }
 
-    func convertTeamsLineEndingTo(_ lineEnding:LineEnding) -> String? {
+    func convertTeamsLineEndingTo(_ lineEnding: LineEnding) -> String? {
         if let path = pathForResourceFile("Teams.csv") {
             do {
                 let string = try String(contentsOfFile: path)
-                expect(string.contains(LineEnding.CRLF.rawValue)).to(beTrue())
-                let crString = string.replacingOccurrences(of: LineEnding.CRLF.rawValue, with: lineEnding.rawValue)
+                expect(string.contains(LineEnding.crlf.rawValue)).to(beTrue())
+                let crString = string.replacingOccurrences(of: LineEnding.crlf.rawValue, with: lineEnding.rawValue)
                 let tempPath = (NSTemporaryDirectory() as NSString).appendingPathComponent("TeamsNewLineEnding.csv")
                 try crString.write(toFile: tempPath, atomically: false, encoding: String.Encoding.utf8)
                 return tempPath
@@ -347,11 +347,11 @@ class CSVImporterSpec: QuickSpec {
         return nil
     }
 
-    func pathForResourceFile(_ name:String) -> String? {
+    func pathForResourceFile(_ name: String) -> String? {
         return Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: name, ofType: nil)
     }
 
-    func deleteFileSilently(_ path:String?) {
+    func deleteFileSilently(_ path: String?) {
         guard let path = path else { return }
         do {
             try FileManager.default.removeItem(atPath: path)

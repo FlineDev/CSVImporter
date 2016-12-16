@@ -25,6 +25,5 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources", "Sources/**/*.swift"
   s.framework  = "Foundation"
   s.dependency "HandySwift", "~> 1.3"
-  s.dependency "FileKit", "~> 4.0"
 
 end
