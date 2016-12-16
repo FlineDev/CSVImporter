@@ -236,6 +236,7 @@
 		827A24B61D2801580003D6DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
+		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,12 +303,7 @@
 		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
-				827A24B61D2801580003D6DD /* README.md */,
-				827A24B51D2801580003D6DD /* LICENSE.md */,
-				82239F611C4AF89200627674 /* Cartfile */,
-				82239F621C4AF89200627674 /* Cartfile.private */,
-				A110355E1D666CFD00214547 /* CSVImporter.podspec */,
-				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
+				A1EC02D81E0431A90021718E /* Root Files */,
 				82239F491C4AF70500627674 /* Sources */,
 				82239F551C4AF70500627674 /* Tests */,
 				82239F481C4AF70500627674 /* Products */,
@@ -490,6 +486,20 @@
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1EC02D81E0431A90021718E /* Root Files */ = {
+			isa = PBXGroup;
+			children = (
+				827A24B61D2801580003D6DD /* README.md */,
+				827A24B51D2801580003D6DD /* LICENSE.md */,
+				82239F611C4AF89200627674 /* Cartfile */,
+				82239F621C4AF89200627674 /* Cartfile.private */,
+				A1EC02D91E0431C00021718E /* Cartfile.resolved */,
+				A110355E1D666CFD00214547 /* CSVImporter.podspec */,
+				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
+			);
+			name = "Root Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
