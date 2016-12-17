@@ -20,7 +20,7 @@ public enum LineEnding: String {
 private let chunkSize = 4096
 
 /// Importer for CSV files that maps your lines to a specified data structure.
-open class CSVImporter<T> {
+public class CSVImporter<T> {
     // MARK: - Stored Instance Properties
 
     let csvFile: TextFile
@@ -77,7 +77,7 @@ open class CSVImporter<T> {
     /// - Parameters:
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    open func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
+    public func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             var importedRecords: [T] = []
 
@@ -104,7 +104,7 @@ open class CSVImporter<T> {
     ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    open func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void, recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
+    public func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void, recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             var recordStructure: [String]?
             var importedRecords: [T] = []
@@ -243,7 +243,7 @@ open class CSVImporter<T> {
     /// - Parameters:
     ///   - closure: The closure to be called on failure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    open func onFail(_ closure: @escaping () -> Void) -> Self {
+    public func onFail(_ closure: @escaping () -> Void) -> Self {
         self.failClosure = closure
         return self
     }
@@ -254,7 +254,7 @@ open class CSVImporter<T> {
     /// - Parameters:
     ///   - closure: The closure to be called on progress. Takes the current count of imported lines as argument.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    open func onProgress(_ closure: @escaping (_ importedDataLinesCount: Int) -> Void) -> Self {
+    public func onProgress(_ closure: @escaping (_ importedDataLinesCount: Int) -> Void) -> Self {
         self.progressClosure = closure
         return self
     }
@@ -263,7 +263,7 @@ open class CSVImporter<T> {
     ///
     /// - Parameters:
     ///   - closure: The closure to be called on finish. Takes the array of all imported records mapped to as its argument.
-    open func onFinish(_ closure: @escaping (_ importedRecords: [T]) -> Void) {
+    public func onFinish(_ closure: @escaping (_ importedRecords: [T]) -> Void) {
         self.finishClosure = closure
     }
 
