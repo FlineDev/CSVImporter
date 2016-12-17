@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CSVImporter"
-  s.version      = "1.3.1"
+  s.version      = "1.4.0"
   s.summary      = "Import CSV files line by line with ease."
 
   s.description  = <<-DESC
