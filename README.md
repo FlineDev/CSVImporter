@@ -12,8 +12,8 @@
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.3.1-blue.svg"
-             alt="Version: 1.3.1">
+        <img src="https://img.shields.io/badge/Version-1.4.0-blue.svg"
+             alt="Version: 1.4.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-3-FFAC45.svg"
          alt="Swift: 3">
@@ -56,7 +56,7 @@ You can of course also just include this framework manually into your project by
 Simply add this line to your Cartfile:
 
 ```
-github "Flinesoft/CSVImporter" ~> 1.3
+github "Flinesoft/CSVImporter" ~> 1.4
 ```
 
 And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
@@ -71,7 +71,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyAppTarget' do
-    pod 'CSVImporter', '~> 1.3'
+    pod 'CSVImporter', '~> 1.4'
 end
 ```
 
