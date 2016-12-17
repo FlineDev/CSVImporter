@@ -233,6 +233,7 @@
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1EC02DA1E0431F20021718E /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = SOURCE_ROOT; };
 		A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UTF16_Example.csv; sourceTree = "<group>"; };
+		A1F5AEE91E056FBA003D6949 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,6 +487,7 @@
 				A1EC02D91E0431C00021718E /* Cartfile.resolved */,
 				A110355E1D666CFD00214547 /* CSVImporter.podspec */,
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
+				A1F5AEE91E056FBA003D6949 /* .swift-version */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
