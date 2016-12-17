@@ -31,7 +31,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
                 print("Did finish import, first array: \(importedRecords.first)")
             }
 
-            expect(didFail).toEventually(beTrue())
+            expect(didFail).toEventually(beTrue(), timeout: 5)
         }
 
         it("imports data from CSV file without headers") {
