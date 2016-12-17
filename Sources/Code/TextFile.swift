@@ -38,13 +38,8 @@ extension TextFile {
     /// - Parameter chunkSize: size of buffer (default: 4096)
     ///
     /// - Returns: the `TextFileStreamReader`
-    func streamReader(_ delimiter: String = "\n", chunkSize: Int = 4096) -> TextFileStreamReader? {
-        return TextFileStreamReader(
-            path: self.path,
-            delimiter: delimiter,
-            encoding: encoding,
-            chunkSize: chunkSize
-        )
+    func streamReader(lineEnding: LineEnding, chunkSize: Int) -> TextFileStreamReader? {
+        return TextFileStreamReader(path: self.path, lineEnding: lineEnding, encoding: encoding, chunkSize: chunkSize)
     }
 }
 
@@ -65,20 +60,14 @@ class TextFileStreamReader {
 
     // MARK: - Initialization
     /// - Parameter path:      the file path
-    /// - Parameter delimiter: the line delimiter (default: \n)
+    /// - Parameter lineEnding: the line ending delimiter (default: \n)
     /// - Parameter encoding: file encoding (default: NSUTF8StringEncoding)
     /// - Parameter chunkSize: size of buffer (default: 4096)
-    fileprivate init?(
-        path: String,
-        delimiter: String = "\n",
-        encoding: String.Encoding = String.Encoding.utf8,
-        chunkSize: Int = 4096
-        ) {
+    fileprivate init?(path: String, lineEnding: LineEnding, encoding: String.Encoding, chunkSize: Int) {
         self.chunkSize = chunkSize
         self.encoding = encoding
 
-        guard let fileHandle = FileHandle(forReadingAtPath: path),
-            let delimData = delimiter.data(using: encoding),
+        guard let fileHandle = FileHandle(forReadingAtPath: path), let delimData = lineEnding.rawValue.data(using: encoding),
             let buffer = NSMutableData(capacity: chunkSize) else {
                 self.fileHandle = nil
                 self.delimData = nil
@@ -98,9 +87,7 @@ class TextFileStreamReader {
     // MARK: - public methods
     /// - Returns: The next line, or nil on EOF.
     fileprivate func nextLine() -> String? {
-        if atEOF {
-            return nil
-        }
+        if atEOF { return nil }
 
         // Read data chunks from file until a line delimiter is found.
         var range = buffer.range(of: delimData, options: [], in: NSRange(location: 0, length: buffer.length))
@@ -124,8 +111,9 @@ class TextFileStreamReader {
         }
 
         // Convert complete line (excluding the delimiter) to a string.
-        let line = NSString(data: buffer.subdata(with: NSRange(location: 0, length: range.location)),
-                            encoding: encoding.rawValue)
+        let lineRange = NSRange(location: 0, length: range.location)
+        let line = NSString(data: buffer.subdata(with: lineRange), encoding: encoding.rawValue)
+
         // Remove line (and the delimiter) from the buffer.
         let cleaningRange = NSRange(location: 0, length: range.location + range.length)
         buffer.replaceBytes(in: cleaningRange, withBytes: nil, length: 0)

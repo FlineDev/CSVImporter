@@ -145,7 +145,7 @@ open class CSVImporter<T> {
         if lineEnding == .unknown {
             lineEnding = lineEndingForFile()
         }
-        if let csvStreamReader = self.csvFile.streamReader(lineEnding.rawValue) {
+        if let csvStreamReader = self.csvFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) {
             for line in csvStreamReader {
                 autoreleasepool {
                     let valuesInLine = readValuesInLine(line)
