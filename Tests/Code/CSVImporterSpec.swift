@@ -326,7 +326,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
             var recordValues: [[String: String]]?
 
             guard let url = Bundle(for: CSVImporterSpec.self).url(forResource: "UTF16_Example.csv", withExtension: nil),
-                let importer = CSVImporter<[String: String]>(url: url) else { fail(); return }
+                let importer = CSVImporter<[String: String]>(url: url, lineEnding: .crlf, encoding: .utf16LittleEndian) else { fail(); return }
 
             importer.startImportingRecords(structure: { (headerValues) -> Void in
                 print(headerValues)
@@ -342,6 +342,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
             }
 
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+            expect(recordValues).toEventuallyNot(beEmpty(), timeout: 10)
             expect(recordValues?.first?["Id"]).toEventually(equal("10392545"))
         }
 
@@ -360,7 +361,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
                 expect(string.contains(LineEnding.crlf.rawValue)).to(beTrue())
                 let crString = string.replacingOccurrences(of: LineEnding.crlf.rawValue, with: lineEnding.rawValue)
                 let tempPath = (NSTemporaryDirectory() as NSString).appendingPathComponent("TeamsNewLineEnding.csv")
-                try crString.write(toFile: tempPath, atomically: false, encoding: String.Encoding.utf8)
+                try crString.write(toFile: tempPath, atomically: false, encoding: .utf8)
                 return tempPath
             } catch {
                 print(error.localizedDescription)

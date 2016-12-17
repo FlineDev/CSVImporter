@@ -26,6 +26,7 @@ public class CSVImporter<T> {
     let csvFile: TextFile
     let delimiter: String
     var lineEnding: LineEnding
+    let encoding: String.Encoding
 
     var lastProgressReport: Date?
 
@@ -53,6 +54,7 @@ public class CSVImporter<T> {
         self.csvFile = TextFile(path: path, encoding: encoding)
         self.delimiter = delimiter
         self.lineEnding = lineEnding
+        self.encoding = encoding
 
         delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
         delimiterDelimiter = delimiter+delimiter
@@ -65,9 +67,9 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - url: File URL for the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
-    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown) {
+    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
         guard url.isFileURL else { return nil }
-        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding)
+        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding, encoding: encoding)
     }
 
     // MARK: - Instance Methods
@@ -104,7 +106,8 @@ public class CSVImporter<T> {
     ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void, recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
+    public func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+                                      recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
         DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
             var recordStructure: [String]?
             var importedRecords: [T] = []
@@ -145,18 +148,16 @@ public class CSVImporter<T> {
         if lineEnding == .unknown {
             lineEnding = lineEndingForFile()
         }
-        if let csvStreamReader = self.csvFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) {
-            for line in csvStreamReader {
-                autoreleasepool {
-                    let valuesInLine = readValuesInLine(line)
-                    closure(valuesInLine)
-                }
-            }
+        guard let csvStreamReader = self.csvFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return false }
 
-            return true
-        } else {
-            return false
+        for line in csvStreamReader {
+            autoreleasepool {
+                let valuesInLine = readValuesInLine(line)
+                closure(valuesInLine)
+            }
         }
+
+        return true
     }
 
     /// Determines the line ending for the CSV file
@@ -166,7 +167,7 @@ public class CSVImporter<T> {
         var lineEnding: LineEnding = .nl
         if let fileHandle = self.csvFile.handleForReading {
             if let data = (fileHandle.readData(ofLength: chunkSize) as NSData).mutableCopy() as? NSMutableData {
-                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: String.Encoding.utf8.rawValue, freeWhenDone: false) {
+                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: encoding.rawValue, freeWhenDone: false) {
                     if contents.contains(LineEnding.crlf.rawValue) {
                         lineEnding = .crlf
                     } else if contents.contains(LineEnding.nl.rawValue) {
