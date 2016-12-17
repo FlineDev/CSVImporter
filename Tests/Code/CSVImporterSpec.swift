@@ -35,7 +35,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         }
 
         it("imports data from CSV file without headers") {
-            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "Teams", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "Teams", ofType: "csv")
             var recordValues: [[String]]?
 
             if let path = path {
@@ -57,7 +57,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         }
 
         it("imports data from CSV file special characters") {
-            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "CommaSemicolonQuotes", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "CommaSemicolonQuotes", ofType: "csv")
             var recordValues: [[String]]?
 
             if let path = path {
@@ -88,7 +88,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         }
 
         it("imports data from CSV file with headers") {
-            let path = Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: "Teams", ofType: "csv")
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "Teams", ofType: "csv")
             var recordValues: [[String: String]]?
 
             if let path = path {
@@ -214,7 +214,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         }
 
         it("imports data from CSV file with headers using File URL") {
-            let url = Bundle(for: CSVImporterSpec.classForCoder()).url(forResource: "Teams.csv", withExtension: nil)
+            let url = Bundle(for: CSVImporterSpec.self).url(forResource: "Teams.csv", withExtension: nil)
             var recordValues: [[String: String]]?
 
             if let url = url {
@@ -269,7 +269,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         }
 
         it("imports data from CSV file with headers using File URL") {
-            let url = Bundle(for: CSVImporterSpec.classForCoder()).url(forResource: "Teams.csv", withExtension: nil)
+            let url = Bundle(for: CSVImporterSpec.self).url(forResource: "Teams.csv", withExtension: nil)
             var recordValues: [[String: String]]?
 
             if let url = url {
@@ -322,6 +322,29 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
             expect(didFail).toEventually(beTrue())
         }
 
+        it("imports data from UTF16 encoded CSV file with headers") {
+            var recordValues: [[String: String]]?
+
+            guard let url = Bundle(for: CSVImporterSpec.self).url(forResource: "UTF16_Example.csv", withExtension: nil),
+                let importer = CSVImporter<[String: String]>(url: url) else { fail(); return }
+
+            importer.startImportingRecords(structure: { (headerValues) -> Void in
+                print(headerValues)
+            }, recordMapper: { (recordValues) -> [String: String] in
+                return recordValues
+            }).onFail {
+                print("Did fail")
+            }.onProgress { importedDataLinesCount in
+                print("Progress: \(importedDataLinesCount)")
+            }.onFinish { importedRecords in
+                print("Did finish import, first array: \(importedRecords.first)")
+                recordValues = importedRecords
+            }
+
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+            expect(recordValues?.first?["Id"]).toEventually(equal("10392545"))
+        }
+
         it("zz") { }
     }
 
@@ -348,7 +371,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
     }
 
     func pathForResourceFile(_ name: String) -> String? {
-        return Bundle(for: CSVImporterSpec.classForCoder()).path(forResource: name, ofType: nil)
+        return Bundle(for: CSVImporterSpec.self).path(forResource: name, ofType: nil)
     }
 
     func deleteFileSilently(_ path: String?) {

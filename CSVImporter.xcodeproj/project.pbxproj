@@ -112,6 +112,9 @@
 		A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
+		A1F5AEE61E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
+		A1F5AEE71E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
+		A1F5AEE81E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +232,7 @@
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1EC02DA1E0431F20021718E /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = SOURCE_ROOT; };
+		A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UTF16_Example.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +376,7 @@
 		82239FB41C4AFC5100627674 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */,
 				827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */,
 				82239FB51C4AFC5100627674 /* Lahman's Baseball Database */,
 			);
@@ -720,6 +725,7 @@
 				8223A0021C4AFC5100627674 /* PitchingPost.csv in Resources */,
 				827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFC1C4AFC5100627674 /* Master.csv in Resources */,
+				A1F5AEE61E05599F003D6949 /* UTF16_Example.csv in Resources */,
 				82239FEA1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE41C4AFC5100627674 /* BattingPost.csv in Resources */,
 				82239FF61C4AFC5100627674 /* Managers.csv in Resources */,
@@ -760,6 +766,7 @@
 				8223A0031C4AFC5100627674 /* PitchingPost.csv in Resources */,
 				827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFD1C4AFC5100627674 /* Master.csv in Resources */,
+				A1F5AEE71E05599F003D6949 /* UTF16_Example.csv in Resources */,
 				82239FEB1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE51C4AFC5100627674 /* BattingPost.csv in Resources */,
 				82239FF71C4AFC5100627674 /* Managers.csv in Resources */,
@@ -800,6 +807,7 @@
 				8223A0041C4AFC5100627674 /* PitchingPost.csv in Resources */,
 				827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */,
 				82239FFE1C4AFC5100627674 /* Master.csv in Resources */,
+				A1F5AEE81E05599F003D6949 /* UTF16_Example.csv in Resources */,
 				82239FEC1C4AFC5100627674 /* Fielding.csv in Resources */,
 				82239FE61C4AFC5100627674 /* BattingPost.csv in Resources */,
 				82239FF81C4AFC5100627674 /* Managers.csv in Resources */,
