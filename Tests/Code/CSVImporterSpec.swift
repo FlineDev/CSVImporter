@@ -340,7 +340,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
                 try crString.write(toFile: tempPath, atomically: false, encoding: String.Encoding.utf8)
                 return tempPath
             } catch {
-                // TODO: Some kind of error handling
+                print(error.localizedDescription)
             }
         }
 
