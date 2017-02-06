@@ -23,10 +23,8 @@ private let chunkSize = 4096
 public class CSVImporter<T> {
     // MARK: - Stored Instance Properties
 
-    let csvFile: TextFile
+    let source: Source
     let delimiter: String
-    var lineEnding: LineEnding
-    let encoding: String.Encoding
 
     var lastProgressReport: Date?
 
@@ -44,17 +42,10 @@ public class CSVImporter<T> {
 
     // MARK: - Initializers
 
-    /// Creates a `CSVImporter` object with required configuration options.
-    ///
-    /// - Parameters:
-    ///   - path: The path to the CSV file to import.
-    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
-    ///   - lineEnding: The lineEnding of the file. If not specified will be determined automatically.
-    public init(path: String, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
-        self.csvFile = TextFile(path: path, encoding: encoding)
+    /// Internal initializer to prevent duplicate code.
+    private init(source: Source, delimiter: String) {
+        self.source = source
         self.delimiter = delimiter
-        self.lineEnding = lineEnding
-        self.encoding = encoding
 
         delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
         delimiterDelimiter = delimiter+delimiter
@@ -62,14 +53,44 @@ public class CSVImporter<T> {
         delimiterQuote = "\(delimiter)\"\""
     }
 
+
+    /// Creates a `CSVImporter` object with required configuration options.
+    ///
+    /// - Parameters:
+    ///   - path: The path to the CSV file to import.
+    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
+    ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
+    ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
+    public convenience init(path: String, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
+        let textFile = TextFile(path: path, encoding: encoding)
+        let fileSource = FileSource(textFile: textFile, encoding: encoding, lineEnding: lineEnding)
+        self.init(source: fileSource, delimiter: delimiter)
+    }
+
     /// Creates a `CSVImporter` object with required configuration options.
     ///
     /// - Parameters:
     ///   - url: File URL for the CSV file to import.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
+    ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
+    ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
     public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
         guard url.isFileURL else { return nil }
         self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding, encoding: encoding)
+    }
+
+    /// Creates a `CSVImporter` object with required configuration options.
+    ///
+    /// NOTE: This initializer doesn't save any memory as the given String is already loaded into memory.
+    ///       Don't use this if you are working with a large file which you could refer to with a path also.
+    ///
+    /// - Parameters:
+    ///   - contentString: The string which contains the content of a CSV file.
+    ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
+    ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
+    public convenience init(contentString: String, delimiter: String = ",", lineEnding: LineEnding = .unknown) {
+        let stringSource = StringSource(contentString: contentString, lineEnding: lineEnding)
+        self.init(source: stringSource, delimiter: delimiter)
     }
 
     // MARK: - Instance Methods
@@ -145,51 +166,28 @@ public class CSVImporter<T> {
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
     func importLines(_ closure: (_ valuesInLine: [String]) -> Void) -> Bool {
-        if lineEnding == .unknown {
-            lineEnding = lineEndingForFile()
-        }
-        guard let csvStreamReader = self.csvFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return false }
+        var anyLine = false
 
-        for line in csvStreamReader {
+        source.forEach { line in
+            anyLine = true
             autoreleasepool {
                 let valuesInLine = readValuesInLine(line)
                 closure(valuesInLine)
             }
         }
 
-        return true
-    }
-
-    /// Determines the line ending for the CSV file
-    ///
-    /// - Returns: the lineEnding for the CSV file or default of NL.
-    fileprivate func lineEndingForFile() -> LineEnding {
-        var lineEnding: LineEnding = .nl
-        if let fileHandle = self.csvFile.handleForReading {
-            if let data = (fileHandle.readData(ofLength: chunkSize) as NSData).mutableCopy() as? NSMutableData {
-                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: encoding.rawValue, freeWhenDone: false) {
-                    if contents.contains(LineEnding.crlf.rawValue) {
-                        lineEnding = .crlf
-                    } else if contents.contains(LineEnding.nl.rawValue) {
-                        lineEnding = .nl
-                    } else if contents.contains(LineEnding.cr.rawValue) {
-                        lineEnding = .cr
-                    }
-                }
-            }
-        }
-        return lineEnding
+        return anyLine
     }
 
     // Various private constants used for reading lines
-    fileprivate let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    fileprivate let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    fileprivate let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    fileprivate let substitute = "\u{001a}"
-    fileprivate let delimiterQuoteDelimiter: String
-    fileprivate let delimiterDelimiter: String
-    fileprivate let quoteDelimiter: String
-    fileprivate let delimiterQuote: String
+    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let substitute = "\u{001a}"
+    private let delimiterQuoteDelimiter: String
+    private let delimiterDelimiter: String
+    private let quoteDelimiter: String
+    private let delimiterQuote: String
 
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///
@@ -306,5 +304,64 @@ public class CSVImporter<T> {
 extension String {
     var fullRange: NSRange {
         return NSRange(location: 0, length: self.utf16.count)
+    }
+}
+
+
+// MARK: - Sub Types
+
+protocol Source {
+    func forEach(_ closure: (String) -> Void)
+}
+
+class FileSource: Source {
+    private let textFile: TextFile
+    private let encoding: String.Encoding
+    private var lineEnding: LineEnding
+
+    init(textFile: TextFile, encoding: String.Encoding, lineEnding: LineEnding) {
+        self.textFile = textFile
+        self.encoding = encoding
+        self.lineEnding = lineEnding
+    }
+
+    func forEach(_ closure: (String) -> Void) {
+        if lineEnding == .unknown {
+            lineEnding = lineEndingForFile()
+        }
+        guard let csvStreamReader = textFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return }
+        csvStreamReader.forEach(closure)
+    }
+
+    /// Determines the line ending for the CSV file
+    ///
+    /// - Returns: the lineEnding for the CSV file or default of NL.
+    private func lineEndingForFile() -> LineEnding {
+        var lineEnding: LineEnding = .nl
+        if let fileHandle = textFile.handleForReading {
+            if let data = (fileHandle.readData(ofLength: chunkSize) as NSData).mutableCopy() as? NSMutableData {
+                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: encoding.rawValue, freeWhenDone: false) {
+                    if contents.contains(LineEnding.crlf.rawValue) {
+                        lineEnding = .crlf
+                    } else if contents.contains(LineEnding.nl.rawValue) {
+                        lineEnding = .nl
+                    } else if contents.contains(LineEnding.cr.rawValue) {
+                        lineEnding = .cr
+                    }
+                }
+            }
+        }
+        return lineEnding
+    }
+}
+class StringSource: Source {
+    private let lines: [String]
+
+    init(contentString: String, lineEnding: LineEnding) {
+        lines = contentString.components(separatedBy: lineEnding.rawValue)
+    }
+
+    func forEach(_ closure: (String) -> Void) {
+        lines.forEach(closure)
     }
 }
