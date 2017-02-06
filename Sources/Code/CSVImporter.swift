@@ -358,7 +358,20 @@ class StringSource: Source {
     private let lines: [String]
 
     init(contentString: String, lineEnding: LineEnding) {
-        lines = contentString.components(separatedBy: lineEnding.rawValue)
+        let correctedLineEnding: LineEnding = {
+            if lineEnding == .unknown {
+                if contentString.contains(LineEnding.crlf.rawValue) {
+                    return .crlf
+                } else if contentString.contains(LineEnding.nl.rawValue) {
+                    return .nl
+                } else if contentString.contains(LineEnding.cr.rawValue) {
+                    return .cr
+                }
+            }
+            return lineEnding
+        }()
+
+        lines = contentString.components(separatedBy: correctedLineEnding.rawValue)
     }
 
     func forEach(_ closure: (String) -> Void) {
