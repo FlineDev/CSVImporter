@@ -6,6 +6,8 @@
 //  Copyright © 2016 Flinesoft. All rights reserved.
 //
 
+// swiftlint:disable file_length
+
 import XCTest
 
 import Quick
@@ -31,7 +33,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
                 print("Did finish import, first array: \(importedRecords.first)")
             }
 
-            expect(didFail).toEventually(beTrue())
+            expect(didFail).toEventually(beTrue(), timeout: 5)
         }
 
         it("imports data from CSV file without headers") {
@@ -106,6 +108,31 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
                     print("Did finish import, first array: \(importedRecords.first)")
                     recordValues = importedRecords
                 }
+            }
+
+            expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
+            expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
+        }
+
+        it("imports data from CSV file content string with headers") {
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "Teams", ofType: "csv")
+            let contentString = try! String(contentsOfFile: path!) // swiftlint:disable:this force_try
+
+            var recordValues: [[String: String]]?
+
+            let importer = CSVImporter<[String: String]>(contentString: contentString)
+
+            importer.startImportingRecords(structure: { (headerValues) -> Void in
+                print(headerValues)
+            }, recordMapper: { (recordValues) -> [String : String] in
+                return recordValues
+            }).onFail {
+                print("Did fail")
+            }.onProgress { importedDataLinesCount in
+                print("Progress: \(importedDataLinesCount)")
+            }.onFinish { importedRecords in
+                print("Did finish import, first array: \(importedRecords.first)")
+                recordValues = importedRecords
             }
 
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)

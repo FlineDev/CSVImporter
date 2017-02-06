@@ -1,8 +1,8 @@
 import Foundation
 import CSVImporter
-import XCPlayground
+import PlaygroundSupport
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: Get the path to an example CSV file (see Resources folder of this Playground).
 let path = Bundle.main.path(forResource: "Teams", ofType: "csv")!
@@ -14,17 +14,23 @@ let path = Bundle.main.path(forResource: "Teams", ofType: "csv")!
 //: First create an instance of CSVImporter. Let's do this with the default type `[String]` like this:
 
 let defaultImporter = CSVImporter<[String]>(path: path)
+let stringImporter = CSVImporter<[String]>(contentString: try! String(contentsOfFile: path))
 
 //: ### Basic import: .startImportingRecords & .onFinish
 //: For a basic line-by-line import of your file start the import and use the `.onFinish` callback. The import is done asynchronously but all callbacks (like `.onFinish`) are called on the main thread.
 
 defaultImporter.startImportingRecords { $0 }.onFinish { importedRecords in
-    
     type(of: importedRecords)
     importedRecords.count   // number of all records
     importedRecords[100]    // this is a single record
     importedRecords         // array with all records (in this case an array of arrays)
-    
+}
+
+stringImporter.startImportingRecords { $0 }.onFinish { importedRecords in
+    type(of: importedRecords)
+    importedRecords.count   // number of all records
+    importedRecords[100]    // this is a single record
+    importedRecords         // array with all records (in this case an array of arrays)
 }
 
 //: ### .onFail

@@ -12,8 +12,8 @@
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.4.0-blue.svg"
-             alt="Version: 1.4.0">
+        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg"
+             alt="Version: 1.5.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-3-FFAC45.svg"
          alt="Swift: 3">
@@ -47,7 +47,7 @@ Import CSV files line by line with ease.
 ## Installation
 
 Currently the recommended way of installing this library is via [Carthage](https://github.com/Carthage/Carthage).
-[Cocoapods](https://github.com/CocoaPods/CocoaPods) is supported too, if you really don't like Carthage. ;)
+[Cocoapods](https://github.com/CocoaPods/CocoaPods) is supported too.
 
 You can of course also just include this framework manually into your project by downloading it or by using git submodules.
 
@@ -59,7 +59,7 @@ Simply add this line to your Cartfile:
 github "Flinesoft/CSVImporter" ~> 1.4
 ```
 
-And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent frameworks `Filekit` and `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
+And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent framework `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
 
 ### CocoaPods
 
@@ -81,7 +81,7 @@ Refer to [CocoaPods.org](https://cocoapods.org) for detailed / updates instructi
 
 ## Usage
 
-Please have a look at the UsageExamples.playground for a complete list of features provided.
+Please have a look at the UsageExamples.playground and the Tests/Code/CSVImporterSpec.swift files for a complete list of features provided.
 Open the Playground from within the `.xcworkspace` in order for it to work.
 
 
