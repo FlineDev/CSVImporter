@@ -1,8 +1,8 @@
 import Foundation
 import CSVImporter
-import XCPlayground
+import PlaygroundSupport
 
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+PlaygroundPage.current.needsIndefiniteExecution = true
 
 //: Get the path to an example CSV file (see Resources folder of this Playground).
 let path = Bundle.main.path(forResource: "Teams", ofType: "csv")!
