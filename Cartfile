@@ -1,2 +1,2 @@
 # Handy Swift features that didn't make it into the Swift standard library.
-github "Flinesoft/HandySwift" ~> 1.3
+github "Flinesoft/HandySwift" ~> 2.0
