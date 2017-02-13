@@ -32,6 +32,9 @@ public class CSVImporter<T> {
     var finishClosure: ((_ importedRecords: [T]) -> Void)?
     var failClosure: (() -> Void)?
 
+    let workQosClass: DispatchQoS.QoSClass
+    let callbacksQosClass: DispatchQoS.QoSClass?
+
 
     // MARK: - Computed Instance Properties
 
@@ -39,13 +42,26 @@ public class CSVImporter<T> {
         return self.progressClosure != nil && (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
     }
 
+    var workDispatchQueue: DispatchQueue {
+        return DispatchQueue.global(qos: workQosClass)
+    }
+
+    var callbacksDispatchQueue: DispatchQueue {
+        guard let callbacksQosClass = callbacksQosClass else {
+            return DispatchQueue.main
+        }
+        return DispatchQueue.global(qos: callbacksQosClass)
+    }
+
 
     // MARK: - Initializers
 
     /// Internal initializer to prevent duplicate code.
-    private init(source: Source, delimiter: String) {
+    private init(source: Source, delimiter: String, workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
         self.source = source
         self.delimiter = delimiter
+        self.workQosClass = workQosClass
+        self.callbacksQosClass = callbacksQosClass
 
         delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
         delimiterDelimiter = delimiter+delimiter
@@ -101,7 +117,7 @@ public class CSVImporter<T> {
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+        workDispatchQueue.async {
             var importedRecords: [T] = []
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
@@ -129,7 +145,7 @@ public class CSVImporter<T> {
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
                                       recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
-        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async {
+        workDispatchQueue.async {
             var recordStructure: [String]?
             var importedRecords: [T] = []
 
@@ -271,7 +287,7 @@ public class CSVImporter<T> {
 
     func reportFail() {
         if let failClosure = self.failClosure {
-            DispatchQueue.main.async {
+            callbacksDispatchQueue.async {
                 failClosure()
             }
         }
@@ -282,7 +298,7 @@ public class CSVImporter<T> {
             self.lastProgressReport = Date()
 
             if let progressClosure = self.progressClosure {
-                DispatchQueue.main.async {
+                callbacksDispatchQueue.async {
                     progressClosure(importedRecords.count)
                 }
             }
@@ -291,7 +307,7 @@ public class CSVImporter<T> {
 
     func reportFinish(_ importedRecords: [T]) {
         if let finishClosure = self.finishClosure {
-            DispatchQueue.main.async {
+            callbacksDispatchQueue.async {
                 finishClosure(importedRecords)
             }
         }
