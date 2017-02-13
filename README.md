@@ -128,6 +128,16 @@ let path = "path/to/your/CSV/file"
 let importer = CSVImporter<[String]>(path: path, workQosClass: .background, callbacksQosClass: .utility)
 ```
 
+### Import Synchronously
+
+If you know your file is small enough or blocking the UI is not a problem, you can also use the synchronous import methods to import your data. Simply call `importRecords` instead of `startImportingRecords` and you will receive the end result (the same content as in the `onFinish` closure when using `startImportingRecords`) directly:
+
+``` Swift
+let importedRecords = importer.importRecords { $0 }
+```
+
+Note that this method doesn't have any option to get notified about progress or failure – you just get the result. Check if the resulting array is empty to recognize potential failures.
+
 ### Easy data mapping
 
 As stated above the default type is a `[String]` but you can provide whatever type you like. For example, let's say you have a class like this
