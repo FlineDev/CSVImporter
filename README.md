@@ -12,8 +12,8 @@
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.5.0-blue.svg"
-             alt="Version: 1.5.0">
+        <img src="https://img.shields.io/badge/Version-1.6.0-blue.svg"
+             alt="Version: 1.6.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-3-FFAC45.svg"
          alt="Swift: 3">
@@ -56,7 +56,7 @@ You can of course also just include this framework manually into your project by
 Simply add this line to your Cartfile:
 
 ```
-github "Flinesoft/CSVImporter" ~> 1.4
+github "Flinesoft/CSVImporter" ~> 1.6
 ```
 
 And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent framework `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
@@ -71,7 +71,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyAppTarget' do
-    pod 'CSVImporter', '~> 1.4'
+    pod 'CSVImporter', '~> 1.6'
 end
 ```
 
@@ -103,7 +103,7 @@ Note that you can specify an **alternative delimiter** when creating a `CSVImpor
 
 ### Asynchronous with Callbacks
 
-CSVImporter works completely asynchronous and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
+CSVImporter works asynchronously by default and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
 
 ``` Swift
 importer.startImportingRecords { $0 }.onFail {
@@ -119,6 +119,13 @@ importer.startImportingRecords { $0 }.onFail {
     print("Did finish import with \(importedRecords.count) records.")
 
 }
+```
+
+By default the real importing work is done in the `.utility` global background queue and callbacks are called on the `main` queue. This way the hard work is done asynchronously but the callbacks allow you to update your UI. If you need a different behavior, you can customize the queues when creating a CSVImporter object like so:
+
+``` Swift
+let path = "path/to/your/CSV/file"
+let importer = CSVImporter<[String]>(path: path, workQosClass: .background, callbacksQosClass: .utility)
 ```
 
 ### Easy data mapping
