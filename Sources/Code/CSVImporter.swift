@@ -127,7 +127,7 @@ public class CSVImporter<T> {
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
         workDispatchQueue.async {
-            var importedRecords: [T] = []
+            var importedRecords = [T]()
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
                 let newRecord = closure(valuesInLine)
@@ -156,7 +156,7 @@ public class CSVImporter<T> {
                                       recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
         workDispatchQueue.async {
             var recordStructure: [String]?
-            var importedRecords: [T] = []
+            var importedRecords = [T]()
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
 
@@ -183,6 +183,55 @@ public class CSVImporter<T> {
         }
 
         return self
+    }
+
+    /// Synchronously imports all records and provides the end result only.
+    ///
+    /// Use the `startImportingRecords` method for an asynchronous import with progress, fail and finish callbacks.
+    ///
+    /// - Parameters:
+    ///   - mapper: A closure to map the data received in a line to your data structure.
+    /// - Returns: The imported records array.
+    public func importRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> [T] {
+        var importedRecords = [T]()
+
+        _ = self.importLines { valuesInLine in
+            let newRecord = closure(valuesInLine)
+            importedRecords.append(newRecord)
+        }
+
+        return importedRecords
+    }
+
+    /// Synchronously imports all records and provides the end result only.
+    ///
+    /// Use the `startImportingRecords` method for an asynchronous import with progress, fail and finish callbacks.
+    ///
+    ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
+    ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
+    /// - Returns: The imported records array.
+    public func importRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+                                      recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> [T] {
+
+        var recordStructure: [String]?
+        var importedRecords = [T]()
+
+        _ = self.importLines { valuesInLine in
+
+            if recordStructure == nil {
+                recordStructure = valuesInLine
+                structureClosure(valuesInLine)
+            } else {
+                if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
+                    let newRecord = closure(structuredValuesInLine)
+                    importedRecords.append(newRecord)
+                } else {
+                    print("CSVImporter – Warning: Couldn't structurize line.")
+                }
+            }
+        }
+
+        return importedRecords
     }
 
     /// Imports all lines one by one and
