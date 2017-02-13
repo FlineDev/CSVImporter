@@ -58,6 +58,18 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
         }
 
+        it("imports data from CSV file without headers synchronously") {
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "Teams", ofType: "csv")
+            var recordValues: [[String]]?
+
+            if let path = path {
+                let importer = CSVImporter<[String]>(path: path)
+                recordValues = importer.importRecords { $0 }
+            }
+
+            expect(recordValues).notTo(beNil())
+        }
+
         it("imports data from CSV file special characters") {
             let path = Bundle(for: CSVImporterSpec.self).path(forResource: "CommaSemicolonQuotes", ofType: "csv")
             var recordValues: [[String]]?
@@ -112,6 +124,23 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
 
             expect(recordValues).toEventuallyNot(beNil(), timeout: 10)
             expect(recordValues!.first!).toEventually(equal(self.validTeamsFirstRecord()))
+        }
+
+        it("imports data from CSV file with headers synchronously") {
+            let path = Bundle(for: CSVImporterSpec.self).path(forResource: "Teams", ofType: "csv")
+            var recordValues: [[String: String]]?
+
+            if let path = path {
+                let importer = CSVImporter<[String: String]>(path: path)
+                recordValues = importer.importRecords(structure: { (headerValues) -> Void in
+                    print(headerValues)
+                }, recordMapper: { (recordValues) -> [String : String] in
+                    return recordValues
+                })
+            }
+
+            expect(recordValues).notTo(beNil())
+            expect(recordValues!.first!).to(equal(self.validTeamsFirstRecord()))
         }
 
         it("imports data from CSV file content string with headers") {

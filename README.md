@@ -12,8 +12,8 @@
              alt="codebeat badge">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.6.0-blue.svg"
-             alt="Version: 1.6.0">
+        <img src="https://img.shields.io/badge/Version-1.7.0-blue.svg"
+             alt="Version: 1.7.0">
     </a>
     <img src="https://img.shields.io/badge/Swift-3-FFAC45.svg"
          alt="Swift: 3">
@@ -56,7 +56,7 @@ You can of course also just include this framework manually into your project by
 Simply add this line to your Cartfile:
 
 ```
-github "Flinesoft/CSVImporter" ~> 1.6
+github "Flinesoft/CSVImporter" ~> 1.7
 ```
 
 And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent framework `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
@@ -71,7 +71,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'MyAppTarget' do
-    pod 'CSVImporter', '~> 1.6'
+    pod 'CSVImporter', '~> 1.7'
 end
 ```
 
@@ -127,6 +127,16 @@ By default the real importing work is done in the `.utility` global background q
 let path = "path/to/your/CSV/file"
 let importer = CSVImporter<[String]>(path: path, workQosClass: .background, callbacksQosClass: .utility)
 ```
+
+### Import Synchronously
+
+If you know your file is small enough or blocking the UI is not a problem, you can also use the synchronous import methods to import your data. Simply call `importRecords` instead of `startImportingRecords` and you will receive the end result (the same content as in the `onFinish` closure when using `startImportingRecords`) directly:
+
+``` Swift
+let importedRecords = importer.importRecords { $0 }
+```
+
+Note that this method doesn't have any option to get notified about progress or failure – you just get the result. Check if the resulting array is empty to recognize potential failures.
 
 ### Easy data mapping
 

@@ -33,6 +33,12 @@ stringImporter.startImportingRecords { $0 }.onFinish { importedRecords in
     importedRecords         // array with all records (in this case an array of arrays)
 }
 
+//: ### Synchronous import: .importRecords
+//: Line-by-line import which results in the end result immediately. Works synchronously.
+
+let results = defaultImporter.importRecords { $0 }
+results
+
 //: ### .onFail
 //: In case your path was wrong the chainable `.onFail` callback will be called instead of the `.onFinish`.
 
