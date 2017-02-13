@@ -57,7 +57,7 @@ public class CSVImporter<T> {
     // MARK: - Initializers
 
     /// Internal initializer to prevent duplicate code.
-    private init(source: Source, delimiter: String, workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
+    private init(source: Source, delimiter: String, workQosClass: DispatchQoS.QoSClass, callbacksQosClass: DispatchQoS.QoSClass?) {
         self.source = source
         self.delimiter = delimiter
         self.workQosClass = workQosClass
@@ -77,10 +77,13 @@ public class CSVImporter<T> {
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
     ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
-    public convenience init(path: String, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
+    ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
+    ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
+    public convenience init(path: String, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8,
+                            workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
         let textFile = TextFile(path: path, encoding: encoding)
         let fileSource = FileSource(textFile: textFile, encoding: encoding, lineEnding: lineEnding)
-        self.init(source: fileSource, delimiter: delimiter)
+        self.init(source: fileSource, delimiter: delimiter, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
     }
 
     /// Creates a `CSVImporter` object with required configuration options.
@@ -90,9 +93,12 @@ public class CSVImporter<T> {
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
     ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
-    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8) {
+    ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
+    ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
+    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8,
+                             workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
         guard url.isFileURL else { return nil }
-        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding, encoding: encoding)
+        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding, encoding: encoding, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
     }
 
     /// Creates a `CSVImporter` object with required configuration options.
@@ -104,9 +110,12 @@ public class CSVImporter<T> {
     ///   - contentString: The string which contains the content of a CSV file.
     ///   - delimiter: The delimiter used within the CSV file for separating fields. Defaults to ",".
     ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
-    public convenience init(contentString: String, delimiter: String = ",", lineEnding: LineEnding = .unknown) {
+    ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
+    ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
+    public convenience init(contentString: String, delimiter: String = ",", lineEnding: LineEnding = .unknown,
+                            workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
         let stringSource = StringSource(contentString: contentString, lineEnding: lineEnding)
-        self.init(source: stringSource, delimiter: delimiter)
+        self.init(source: stringSource, delimiter: delimiter, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
     }
 
     // MARK: - Instance Methods

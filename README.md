@@ -103,7 +103,7 @@ Note that you can specify an **alternative delimiter** when creating a `CSVImpor
 
 ### Asynchronous with Callbacks
 
-CSVImporter works completely asynchronous and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
+CSVImporter works asynchronously by default and therefore doesn't block the main thread. As you can see the `onFinish` method is called once it finishes for using the results. There is also `onFail` for failure cases (for example when the given path doesn't contain a CSV file), `onProgress` which is regularly called and provides the number of lines already processed (e.g. for progress indicators). You can chain them as follows:
 
 ``` Swift
 importer.startImportingRecords { $0 }.onFail {
@@ -119,6 +119,13 @@ importer.startImportingRecords { $0 }.onFail {
     print("Did finish import with \(importedRecords.count) records.")
 
 }
+```
+
+By default the real importing work is done in the `.utility` global background queue and callbacks are called on the `main` queue. This way the hard work is done asynchronously but the callbacks allow you to update your UI. If you need a different behavior, you can customize the queues when creating a CSVImporter object like so:
+
+``` Swift
+let path = "path/to/your/CSV/file"
+let importer = CSVImporter<[String]>(path: path, workQosClass: .background, callbacksQosClass: .utility)
 ```
 
 ### Easy data mapping
