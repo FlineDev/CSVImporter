@@ -610,7 +610,6 @@
 				82239F8F1C4AFB1000627674 /* Frameworks */,
 				82239F901C4AFB1000627674 /* Headers */,
 				82239F911C4AFB1000627674 /* Resources */,
-				82239FB31C4AFB9700627674 /* Copy Frameworks */,
 				8283486A1CA6E20800DC4C26 /* Run Swift Linter */,
 			);
 			buildRules = (
@@ -831,20 +830,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		82239FB31C4AFB9700627674 /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		8223A0371C4AFD7B00627674 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
