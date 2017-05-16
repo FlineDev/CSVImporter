@@ -388,18 +388,18 @@ protocol Source {
     func forEach(_ closure: (String) -> Void)
 }
 
-class FileSource: Source {
-    private let textFile: TextFile
-    private let encoding: String.Encoding
-    private var lineEnding: LineEnding
+public class FileSource: Source {
+    public let textFile: TextFile
+    public let encoding: String.Encoding
+    private (set) public var lineEnding: LineEnding
 
-    init(textFile: TextFile, encoding: String.Encoding, lineEnding: LineEnding) {
+    public init(textFile: TextFile, encoding: String.Encoding, lineEnding: LineEnding) {
         self.textFile = textFile
         self.encoding = encoding
         self.lineEnding = lineEnding
     }
 
-    func forEach(_ closure: (String) -> Void) {
+    public func forEach(_ closure: (String) -> Void) {
         if lineEnding == .unknown {
             lineEnding = lineEndingForFile()
         }
@@ -429,9 +429,9 @@ class FileSource: Source {
     }
 }
 class StringSource: Source {
-    private let lines: [String]
+    public let lines: [String]
 
-    init(contentString: String, lineEnding: LineEnding) {
+    public init(contentString: String, lineEnding: LineEnding) {
         let correctedLineEnding: LineEnding = {
             if lineEnding == .unknown {
                 if contentString.contains(LineEnding.crlf.rawValue) {
@@ -448,7 +448,7 @@ class StringSource: Source {
         lines = contentString.components(separatedBy: correctedLineEnding.rawValue)
     }
 
-    func forEach(_ closure: (String) -> Void) {
+    public func forEach(_ closure: (String) -> Void) {
         lines.forEach(closure)
     }
 }
