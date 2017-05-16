@@ -13,18 +13,18 @@ import Foundation
 /// A representation of a filesystem text file.
 ///
 /// The data type is String.
-class TextFile {
+public class TextFile {
     /// The text file's string encoding.
-    fileprivate var encoding: String.Encoding
+    fileprivate (set) public var encoding: String.Encoding
 
     /// The file's filesystem path.
-    fileprivate var path: String
+    fileprivate (set) public var path: String
 
     /// Initializes a text file from a path with an encoding.
     ///
     /// - Parameter path: The path to be created a text file from.
     /// - Parameter encoding: The encoding to be used for the text file.
-    init(path: String, encoding: String.Encoding) {
+    public init(path: String, encoding: String.Encoding) {
         self.path = path
         self.encoding = encoding
     }
@@ -38,18 +38,18 @@ extension TextFile {
     /// - Parameter chunkSize: size of buffer (default: 4096)
     ///
     /// - Returns: the `TextFileStreamReader`
-    func streamReader(lineEnding: LineEnding, chunkSize: Int) -> TextFileStreamReader? {
+    public func streamReader(lineEnding: LineEnding, chunkSize: Int) -> TextFileStreamReader? {
         return TextFileStreamReader(path: self.path, lineEnding: lineEnding, encoding: encoding, chunkSize: chunkSize)
     }
 }
 
 /// A class to read `TextFile` line by line.
-class TextFileStreamReader {
+public class TextFileStreamReader {
     /// The text encoding.
-    fileprivate let encoding: String.Encoding
+    public let encoding: String.Encoding
 
     /// The chunk size when reading.
-    fileprivate let chunkSize: Int
+    public let chunkSize: Int
 
     /// Tells if the position is at the end of file.
     fileprivate var atEOF: Bool = false
@@ -63,7 +63,7 @@ class TextFileStreamReader {
     /// - Parameter lineEnding: the line ending delimiter (default: \n)
     /// - Parameter encoding: file encoding (default: NSUTF8StringEncoding)
     /// - Parameter chunkSize: size of buffer (default: 4096)
-    fileprivate init?(path: String, lineEnding: LineEnding, encoding: String.Encoding, chunkSize: Int) {
+    public init?(path: String, lineEnding: LineEnding, encoding: String.Encoding, chunkSize: Int) {
         self.chunkSize = chunkSize
         self.encoding = encoding
 
@@ -86,7 +86,7 @@ class TextFileStreamReader {
 
     // MARK: - public methods
     /// - Returns: The next line, or nil on EOF.
-    fileprivate func nextLine() -> String? {
+    public func nextLine() -> String? {
         if atEOF { return nil }
 
         // Read data chunks from file until a line delimiter is found.
@@ -122,7 +122,7 @@ class TextFileStreamReader {
     }
 
     /// Close the underlying file. No reading must be done after calling this method.
-    fileprivate func close() -> Void {
+    public func close() -> Void {
         fileHandle?.closeFile()
     }
 }
@@ -141,7 +141,7 @@ extension TextFile {
 // Implement `SequenceType` for `TextFileStreamReader`
 extension TextFileStreamReader: Sequence {
     /// - Returns: An iterator to be used for iterating over a `TextFileStreamReader` object.
-    func makeIterator() -> AnyIterator<String> {
+    public func makeIterator() -> AnyIterator<String> {
         return AnyIterator {
             return self.nextLine()
         }
