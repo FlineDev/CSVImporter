@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EC505221FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
+		2EC505231FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
+		2EC505241FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
+		2EC505261FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
+		2EC505271FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
+		2EC505281FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
+		2EC5052A1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
+		2EC5052B1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
+		2EC5052C1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
 		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
 		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
@@ -106,6 +115,12 @@
 		827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
+		A1E6AFAD1EEC153F000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A01F1C4AFC9300627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E6AFAE1EEC153F000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0201C4AFC9300627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E6AFB01EEC154F000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0241C4AFCAE00627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E6AFB11EEC154F000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E6AFB31EEC1560000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E6AFB41EEC1560000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
@@ -172,9 +187,48 @@
 			name = "Copy Framework Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1E6AFAC1EEC1529000FF121 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1E6AFAD1EEC153F000FF121 /* Nimble.framework in Carthage */,
+				A1E6AFAE1EEC153F000FF121 /* Quick.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1E6AFAF1EEC1545000FF121 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1E6AFB01EEC154F000FF121 /* Nimble.framework in Carthage */,
+				A1E6AFB11EEC154F000FF121 /* Quick.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1E6AFB21EEC1555000FF121 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1E6AFB31EEC1560000FF121 /* Nimble.framework in Carthage */,
+				A1E6AFB41EEC1560000FF121 /* Quick.framework in Carthage */,
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2EC505211FDDC1D800ACFBA4 /* StringSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSource.swift; sourceTree = "<group>"; };
+		2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSource.swift; sourceTree = "<group>"; };
+		2EC505291FDDC21E00ACFBA4 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -449,6 +503,10 @@
 			isa = PBXGroup;
 			children = (
 				82239F701C4AFAA800627674 /* CSVImporter.swift */,
+				2EC505291FDDC21E00ACFBA4 /* Source.swift */,
+				2EC505211FDDC1D800ACFBA4 /* StringSource.swift */,
+				2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */,
+				A1E6AFAB1EEC13EB000FF121 /* Helpers */,
 				A1EC02E21E0433300021718E /* Text Reader */,
 			);
 			path = Code;
@@ -469,6 +527,13 @@
 				82239F581C4AF70500627674 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1E6AFAB1EEC13EB000FF121 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		A1EC02D81E0431A90021718E /* Root Files */ = {
@@ -551,7 +616,7 @@
 				82239F4E1C4AF70500627674 /* Frameworks */,
 				82239F4F1C4AF70500627674 /* Resources */,
 				8223A02E1C4AFD1900627674 /* Copy Framework Dependencies */,
-				8223A0371C4AFD7B00627674 /* Copy Frameworks */,
+				A1E6AFAC1EEC1529000FF121 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -590,7 +655,7 @@
 				82239F7D1C4AFAFF00627674 /* Frameworks */,
 				82239F7E1C4AFAFF00627674 /* Resources */,
 				8223A0311C4AFD3700627674 /* Copy Framework Dependencies */,
-				8223A0381C4AFD8300627674 /* Copy Frameworks */,
+				A1E6AFAF1EEC1545000FF121 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -629,7 +694,7 @@
 				82239F991C4AFB1000627674 /* Frameworks */,
 				82239F9A1C4AFB1000627674 /* Resources */,
 				8223A0341C4AFD4900627674 /* Copy Framework Dependencies */,
-				8223A0391C4AFD8800627674 /* Copy Frameworks */,
+				A1E6AFB21EEC1555000FF121 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -653,30 +718,30 @@
 				TargetAttributes = {
 					82239F461C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					82239F501C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					82239F761C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					82239F7F1C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					82239F921C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 					};
 					82239F9B1C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 767S6EFMJ8;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -830,54 +895,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8223A0371C4AFD7B00627674 /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		8223A0381C4AFD8300627674 /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Nimble.framework",
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		8223A0391C4AFD8800627674 /* Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/tvOS/Nimble.framework",
-			);
-			name = "Copy Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		828348681CA6E1F100DC4C26 /* Run Swift Linter */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -927,7 +944,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC505261FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
 				A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */,
+				2EC505221FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
+				2EC5052A1FDDC21E00ACFBA4 /* Source.swift in Sources */,
 				82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -944,7 +964,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC505271FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
 				A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */,
+				2EC505231FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
+				2EC5052B1FDDC21E00ACFBA4 /* Source.swift in Sources */,
 				82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -961,7 +984,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC505281FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
 				A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */,
+				2EC505241FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
+				2EC5052C1FDDC21E00ACFBA4 /* Source.swift in Sources */,
 				82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,6 +1071,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1094,6 +1121,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1164,7 +1192,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1180,7 +1208,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1204,7 +1232,7 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1230,7 +1258,7 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -1249,7 +1277,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
@@ -1267,7 +1295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
@@ -1295,7 +1323,7 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1322,7 +1350,7 @@
 				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1342,7 +1370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -1362,7 +1390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

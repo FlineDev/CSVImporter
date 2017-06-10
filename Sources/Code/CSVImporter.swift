@@ -11,18 +11,15 @@ import HandySwift
 
 /// An enum to represent the possible line endings of CSV files.
 public enum LineEnding: String {
-    case nl = "\n"
-    case cr = "\r"
-    case crlf = "\r\n"
+    case newLine = "\n"
+    case carriageReturn = "\r"
+    case carriageReturnLineFeed = "\r\n"
     case unknown = ""
 }
-
-private let chunkSize = 4096
 
 /// Importer for CSV files that maps your lines to a specified data structure.
 public class CSVImporter<T> {
     // MARK: - Stored Instance Properties
-
     let source: Source
     let delimiter: String
 
@@ -35,9 +32,7 @@ public class CSVImporter<T> {
     let workQosClass: DispatchQoS.QoSClass
     let callbacksQosClass: DispatchQoS.QoSClass?
 
-
     // MARK: - Computed Instance Properties
-
     var shouldReportProgress: Bool {
         return self.progressClosure != nil && (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
     }
@@ -53,9 +48,7 @@ public class CSVImporter<T> {
         return DispatchQueue.global(qos: callbacksQosClass)
     }
 
-
     // MARK: - Initializers
-
     /// Internal initializer to prevent duplicate code.
     private init(source: Source, delimiter: String, workQosClass: DispatchQoS.QoSClass, callbacksQosClass: DispatchQoS.QoSClass?) {
         self.source = source
@@ -68,7 +61,6 @@ public class CSVImporter<T> {
         quoteDelimiter = "\"\"\(delimiter)"
         delimiterQuote = "\(delimiter)\"\""
     }
-
 
     /// Creates a `CSVImporter` object with required configuration options.
     ///
@@ -119,7 +111,6 @@ public class CSVImporter<T> {
     }
 
     // MARK: - Instance Methods
-
     /// Starts importing the records within the CSV file line by line.
     ///
     /// - Parameters:
@@ -211,8 +202,7 @@ public class CSVImporter<T> {
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: The imported records array.
     public func importRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
-                                      recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> [T] {
-
+                              recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> [T] {
         var recordStructure: [String]?
         var importedRecords = [T]()
 
@@ -272,10 +262,10 @@ public class CSVImporter<T> {
         var correctedLine = line.replacingOccurrences(of: delimiterQuoteDelimiter, with: delimiterDelimiter)
 
         if correctedLine.hasPrefix(quoteDelimiter) {
-            correctedLine = correctedLine.substring(from: correctedLine.characters.index(correctedLine.startIndex, offsetBy: 2))
+            correctedLine = correctedLine.substring(from: correctedLine.index(correctedLine.startIndex, offsetBy: 2))
         }
         if correctedLine.hasSuffix(delimiterQuote) {
-            correctedLine = correctedLine.substring(to: correctedLine.characters.index(correctedLine.startIndex, offsetBy: correctedLine.utf16.count - 2))
+            correctedLine = correctedLine.substring(to: correctedLine.index(correctedLine.startIndex, offsetBy: correctedLine.utf16.count - 2))
         }
 
         correctedLine = correctedLine.replacingOccurrences(of: "\"\"", with: substitute)
@@ -340,9 +330,7 @@ public class CSVImporter<T> {
         self.finishClosure = closure
     }
 
-
     // MARK: - Helper Methods
-
     func reportFail() {
         if let failClosure = self.failClosure {
             callbacksDispatchQueue.async {
@@ -372,83 +360,9 @@ public class CSVImporter<T> {
     }
 }
 
-
 // MARK: - Helpers
-
 extension String {
     var fullRange: NSRange {
         return NSRange(location: 0, length: self.utf16.count)
-    }
-}
-
-
-// MARK: - Sub Types
-
-protocol Source {
-    func forEach(_ closure: (String) -> Void)
-}
-
-class FileSource: Source {
-    private let textFile: TextFile
-    private let encoding: String.Encoding
-    private var lineEnding: LineEnding
-
-    init(textFile: TextFile, encoding: String.Encoding, lineEnding: LineEnding) {
-        self.textFile = textFile
-        self.encoding = encoding
-        self.lineEnding = lineEnding
-    }
-
-    func forEach(_ closure: (String) -> Void) {
-        if lineEnding == .unknown {
-            lineEnding = lineEndingForFile()
-        }
-        guard let csvStreamReader = textFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return }
-        csvStreamReader.forEach(closure)
-    }
-
-    /// Determines the line ending for the CSV file
-    ///
-    /// - Returns: the lineEnding for the CSV file or default of NL.
-    private func lineEndingForFile() -> LineEnding {
-        var lineEnding: LineEnding = .nl
-        if let fileHandle = textFile.handleForReading {
-            if let data = (fileHandle.readData(ofLength: chunkSize) as NSData).mutableCopy() as? NSMutableData {
-                if let contents = NSString(bytesNoCopy: data.mutableBytes, length: data.length, encoding: encoding.rawValue, freeWhenDone: false) {
-                    if contents.contains(LineEnding.crlf.rawValue) {
-                        lineEnding = .crlf
-                    } else if contents.contains(LineEnding.nl.rawValue) {
-                        lineEnding = .nl
-                    } else if contents.contains(LineEnding.cr.rawValue) {
-                        lineEnding = .cr
-                    }
-                }
-            }
-        }
-        return lineEnding
-    }
-}
-class StringSource: Source {
-    private let lines: [String]
-
-    init(contentString: String, lineEnding: LineEnding) {
-        let correctedLineEnding: LineEnding = {
-            if lineEnding == .unknown {
-                if contentString.contains(LineEnding.crlf.rawValue) {
-                    return .crlf
-                } else if contentString.contains(LineEnding.nl.rawValue) {
-                    return .nl
-                } else if contentString.contains(LineEnding.cr.rawValue) {
-                    return .cr
-                }
-            }
-            return lineEnding
-        }()
-
-        lines = contentString.components(separatedBy: correctedLineEnding.rawValue)
-    }
-
-    func forEach(_ closure: (String) -> Void) {
-        lines.forEach(closure)
     }
 }
