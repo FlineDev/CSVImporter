@@ -8,9 +8,8 @@
 
 import Foundation
 
-let chunkSize = 4096
+let chunkSize = 4_096
 
-// MARK: - Sub Types
 protocol Source {
     func forEach(_ closure: (String) -> Void)
 }

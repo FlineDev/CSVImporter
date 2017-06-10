@@ -42,9 +42,7 @@ public class CSVImporter<T> {
     }
 
     var callbacksDispatchQueue: DispatchQueue {
-        guard let callbacksQosClass = callbacksQosClass else {
-            return DispatchQueue.main
-        }
+        guard let callbacksQosClass = callbacksQosClass else { return DispatchQueue.main }
         return DispatchQueue.global(qos: callbacksQosClass)
     }
 
@@ -57,7 +55,7 @@ public class CSVImporter<T> {
         self.callbacksQosClass = callbacksQosClass
 
         delimiterQuoteDelimiter = "\(delimiter)\"\"\(delimiter)"
-        delimiterDelimiter = delimiter+delimiter
+        delimiterDelimiter = delimiter + delimiter
         quoteDelimiter = "\"\"\(delimiter)"
         delimiterQuote = "\(delimiter)\"\""
     }
@@ -264,6 +262,7 @@ public class CSVImporter<T> {
         if correctedLine.hasPrefix(quoteDelimiter) {
             correctedLine = correctedLine.substring(from: correctedLine.index(correctedLine.startIndex, offsetBy: 2))
         }
+
         if correctedLine.hasSuffix(delimiterQuote) {
             correctedLine = correctedLine.substring(to: correctedLine.index(correctedLine.startIndex, offsetBy: correctedLine.utf16.count - 2))
         }
@@ -275,17 +274,17 @@ public class CSVImporter<T> {
         while index < components.count {
             let element = components[index]
 
-            if index < components.count-1 && startPartRegex.firstMatch(in: element, options: .anchored, range: element.fullRange) != nil {
+            if index < components.count - 1 && startPartRegex.firstMatch(in: element, options: .anchored, range: element.fullRange) != nil {
                 var elementsToMerge = [element]
 
-                while middlePartRegex.firstMatch(in: components[index+1], options: .anchored, range: components[index+1].fullRange) != nil {
-                    elementsToMerge.append(components[index+1])
-                    components.remove(at: index+1)
+                while middlePartRegex.firstMatch(in: components[index + 1], options: .anchored, range: components[index + 1].fullRange) != nil {
+                    elementsToMerge.append(components[index + 1])
+                    components.remove(at: index + 1)
                 }
 
-                if endPartRegex.firstMatch(in: components[index+1], options: .anchored, range: components[index+1].fullRange) != nil {
-                    elementsToMerge.append(components[index+1])
-                    components.remove(at: index+1)
+                if endPartRegex.firstMatch(in: components[index + 1], options: .anchored, range: components[index + 1].fullRange) != nil {
+                    elementsToMerge.append(components[index + 1])
+                    components.remove(at: index + 1)
                     components[index] = elementsToMerge.joined(separator: delimiter)
                 } else {
                     print("Invalid CSV format in line, opening \" must be closed – line: \(line).")
@@ -330,7 +329,6 @@ public class CSVImporter<T> {
         self.finishClosure = closure
     }
 
-    // MARK: - Helper Methods
     func reportFail() {
         if let failClosure = self.failClosure {
             callbacksDispatchQueue.async {

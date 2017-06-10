@@ -127,9 +127,7 @@ class TextFileStreamReader {
     }
 }
 
-
 // MARK: File Handle
-
 extension TextFile {
     /// Returns a file handle for reading from `self`, or `nil` if `self`
     /// doesn't exist.

@@ -46,6 +46,7 @@ class FileSource: Source {
                 }
             }
         }
+
         return lineEnding
     }
 }
