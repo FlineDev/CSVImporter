@@ -118,18 +118,16 @@ class TextFileStreamReader {
         let cleaningRange = NSRange(location: 0, length: range.location + range.length)
         buffer.replaceBytes(in: cleaningRange, withBytes: nil, length: 0)
 
-        return line as? String
+        return line as String?
     }
 
     /// Close the underlying file. No reading must be done after calling this method.
-    fileprivate func close() -> Void {
+    fileprivate func close() {
         fileHandle?.closeFile()
     }
 }
 
-
 // MARK: File Handle
-
 extension TextFile {
     /// Returns a file handle for reading from `self`, or `nil` if `self`
     /// doesn't exist.
