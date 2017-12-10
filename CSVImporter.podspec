@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CSVImporter"
-  s.version      = "1.7.1"
+  s.version      = "1.8.0"
   s.summary      = "Import CSV files line by line with ease."
 
   s.description  = <<-DESC
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Flinesoft/CSVImporter.git", :tag => "#{s.version}" }
   s.source_files  = "Sources", "Sources/**/*.swift"
   s.framework  = "Foundation"
-  s.dependency "HandySwift", "~> 2.0"
+  s.dependency "HandySwift", "~> 2.4"
 
 end
