@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CSVImporter"
-  s.version      = "1.8.0"
+  s.version      = "1.9.0"
   s.summary      = "Import CSV files line by line with ease."
 
   s.description  = <<-DESC
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/Flinesoft/CSVImporter"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
 
-  s.author             = { "Cihat Gündüz" => "CihatGuenduez@posteo.de" }
+  s.author             = { "Cihat Gündüz" => "cocoapods@cihatguenduez.de" }
   s.social_media_url   = "https://twitter.com/Dschee"
 
   s.ios.deployment_target = "8.0"
@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Flinesoft/CSVImporter.git", :tag => "#{s.version}" }
   s.source_files  = "Sources", "Sources/**/*.swift"
   s.framework  = "Foundation"
-  s.dependency "HandySwift", "~> 2.4"
+  s.dependency "HandySwift", "~> 2.5"
 
 end

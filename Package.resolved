@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HandySwift",
+        "repositoryURL": "https://github.com/Flinesoft/HandySwift.git",
+        "state": {
+          "branch": null,
+          "revision": "a2004f8c842721ec739fd27cbe7b6269f6c6d0ba",
+          "version": "2.5.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
