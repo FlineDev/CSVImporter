@@ -15,8 +15,8 @@
         <img src="https://img.shields.io/badge/Version-1.8.0-blue.svg"
              alt="Version: 1.8.0">
     </a>
-    <img src="https://img.shields.io/badge/Swift-3-FFAC45.svg"
-         alt="Swift: 3">
+    <img src="https://img.shields.io/badge/Swift-4-FFAC45.svg"
+         alt="Swift: 4">
     <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20macOS-FF69B4.svg"
         alt="Platforms: iOS | tvOS | macOS">
     <a href="https://github.com/Flinesoft/CSVImporter/blob/stable/LICENSE.md">

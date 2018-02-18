@@ -229,6 +229,7 @@
 		2EC505211FDDC1D800ACFBA4 /* StringSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSource.swift; sourceTree = "<group>"; };
 		2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSource.swift; sourceTree = "<group>"; };
 		2EC505291FDDC21E00ACFBA4 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		2EE2D01B2039C3E800C21E3F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
 		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -547,6 +548,7 @@
 				A110355E1D666CFD00214547 /* CSVImporter.podspec */,
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
 				A1F5AEE91E056FBA003D6949 /* .swift-version */,
+				2EE2D01B2039C3E800C21E3F /* Package.swift */,
 			);
 			name = "Root Files";
 			sourceTree = "<group>";
