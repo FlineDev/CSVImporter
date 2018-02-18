@@ -1,11 +1,28 @@
-//
-//  Package.swift
-//  CSVImporter
-//
-//  Created by Cihat Gündüz on 18.02.18.
-//  Copyright © 2018 Flinesoft. All rights reserved.
-//
-
+// swift-tools-version:4.0
 import PackageDescription
 
-let package = Package(name: "CSVImporter")
+let package = Package(
+    name: "CSVImporter",
+    products: [
+        .library(
+            name: "CSVImporter",
+            targets: ["CSVImporter"]
+        )
+    ],
+    dependencies: [
+        .package(url: "https://github.com/Flinesoft/HandySwift.git", .upToNextMajor(from: "2.5.0"))
+    ],
+    targets: [
+        .target(
+            name: "CSVImporter",
+            dependencies: [
+                "HandySwift"
+            ],
+            path: "Sources",
+            exclude: [
+                "Sources/Supporting Files"
+            ]
+        )
+    ],
+    swiftLanguageVersions: [4]
+)
