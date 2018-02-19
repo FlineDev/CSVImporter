@@ -257,7 +257,10 @@ public class CSVImporter<T> {
     ///   - line: The line to read values from.
     /// - Returns: An array of values found in line.
     func readValuesInLine(_ line: String) -> [String] {
-        var correctedLine = line.replacingOccurrences(of: delimiterQuoteDelimiter, with: delimiterDelimiter)
+        var correctedLine = line
+        while correctedLine.contains(delimiterQuoteDelimiter) {
+            correctedLine = correctedLine.replacingOccurrences(of: delimiterQuoteDelimiter, with: delimiterDelimiter)
+        }
 
         if correctedLine.hasPrefix(quoteDelimiter) {
             correctedLine = String(correctedLine.suffix(from: correctedLine.index(correctedLine.startIndex, offsetBy: 2)))
