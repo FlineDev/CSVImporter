@@ -7,24 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EC505221FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
-		2EC505231FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
-		2EC505241FDDC1D800ACFBA4 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505211FDDC1D800ACFBA4 /* StringSource.swift */; };
-		2EC505261FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
-		2EC505271FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
-		2EC505281FDDC1FC00ACFBA4 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */; };
-		2EC5052A1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
-		2EC5052B1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
-		2EC5052C1FDDC21E00ACFBA4 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC505291FDDC21E00ACFBA4 /* Source.swift */; };
-		82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239F521C4AF70500627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F471C4AF70500627674 /* CSVImporter.framework */; };
-		82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
 		82239F811C4AFAFF00627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F771C4AFAFF00627674 /* CSVImporter.framework */; };
 		82239F9D1C4AFB1000627674 /* CSVImporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82239F931C4AFB1000627674 /* CSVImporter.framework */; };
-		82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
-		82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82239F701C4AFAA800627674 /* CSVImporter.swift */; };
-		82239FB01C4AFB3900627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82239FB11C4AFB3A00627674 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82239F4A1C4AF70500627674 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		82239FCF1C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
 		82239FD01C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
 		82239FD11C4AFC5100627674 /* AllstarFull.csv in Resources */ = {isa = PBXBuildFile; fileRef = 82239FB61C4AFC5100627674 /* AllstarFull.csv */; };
@@ -115,15 +100,30 @@
 		827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
+		82C48C7620F3A0D80052FAE5 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C48C7420F3A0D30052FAE5 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82C48C7720F3A0D90052FAE5 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C48C7420F3A0D30052FAE5 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82C48C7820F3A0D90052FAE5 /* CSVImporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 82C48C7420F3A0D30052FAE5 /* CSVImporter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82C48C8820F3A1C40052FAE5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8320F3A1C40052FAE5 /* Source.swift */; };
+		82C48C8920F3A1C40052FAE5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8320F3A1C40052FAE5 /* Source.swift */; };
+		82C48C8A20F3A1C40052FAE5 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8320F3A1C40052FAE5 /* Source.swift */; };
+		82C48C8B20F3A1C40052FAE5 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */; };
+		82C48C8C20F3A1C40052FAE5 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */; };
+		82C48C8D20F3A1C40052FAE5 /* CSVImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */; };
+		82C48C8E20F3A1C40052FAE5 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8520F3A1C40052FAE5 /* FileSource.swift */; };
+		82C48C8F20F3A1C40052FAE5 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8520F3A1C40052FAE5 /* FileSource.swift */; };
+		82C48C9020F3A1C40052FAE5 /* FileSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8520F3A1C40052FAE5 /* FileSource.swift */; };
+		82C48C9120F3A1C40052FAE5 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8620F3A1C40052FAE5 /* StringSource.swift */; };
+		82C48C9220F3A1C40052FAE5 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8620F3A1C40052FAE5 /* StringSource.swift */; };
+		82C48C9320F3A1C40052FAE5 /* StringSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8620F3A1C40052FAE5 /* StringSource.swift */; };
+		82C48C9420F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
+		82C48C9520F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
+		82C48C9620F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
 		A1E6AFAD1EEC153F000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A01F1C4AFC9300627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E6AFAE1EEC153F000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0201C4AFC9300627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E6AFB01EEC154F000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0241C4AFCAE00627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E6AFB11EEC154F000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0251C4AFCAE00627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E6AFB31EEC1560000FF121 /* Nimble.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A0291C4AFCC900627674 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E6AFB41EEC1560000FF121 /* Quick.framework in Carthage */ = {isa = PBXBuildFile; fileRef = 8223A02A1C4AFCC900627674 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
-		A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
-		A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EC02DA1E0431F20021718E /* TextFile.swift */; };
 		A1F5AEE61E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
 		A1F5AEE71E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
 		A1F5AEE81E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
@@ -226,25 +226,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2EC505211FDDC1D800ACFBA4 /* StringSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSource.swift; sourceTree = "<group>"; };
-		2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSource.swift; sourceTree = "<group>"; };
-		2EC505291FDDC21E00ACFBA4 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		2EE2D01B2039C3E800C21E3F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		82239F471C4AF70500627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F4A1C4AF70500627674 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSVImporter.h; path = "Sources/Supporting Files/CSVImporter.h"; sourceTree = SOURCE_ROOT; };
-		82239F4C1C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Sources/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F581C4AF70500627674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Tests/Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		82239F511C4AF70500627674 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F611C4AF89200627674 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		82239F621C4AF89200627674 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = SOURCE_ROOT; };
 		82239F681C4AF9AE00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/iOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
 		82239F6C1C4AFA0F00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/tvOS/HandySwift.framework; sourceTree = SOURCE_ROOT; };
 		82239F6E1C4AFA1E00627674 /* HandySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HandySwift.framework; path = Carthage/Build/Mac/HandySwift.framework; sourceTree = SOURCE_ROOT; };
-		82239F701C4AFAA800627674 /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSVImporter.swift; path = Sources/Code/CSVImporter.swift; sourceTree = SOURCE_ROOT; };
 		82239F771C4AFAFF00627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter tvOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F801C4AFAFF00627674 /* Tests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239F931C4AFB1000627674 /* CSVImporter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CSVImporter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSVImporter OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82239F9C1C4AFB1000627674 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82239FB61C4AFC5100627674 /* AllstarFull.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllstarFull.csv; sourceTree = "<group>"; };
 		82239FB71C4AFC5100627674 /* Appearances.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appearances.csv; sourceTree = "<group>"; };
 		82239FB81C4AFC5100627674 /* AwardsManagers.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AwardsManagers.csv; sourceTree = "<group>"; };
@@ -281,9 +274,16 @@
 		827A24B51D2801580003D6DD /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		827A24B61D2801580003D6DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		82C48C7320F3A0C40052FAE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C48C7420F3A0D30052FAE5 /* CSVImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSVImporter.h; sourceTree = "<group>"; };
+		82C48C7520F3A0D30052FAE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82C48C8320F3A1C40052FAE5 /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVImporter.swift; sourceTree = "<group>"; };
+		82C48C8520F3A1C40052FAE5 /* FileSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSource.swift; sourceTree = "<group>"; };
+		82C48C8620F3A1C40052FAE5 /* StringSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSource.swift; sourceTree = "<group>"; };
+		82C48C8720F3A1C40052FAE5 /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		A1EC02DA1E0431F20021718E /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFile.swift; path = Sources/Code/TextFile.swift; sourceTree = SOURCE_ROOT; };
 		A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UTF16_Example.csv; sourceTree = "<group>"; };
 		A1F5AEE91E056FBA003D6949 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,11 +346,11 @@
 		82239F3D1C4AF70500627674 = {
 			isa = PBXGroup;
 			children = (
-				A1EC02D81E0431A90021718E /* Root Files */,
-				82239F491C4AF70500627674 /* Sources */,
+				82239F491C4AF70500627674 /* Framework */,
 				82239F551C4AF70500627674 /* Tests */,
+				A1EC02D81E0431A90021718E /* Root Files */,
+				82C48C7D20F3A1510052FAE5 /* Frameworks */,
 				82239F481C4AF70500627674 /* Products */,
-				82239F631C4AF89600627674 /* Carthage */,
 			);
 			sourceTree = "<group>";
 		};
@@ -358,22 +358,22 @@
 			isa = PBXGroup;
 			children = (
 				82239F471C4AF70500627674 /* CSVImporter.framework */,
-				82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */,
+				82239F511C4AF70500627674 /* Tests iOS.xctest */,
 				82239F771C4AFAFF00627674 /* CSVImporter.framework */,
-				82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */,
+				82239F801C4AFAFF00627674 /* Tests tvOS.xctest */,
 				82239F931C4AFB1000627674 /* CSVImporter.framework */,
-				82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */,
+				82239F9C1C4AFB1000627674 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		82239F491C4AF70500627674 /* Sources */ = {
+		82239F491C4AF70500627674 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				8223A03A1C4AFE5D00627674 /* Code */,
-				8223A03B1C4AFE6200627674 /* Supporting Files */,
+				8223A03A1C4AFE5D00627674 /* Sources */,
+				8223A03B1C4AFE6200627674 /* SupportingFiles */,
 			);
-			path = Sources;
+			path = Framework;
 			sourceTree = "<group>";
 		};
 		82239F551C4AF70500627674 /* Tests */ = {
@@ -381,7 +381,7 @@
 			children = (
 				8223A01A1C4AFC6700627674 /* Code */,
 				82239FB41C4AFC5100627674 /* Assets */,
-				8223A03C1C4AFE6E00627674 /* Supporting Files */,
+				8223A03C1C4AFE6E00627674 /* SupportingFiles */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -389,9 +389,8 @@
 		82239F631C4AF89600627674 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				82239F641C4AF98800627674 /* iOS */,
-				82239F651C4AF98C00627674 /* tvOS */,
-				82239F661C4AF99400627674 /* OSX */,
+				82C48C7F20F3A16E0052FAE5 /* Tests */,
+				82C48C7E20F3A16A0052FAE5 /* Framework */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -400,7 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				82239F681C4AF9AE00627674 /* HandySwift.framework */,
-				8223A0231C4AFC9900627674 /* Tests */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -409,18 +407,16 @@
 			isa = PBXGroup;
 			children = (
 				82239F6C1C4AFA0F00627674 /* HandySwift.framework */,
-				8223A0281C4AFCB400627674 /* Tests */,
 			);
 			name = tvOS;
 			sourceTree = "<group>";
 		};
-		82239F661C4AF99400627674 /* OSX */ = {
+		82239F661C4AF99400627674 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				82239F6E1C4AFA1E00627674 /* HandySwift.framework */,
-				8223A02D1C4AFCCD00627674 /* Tests */,
 			);
-			name = OSX;
+			name = macOS;
 			sourceTree = "<group>";
 		};
 		82239FB41C4AFC5100627674 /* Assets */ = {
@@ -473,68 +469,88 @@
 			path = Code;
 			sourceTree = "<group>";
 		};
-		8223A0231C4AFC9900627674 /* Tests */ = {
+		8223A03A1C4AFE5D00627674 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */,
+				82C48C8520F3A1C40052FAE5 /* FileSource.swift */,
+				82C48C8320F3A1C40052FAE5 /* Source.swift */,
+				82C48C8620F3A1C40052FAE5 /* StringSource.swift */,
+				82C48C8720F3A1C40052FAE5 /* TextFile.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8223A03B1C4AFE6200627674 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				82C48C7420F3A0D30052FAE5 /* CSVImporter.h */,
+				82C48C7520F3A0D30052FAE5 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8223A03C1C4AFE6E00627674 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				82C48C7320F3A0C40052FAE5 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		82C48C7D20F3A1510052FAE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82239F631C4AF89600627674 /* Carthage */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82C48C7E20F3A16A0052FAE5 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				82239F641C4AF98800627674 /* iOS */,
+				82239F661C4AF99400627674 /* macOS */,
+				82239F651C4AF98C00627674 /* tvOS */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		82C48C7F20F3A16E0052FAE5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				82C48C8020F3A1760052FAE5 /* iOS */,
+				82C48C8220F3A17E0052FAE5 /* macOS */,
+				82C48C8120F3A17A0052FAE5 /* tvOS */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		82C48C8020F3A1760052FAE5 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				8223A01F1C4AFC9300627674 /* Nimble.framework */,
 				8223A0201C4AFC9300627674 /* Quick.framework */,
 			);
-			name = Tests;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		8223A0281C4AFCB400627674 /* Tests */ = {
+		82C48C8120F3A17A0052FAE5 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
 				8223A0241C4AFCAE00627674 /* Nimble.framework */,
 				8223A0251C4AFCAE00627674 /* Quick.framework */,
 			);
-			name = Tests;
+			name = tvOS;
 			sourceTree = "<group>";
 		};
-		8223A02D1C4AFCCD00627674 /* Tests */ = {
+		82C48C8220F3A17E0052FAE5 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
 				8223A0291C4AFCC900627674 /* Nimble.framework */,
 				8223A02A1C4AFCC900627674 /* Quick.framework */,
 			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		8223A03A1C4AFE5D00627674 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				82239F701C4AFAA800627674 /* CSVImporter.swift */,
-				2EC505291FDDC21E00ACFBA4 /* Source.swift */,
-				2EC505211FDDC1D800ACFBA4 /* StringSource.swift */,
-				2EC505251FDDC1FC00ACFBA4 /* FileSource.swift */,
-				A1E6AFAB1EEC13EB000FF121 /* Helpers */,
-				A1EC02E21E0433300021718E /* Text Reader */,
-			);
-			path = Code;
-			sourceTree = "<group>";
-		};
-		8223A03B1C4AFE6200627674 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				82239F4A1C4AF70500627674 /* CSVImporter.h */,
-				82239F4C1C4AF70500627674 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8223A03C1C4AFE6E00627674 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				82239F581C4AF70500627674 /* Info.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A1E6AFAB1EEC13EB000FF121 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
+			name = macOS;
 			sourceTree = "<group>";
 		};
 		A1EC02D81E0431A90021718E /* Root Files */ = {
@@ -553,14 +569,6 @@
 			name = "Root Files";
 			sourceTree = "<group>";
 		};
-		A1EC02E21E0433300021718E /* Text Reader */ = {
-			isa = PBXGroup;
-			children = (
-				A1EC02DA1E0431F20021718E /* TextFile.swift */,
-			);
-			name = "Text Reader";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -568,7 +576,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239F4B1C4AF70500627674 /* CSVImporter.h in Headers */,
+				82C48C7620F3A0D80052FAE5 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,7 +584,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239FB01C4AFB3900627674 /* CSVImporter.h in Headers */,
+				82C48C7720F3A0D90052FAE5 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,16 +592,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82239FB11C4AFB3A00627674 /* CSVImporter.h in Headers */,
+				82C48C7820F3A0D90052FAE5 /* CSVImporter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		82239F461C4AF70500627674 /* CSVImporter iOS */ = {
+		82239F461C4AF70500627674 /* Framework iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */;
+			buildConfigurationList = 82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "Framework iOS" */;
 			buildPhases = (
 				82239F421C4AF70500627674 /* Sources */,
 				82239F431C4AF70500627674 /* Frameworks */,
@@ -605,14 +613,14 @@
 			);
 			dependencies = (
 			);
-			name = "CSVImporter iOS";
+			name = "Framework iOS";
 			productName = CSVImporter;
 			productReference = 82239F471C4AF70500627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F501C4AF70500627674 /* CSVImporter iOS Tests */ = {
+		82239F501C4AF70500627674 /* Tests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */;
+			buildConfigurationList = 82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
 			buildPhases = (
 				82239F4D1C4AF70500627674 /* Sources */,
 				82239F4E1C4AF70500627674 /* Frameworks */,
@@ -625,14 +633,14 @@
 			dependencies = (
 				82239F541C4AF70500627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter iOS Tests";
+			name = "Tests iOS";
 			productName = CSVImporterTests;
-			productReference = 82239F511C4AF70500627674 /* CSVImporter iOS Tests.xctest */;
+			productReference = 82239F511C4AF70500627674 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		82239F761C4AFAFF00627674 /* CSVImporter tvOS */ = {
+		82239F761C4AFAFF00627674 /* Framework tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */;
+			buildConfigurationList = 82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "Framework tvOS" */;
 			buildPhases = (
 				82239F721C4AFAFF00627674 /* Sources */,
 				82239F731C4AFAFF00627674 /* Frameworks */,
@@ -644,14 +652,14 @@
 			);
 			dependencies = (
 			);
-			name = "CSVImporter tvOS";
+			name = "Framework tvOS";
 			productName = "CSVImporter tvOS";
 			productReference = 82239F771C4AFAFF00627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */ = {
+		82239F7F1C4AFAFF00627674 /* Tests tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */;
+			buildConfigurationList = 82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "Tests tvOS" */;
 			buildPhases = (
 				82239F7C1C4AFAFF00627674 /* Sources */,
 				82239F7D1C4AFAFF00627674 /* Frameworks */,
@@ -664,14 +672,14 @@
 			dependencies = (
 				82239F831C4AFAFF00627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter tvOS Tests";
+			name = "Tests tvOS";
 			productName = "CSVImporter tvOSTests";
-			productReference = 82239F801C4AFAFF00627674 /* CSVImporter tvOS Tests.xctest */;
+			productReference = 82239F801C4AFAFF00627674 /* Tests tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		82239F921C4AFB1000627674 /* CSVImporter OSX */ = {
+		82239F921C4AFB1000627674 /* Framework macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */;
+			buildConfigurationList = 82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "Framework macOS" */;
 			buildPhases = (
 				82239F8E1C4AFB1000627674 /* Sources */,
 				82239F8F1C4AFB1000627674 /* Frameworks */,
@@ -683,14 +691,14 @@
 			);
 			dependencies = (
 			);
-			name = "CSVImporter OSX";
+			name = "Framework macOS";
 			productName = "CSVImporter OSX";
 			productReference = 82239F931C4AFB1000627674 /* CSVImporter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */ = {
+		82239F9B1C4AFB1000627674 /* Tests macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */;
+			buildConfigurationList = 82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
 			buildPhases = (
 				82239F981C4AFB1000627674 /* Sources */,
 				82239F991C4AFB1000627674 /* Frameworks */,
@@ -703,9 +711,9 @@
 			dependencies = (
 				82239F9F1C4AFB1000627674 /* PBXTargetDependency */,
 			);
-			name = "CSVImporter OSX Tests";
+			name = "Tests macOS";
 			productName = "CSVImporter OSXTests";
-			productReference = 82239F9C1C4AFB1000627674 /* CSVImporter OSX Tests.xctest */;
+			productReference = 82239F9C1C4AFB1000627674 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -715,12 +723,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Flinesoft;
 				TargetAttributes = {
 					82239F461C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 					};
 					82239F501C4AF70500627674 = {
 						CreatedOnToolsVersion = 7.2;
@@ -729,7 +737,7 @@
 					};
 					82239F761C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 					};
 					82239F7F1C4AFAFF00627674 = {
 						CreatedOnToolsVersion = 7.2;
@@ -738,7 +746,7 @@
 					};
 					82239F921C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 					};
 					82239F9B1C4AFB1000627674 = {
 						CreatedOnToolsVersion = 7.2;
@@ -760,12 +768,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				82239F461C4AF70500627674 /* CSVImporter iOS */,
-				82239F501C4AF70500627674 /* CSVImporter iOS Tests */,
-				82239F761C4AFAFF00627674 /* CSVImporter tvOS */,
-				82239F7F1C4AFAFF00627674 /* CSVImporter tvOS Tests */,
-				82239F921C4AFB1000627674 /* CSVImporter OSX */,
-				82239F9B1C4AFB1000627674 /* CSVImporter OSX Tests */,
+				82239F461C4AF70500627674 /* Framework iOS */,
+				82239F501C4AF70500627674 /* Tests iOS */,
+				82239F761C4AFAFF00627674 /* Framework tvOS */,
+				82239F7F1C4AFAFF00627674 /* Tests tvOS */,
+				82239F921C4AFB1000627674 /* Framework macOS */,
+				82239F9B1C4AFB1000627674 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -946,11 +954,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC505261FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
-				A1EC02DB1E0431F20021718E /* TextFile.swift in Sources */,
-				2EC505221FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
-				2EC5052A1FDDC21E00ACFBA4 /* Source.swift in Sources */,
-				82239F711C4AFAA800627674 /* CSVImporter.swift in Sources */,
+				82C48C8B20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82C48C9420F3A1C40052FAE5 /* TextFile.swift in Sources */,
+				82C48C9120F3A1C40052FAE5 /* StringSource.swift in Sources */,
+				82C48C8820F3A1C40052FAE5 /* Source.swift in Sources */,
+				82C48C8E20F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,11 +974,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC505271FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
-				A1EC02DC1E0431F20021718E /* TextFile.swift in Sources */,
-				2EC505231FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
-				2EC5052B1FDDC21E00ACFBA4 /* Source.swift in Sources */,
-				82239FAE1C4AFB3500627674 /* CSVImporter.swift in Sources */,
+				82C48C8C20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82C48C9520F3A1C40052FAE5 /* TextFile.swift in Sources */,
+				82C48C9220F3A1C40052FAE5 /* StringSource.swift in Sources */,
+				82C48C8920F3A1C40052FAE5 /* Source.swift in Sources */,
+				82C48C8F20F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,11 +994,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EC505281FDDC1FC00ACFBA4 /* FileSource.swift in Sources */,
-				A1EC02DD1E0431F20021718E /* TextFile.swift in Sources */,
-				2EC505241FDDC1D800ACFBA4 /* StringSource.swift in Sources */,
-				2EC5052C1FDDC21E00ACFBA4 /* Source.swift in Sources */,
-				82239FAF1C4AFB3600627674 /* CSVImporter.swift in Sources */,
+				82C48C8D20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82C48C9620F3A1C40052FAE5 /* TextFile.swift in Sources */,
+				82C48C9320F3A1C40052FAE5 /* StringSource.swift in Sources */,
+				82C48C8A20F3A1C40052FAE5 /* Source.swift in Sources */,
+				82C48C9020F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,17 +1015,17 @@
 /* Begin PBXTargetDependency section */
 		82239F541C4AF70500627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 82239F461C4AF70500627674 /* CSVImporter iOS */;
+			target = 82239F461C4AF70500627674 /* Framework iOS */;
 			targetProxy = 82239F531C4AF70500627674 /* PBXContainerItemProxy */;
 		};
 		82239F831C4AFAFF00627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 82239F761C4AFAFF00627674 /* CSVImporter tvOS */;
+			target = 82239F761C4AFAFF00627674 /* Framework tvOS */;
 			targetProxy = 82239F821C4AFAFF00627674 /* PBXContainerItemProxy */;
 		};
 		82239F9F1C4AFB1000627674 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 82239F921C4AFB1000627674 /* CSVImporter OSX */;
+			target = 82239F921C4AFB1000627674 /* Framework macOS */;
 			targetProxy = 82239F9E1C4AFB1000627674 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1035,12 +1043,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1068,9 +1078,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = CSVImporter;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1092,12 +1102,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1119,8 +1131,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CSVImporter;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1145,12 +1157,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -1171,12 +1182,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
@@ -1185,12 +1195,13 @@
 		82239F5F1C4AF70500627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1201,12 +1212,13 @@
 		82239F601C4AF70500627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1218,6 +1230,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1227,13 +1240,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
@@ -1244,6 +1257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1253,11 +1267,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1269,12 +1282,13 @@
 		82239F8C1C4AFAFF00627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1287,12 +1301,13 @@
 		82239F8D1C4AFAFF00627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1306,6 +1321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1317,14 +1333,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1333,6 +1349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -1344,12 +1361,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "$(SRCROOT)/Sources/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/SupportingFiles/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flinesoft.CSVImporter;
-				PRODUCT_NAME = CSVImporter;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1359,6 +1375,7 @@
 		82239FA81C4AFB1000627674 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
@@ -1366,7 +1383,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
@@ -1379,6 +1396,7 @@
 		82239FA91C4AFB1000627674 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 767S6EFMJ8;
@@ -1386,7 +1404,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
+				INFOPLIST_FILE = Tests/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flinesoft.CSVImporter-OSXTests";
@@ -1408,7 +1426,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS" */ = {
+		82239F5B1C4AF70500627674 /* Build configuration list for PBXNativeTarget "Framework iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F5C1C4AF70500627674 /* Debug */,
@@ -1417,7 +1435,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "CSVImporter iOS Tests" */ = {
+		82239F5E1C4AF70500627674 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F5F1C4AF70500627674 /* Debug */,
@@ -1426,7 +1444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS" */ = {
+		82239F881C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "Framework tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F891C4AFAFF00627674 /* Debug */,
@@ -1435,7 +1453,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "CSVImporter tvOS Tests" */ = {
+		82239F8B1C4AFAFF00627674 /* Build configuration list for PBXNativeTarget "Tests tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239F8C1C4AFAFF00627674 /* Debug */,
@@ -1444,7 +1462,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX" */ = {
+		82239FA41C4AFB1000627674 /* Build configuration list for PBXNativeTarget "Framework macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239FA51C4AFB1000627674 /* Debug */,
@@ -1453,7 +1471,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "CSVImporter OSX Tests" */ = {
+		82239FA71C4AFB1000627674 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				82239FA81C4AFB1000627674 /* Debug */,
