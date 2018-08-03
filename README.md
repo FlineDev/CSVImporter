@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="https://www.bitrise.io/app/729b6b29afaa23cb">
-        <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
+        <img src="https://app.bitrise.io/app/729b6b29afaa23cb/status.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
              alt="Build Status">
     </a>
     <a href="https://codebeat.co/projects/github-com-flinesoft-csvimporter">
