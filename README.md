@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/729b6b29afaa23cb">
+    <a href="https://app.bitrise.io/app/729b6b29afaa23cb">
         <img src="https://app.bitrise.io/app/729b6b29afaa23cb/status.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
              alt="Build Status">
     </a>
