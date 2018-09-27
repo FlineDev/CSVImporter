@@ -32,6 +32,16 @@ public class CSVImporter<T> {
     let workQosClass: DispatchQoS.QoSClass
     let callbacksQosClass: DispatchQoS.QoSClass?
 
+    // Various private constants used for reading lines
+    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
+    private let substitute: String = "\u{001a}"
+    private let delimiterQuoteDelimiter: String
+    private let delimiterDelimiter: String
+    private let quoteDelimiter: String
+    private let delimiterQuote: String
+
     // MARK: - Computed Instance Properties
     var shouldReportProgress: Bool {
         return self.progressClosure != nil && (self.lastProgressReport == nil || Date().timeIntervalSince(self.lastProgressReport!) > 0.1)
@@ -69,8 +79,14 @@ public class CSVImporter<T> {
     ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
     ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
     ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
-    public convenience init(path: String, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8,
-                            workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
+    public convenience init(
+        path: String,
+        delimiter: String = ",",
+        lineEnding: LineEnding = .unknown,
+        encoding: String.Encoding = .utf8,
+        workQosClass: DispatchQoS.QoSClass = .utility,
+        callbacksQosClass: DispatchQoS.QoSClass? = nil
+    ) {
         let textFile = TextFile(path: path, encoding: encoding)
         let fileSource = FileSource(textFile: textFile, encoding: encoding, lineEnding: lineEnding)
         self.init(source: fileSource, delimiter: delimiter, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
@@ -85,10 +101,23 @@ public class CSVImporter<T> {
     ///   - encoding: The encoding the file is read with. Defaults to `.utf8`.
     ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
     ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
-    public convenience init?(url: URL, delimiter: String = ",", lineEnding: LineEnding = .unknown, encoding: String.Encoding = .utf8,
-                             workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
+    public convenience init?(
+        url: URL,
+        delimiter: String = ",",
+        lineEnding: LineEnding = .unknown,
+        encoding: String.Encoding = .utf8,
+        workQosClass: DispatchQoS.QoSClass = .utility,
+        callbacksQosClass: DispatchQoS.QoSClass? = nil
+    ) {
         guard url.isFileURL else { return nil }
-        self.init(path: url.path, delimiter: delimiter, lineEnding: lineEnding, encoding: encoding, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
+        self.init(
+            path: url.path,
+            delimiter: delimiter,
+            lineEnding: lineEnding,
+            encoding: encoding,
+            workQosClass: workQosClass,
+            callbacksQosClass: callbacksQosClass
+        )
     }
 
     /// Creates a `CSVImporter` object with required configuration options.
@@ -102,8 +131,13 @@ public class CSVImporter<T> {
     ///   - lineEnding: The lineEnding used in the file. If not specified will be determined automatically.
     ///   - workQosClass: The QOS class of the background queue to run the heavy work in. Defaults to `.utility`.
     ///   - callbacksQosClass: The QOS class of the background queue to run the callbacks in or `nil` for the main queue. Defaults to `nil`.
-    public convenience init(contentString: String, delimiter: String = ",", lineEnding: LineEnding = .unknown,
-                            workQosClass: DispatchQoS.QoSClass = .utility, callbacksQosClass: DispatchQoS.QoSClass? = nil) {
+    public convenience init(
+        contentString: String,
+        delimiter: String = ",",
+        lineEnding: LineEnding = .unknown,
+        workQosClass: DispatchQoS.QoSClass = .utility,
+        callbacksQosClass: DispatchQoS.QoSClass? = nil
+    ) {
         let stringSource = StringSource(contentString: contentString, lineEnding: lineEnding)
         self.init(source: stringSource, delimiter: delimiter, workQosClass: workQosClass, callbacksQosClass: callbacksQosClass)
     }
@@ -141,14 +175,15 @@ public class CSVImporter<T> {
     ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func startImportingRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
-                                      recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> Self {
+    public func startImportingRecords(
+        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
+    ) -> Self {
         workDispatchQueue.async {
             var recordStructure: [String]?
             var importedRecords = [T]()
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
-
                 if recordStructure == nil {
                     recordStructure = valuesInLine
                     structureClosure(valuesInLine)
@@ -199,13 +234,14 @@ public class CSVImporter<T> {
     ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: The imported records array.
-    public func importRecords(structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
-                              recordMapper closure: @escaping (_ recordValues: [String: String]) -> T) -> [T] {
+    public func importRecords(
+        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
+    ) -> [T] {
         var recordStructure: [String]?
         var importedRecords = [T]()
 
         _ = self.importLines { valuesInLine in
-
             if recordStructure == nil {
                 recordStructure = valuesInLine
                 structureClosure(valuesInLine)
@@ -240,16 +276,6 @@ public class CSVImporter<T> {
 
         return anyLine
     }
-
-    // Various private constants used for reading lines
-    private let startPartRegex = try! NSRegularExpression(pattern: "\\A\"[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    private let middlePartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    private let endPartRegex = try! NSRegularExpression(pattern: "\\A[^\"]*\"\\z", options: .caseInsensitive) // swiftlint:disable:this force_try
-    private let substitute = "\u{001a}"
-    private let delimiterQuoteDelimiter: String
-    private let delimiterDelimiter: String
-    private let quoteDelimiter: String
-    private let delimiterQuote: String
 
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
     ///

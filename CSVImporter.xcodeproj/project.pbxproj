@@ -103,6 +103,9 @@
 		82297C33215D49CA0059FB5B /* Quick.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82297C2D215D495E0059FB5B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82297C34215D49D10059FB5B /* Nimble.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82297C28215D49540059FB5B /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82297C35215D49D10059FB5B /* Quick.framework in Copy Framework Dependencies */ = {isa = PBXBuildFile; fileRef = 82297C29215D49540059FB5B /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		82297C37215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */; };
+		82297C38215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */; };
+		82297C39215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */; };
 		827A24B21D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B31D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
 		827A24B41D2801050003D6DD /* CommaSemicolonQuotes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */; };
@@ -245,6 +248,7 @@
 		82297C29215D49540059FB5B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		82297C2C215D495E0059FB5B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/tvOS/Nimble.framework; sourceTree = "<group>"; };
 		82297C2D215D495E0059FB5B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/tvOS/Quick.framework; sourceTree = "<group>"; };
+		82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFileStreamReader.swift; sourceTree = "<group>"; };
 		827A24B11D2801050003D6DD /* CommaSemicolonQuotes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CommaSemicolonQuotes.csv; sourceTree = "<group>"; };
 		827A24B61D2801580003D6DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		828348671CA6E1B000DC4C26 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -450,6 +454,7 @@
 				82C48C8320F3A1C40052FAE5 /* Source.swift */,
 				82C48C8620F3A1C40052FAE5 /* StringSource.swift */,
 				82C48C8720F3A1C40052FAE5 /* TextFile.swift */,
+				82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */,
 			);
 			path = CSVImporter;
 			sourceTree = "<group>";
@@ -985,6 +990,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C48C8B20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82297C37215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */,
 				82C48C9420F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9120F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8820F3A1C40052FAE5 /* Source.swift in Sources */,
@@ -1005,6 +1011,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C48C8C20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82297C38215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */,
 				82C48C9520F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9220F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8920F3A1C40052FAE5 /* Source.swift in Sources */,
@@ -1025,6 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82C48C8D20F3A1C40052FAE5 /* CSVImporter.swift in Sources */,
+				82297C39215D4F0F0059FB5B /* TextFileStreamReader.swift in Sources */,
 				82C48C9620F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9320F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8A20F3A1C40052FAE5 /* Source.swift in Sources */,
