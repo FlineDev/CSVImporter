@@ -8,12 +8,10 @@
 
 // swiftlint:disable file_length
 
-import XCTest
-
+@testable import CSVImporter
 import Quick
 import Nimble
-
-@testable import CSVImporter
+import XCTest
 
 class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
     override func spec() { // swiftlint:disable:this function_body_length cyclomatic_complexity
