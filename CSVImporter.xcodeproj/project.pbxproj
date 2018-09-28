@@ -456,11 +456,11 @@
 			children = (
 				82C48C8420F3A1C40052FAE5 /* CSVImporter.swift */,
 				82C48C8520F3A1C40052FAE5 /* FileSource.swift */,
+				82F59535215E2F2400C840A3 /* Globals.swift */,
 				82C48C8320F3A1C40052FAE5 /* Source.swift */,
 				82C48C8620F3A1C40052FAE5 /* StringSource.swift */,
 				82C48C8720F3A1C40052FAE5 /* TextFile.swift */,
 				82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */,
-				82F59535215E2F2400C840A3 /* Globals.swift */,
 			);
 			path = CSVImporter;
 			sourceTree = "<group>";
