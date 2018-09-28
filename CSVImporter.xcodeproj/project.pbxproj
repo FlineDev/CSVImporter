@@ -127,6 +127,9 @@
 		82C48C9420F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
 		82C48C9520F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
 		82C48C9620F3A1C40052FAE5 /* TextFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C48C8720F3A1C40052FAE5 /* TextFile.swift */; };
+		82F59536215E2F2400C840A3 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F59535215E2F2400C840A3 /* Globals.swift */; };
+		82F59537215E2F2400C840A3 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F59535215E2F2400C840A3 /* Globals.swift */; };
+		82F59538215E2F2400C840A3 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F59535215E2F2400C840A3 /* Globals.swift */; };
 		A1F5AEE61E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
 		A1F5AEE71E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
 		A1F5AEE81E05599F003D6949 /* UTF16_Example.csv in Resources */ = {isa = PBXBuildFile; fileRef = A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */; };
@@ -260,6 +263,8 @@
 		82C48C8520F3A1C40052FAE5 /* FileSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSource.swift; sourceTree = "<group>"; };
 		82C48C8620F3A1C40052FAE5 /* StringSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringSource.swift; sourceTree = "<group>"; };
 		82C48C8720F3A1C40052FAE5 /* TextFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFile.swift; sourceTree = "<group>"; };
+		82F59534215E2CED00C840A3 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
+		82F59535215E2F2400C840A3 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		A110355E1D666CFD00214547 /* CSVImporter.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = CSVImporter.podspec; sourceTree = "<group>"; };
 		A1EC02D91E0431C00021718E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		A1F5AEE51E05599F003D6949 /* UTF16_Example.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UTF16_Example.csv; sourceTree = "<group>"; };
@@ -455,6 +460,7 @@
 				82C48C8620F3A1C40052FAE5 /* StringSource.swift */,
 				82C48C8720F3A1C40052FAE5 /* TextFile.swift */,
 				82297C36215D4F0F0059FB5B /* TextFileStreamReader.swift */,
+				82F59535215E2F2400C840A3 /* Globals.swift */,
 			);
 			path = CSVImporter;
 			sourceTree = "<group>";
@@ -536,6 +542,7 @@
 			children = (
 				82297C17215D453B0059FB5B /* .projlint.yml */,
 				828348671CA6E1B000DC4C26 /* .swiftlint.yml */,
+				82F59534215E2CED00C840A3 /* beak.swift */,
 				82239F611C4AF89200627674 /* Cartfile */,
 				82297C1C215D45B70059FB5B /* Cartfile.private */,
 				A1EC02D91E0431C00021718E /* Cartfile.resolved */,
@@ -994,6 +1001,7 @@
 				82C48C9420F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9120F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8820F3A1C40052FAE5 /* Source.swift in Sources */,
+				82F59536215E2F2400C840A3 /* Globals.swift in Sources */,
 				82C48C8E20F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1015,6 +1023,7 @@
 				82C48C9520F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9220F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8920F3A1C40052FAE5 /* Source.swift in Sources */,
+				82F59537215E2F2400C840A3 /* Globals.swift in Sources */,
 				82C48C8F20F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1036,6 +1045,7 @@
 				82C48C9620F3A1C40052FAE5 /* TextFile.swift in Sources */,
 				82C48C9320F3A1C40052FAE5 /* StringSource.swift in Sources */,
 				82C48C8A20F3A1C40052FAE5 /* Source.swift in Sources */,
+				82F59538215E2F2400C840A3 /* Globals.swift in Sources */,
 				82C48C9020F3A1C40052FAE5 /* FileSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
