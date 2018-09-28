@@ -17,6 +17,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ### Security
 - None.
 
+## [1.9.1] - 2018-09-28
+### Added
+- Official support for building on Linux.
+### Changed
+- Upgraded to Swift 4.2 & Xcode 10.
+
 ## [1.8.0] - 2017-12-10
 ### Changed
 - Upgraded Code to Swift 4.

@@ -12,8 +12,8 @@
              alt="Codebeat Status">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.9.0-blue.svg"
-             alt="Version: 1.9.0">
+        <img src="https://img.shields.io/badge/Version-1.9.1-blue.svg"
+             alt="Version: 1.9.1">
     </a>
     <img src="https://img.shields.io/badge/Swift-4.2-FFAC45.svg"
          alt="Swift: 4.2">
