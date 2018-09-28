@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CSVImporter"
-  s.version      = "1.9.0"
+  s.version      = "1.9.1"
   s.summary      = "Import CSV files line by line with ease."
 
   s.description  = <<-DESC
@@ -25,5 +25,6 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources", "Sources/**/*.swift"
   s.framework  = "Foundation"
   s.dependency "HandySwift", "~> 2.5"
+  s.swift_version = "4.2"
 
 end

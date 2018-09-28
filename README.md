@@ -3,22 +3,22 @@
 </p>
 
 <p align="center">
-    <a href="https://www.bitrise.io/app/729b6b29afaa23cb">
-        <img src="https://www.bitrise.io/app/729b6b29afaa23cb.svg?token=vylelkIV0d8L8dgaENuNqg&branch=stable"
+    <a href="https://app.bitrise.io/app/257039737afe71d1">
+        <img src="https://app.bitrise.io/app/257039737afe71d1/status.svg?token=5IksJHfDRgFFmIFyTWMdxQ&branch=stable"
              alt="Build Status">
     </a>
     <a href="https://codebeat.co/projects/github-com-flinesoft-csvimporter">
         <img src="https://codebeat.co/badges/c665ed7c-1f1b-45db-9602-9ac216327edf"
-             alt="codebeat badge">
+             alt="Codebeat Status">
     </a>
     <a href="https://github.com/Flinesoft/CSVImporter/releases">
-        <img src="https://img.shields.io/badge/Version-1.9.0-blue.svg"
-             alt="Version: 1.9.0">
+        <img src="https://img.shields.io/badge/Version-1.9.1-blue.svg"
+             alt="Version: 1.9.1">
     </a>
-    <img src="https://img.shields.io/badge/Swift-4-FFAC45.svg"
-         alt="Swift: 4">
-    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20macOS-FF69B4.svg"
-        alt="Platforms: iOS | tvOS | macOS">
+    <img src="https://img.shields.io/badge/Swift-4.2-FFAC45.svg"
+         alt="Swift: 4.2">
+    <img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20tvOS%20%7C%20macOS%20%7C%20Linux-FF69B4.svg"
+        alt="Platforms: iOS | tvOS | macOS | Linux">
     <a href="https://github.com/Flinesoft/CSVImporter/blob/stable/LICENSE.md">
         <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
               alt="License: MIT">
@@ -46,42 +46,13 @@ Import CSV files line by line with ease.
 
 ## Installation
 
-Currently the recommended way of installing this library is via [Carthage](https://github.com/Carthage/Carthage).
-[Cocoapods](https://github.com/CocoaPods/CocoaPods) is supported too.
+Currently the recommended way of installing this library is via [Carthage](https://github.com/Carthage/Carthage) on macOS or [Swift Package Manager](https://github.com/apple/swift-package-manager) on Linux. [Cocoapods](https://github.com/CocoaPods/CocoaPods) might work, too, but is not tested.
 
 You can of course also just include this framework manually into your project by downloading it or by using git submodules.
 
-### Carthage
-
-Simply add this line to your Cartfile:
-
-```
-github "Flinesoft/CSVImporter" ~> 1.7
-```
-
-And run `carthage update`. Then drag & drop the HandySwift.framework in the Carthage/build folder to your project. Also do the same with the dependent framework `HandySwift`. Now you can `import CSVImporter` in each class you want to use its features. Refer to the [Carthage README](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) for detailed / updated instructions.
-
-### CocoaPods
-
-Add the line `pod 'CSVImporter'` to your target in your `Podfile` and make sure to include `use_frameworks!`
-at the top. The result might look similar to this:
-
-``` Ruby
-platform :ios, '8.0'
-use_frameworks!
-
-target 'MyAppTarget' do
-    pod 'CSVImporter', '~> 1.7'
-end
-```
-
-Now close your project and run `pod install` from the command line. Then open the `.xcworkspace` from within your project folder.
-Build your project once (with `Cmd+B`) to update the frameworks known to Xcode. Now you can `import CSVImporter` in each class you want to use its features.
-Refer to [CocoaPods.org](https://cocoapods.org) for detailed / updates instructions.
-
 ## Usage
 
-Please have a look at the UsageExamples.playground and the Tests/Code/CSVImporterSpec.swift files for a complete list of features provided.
+Please have a look at the UsageExamples.playground and the Tests/CSVImporterTests/CSVImporterSpec.swift files for a complete list of features provided.
 Open the Playground from within the `.xcworkspace` in order for it to work.
 
 
@@ -214,11 +185,9 @@ Note: If a records values count doesn't match that of the first lines values cou
 
 ## Contributing
 
-Contributions are welcome. Please just open an Issue on GitHub to discuss a point or request a feature or send a Pull Request with your suggestion.
+See the file [CONTRIBUTING.md](https://github.com/Flinesoft/HandySwift/blob/stable/CONTRIBUTING.md).
 
-Pull requests with new features will only be accepted when the following are given:
-- **Tests** for the new feature exist and all tests pass successfully for all targets.
-- **Usage examples** of the new feature are given in the Playgrounds.
 
 ## License
+
 This library is released under the [MIT License](http://opensource.org/licenses/MIT). See LICENSE for details.

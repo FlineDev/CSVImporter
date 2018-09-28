@@ -45,11 +45,11 @@ results
 let wrongPathImporter = CSVImporter<[String]>(path: "a/wrong/path")
 wrongPathImporter.startImportingRecords { $0 }.onFail {
     
-    ".onFail called because the path is wrong"
+    _ = ".onFail called because the path is wrong"
     
 }.onFinish { importedRecords in
     
-    ".onFinish is never called here because the path is wrong"
+    _ = ".onFinish is never called here because the path is wrong"
     
 }
 
@@ -69,7 +69,7 @@ defaultImporter.startImportingRecords { $0 }.onProgress { importedDataLinesCount
 let structureImporter = CSVImporter<[String: String]>(path: path)
 structureImporter.startImportingRecords(structure: { headerValues in
     
-    headerValues // the structural information from the first line as a [String]
+    _ = headerValues // the structural information from the first line as a [String]
 
 }){ $0 }.onFinish { importedRecords in
     
@@ -114,7 +114,7 @@ teamsDefaultImporter.startImportingRecords { recordValues -> Team in
 let teamsStructuredImporter = CSVImporter<Team>(path: path)
 teamsStructuredImporter.startImportingRecords(structure: { headerValues in
     
-    headerValues // the structure form the first line of the CSV file
+    _ = headerValues // the structure form the first line of the CSV file
     
 }) { recordValues -> Team in
     
