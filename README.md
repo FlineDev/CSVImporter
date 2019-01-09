@@ -185,7 +185,7 @@ Note: If a records values count doesn't match that of the first lines values cou
 
 ## Contributing
 
-See the file [CONTRIBUTING.md](https://github.com/Flinesoft/HandySwift/blob/stable/CONTRIBUTING.md).
+See the file [CONTRIBUTING.md](https://github.com/Flinesoft/CSVImporter/blob/stable/CONTRIBUTING.md).
 
 
 ## License
