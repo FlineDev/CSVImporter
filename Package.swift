@@ -7,9 +7,9 @@ let package = Package(
         .library(name: "CSVImporter", targets: ["CSVImporter"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Flinesoft/HandySwift.git", .upToNextMajor(from: "2.7.0")),
-        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "1.3.2")),
-        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "7.3.1"))
+        .package(url: "https://github.com/Flinesoft/HandySwift.git", .upToNextMajor(from: "3.0.0")),
+        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "2.1.0")),
+        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "8.0.1")),
     ],
     targets: [
         .target(

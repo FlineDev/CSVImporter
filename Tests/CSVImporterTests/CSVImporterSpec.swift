@@ -257,7 +257,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
             if let path = path {
                 do {
                     let string = try String(contentsOfFile: path)
-                    expect(string.contains(LineEnding.carriageReturnLineFeed.rawValue)).to(beTrue())
+                    expect(string).to(contain(LineEnding.carriageReturnLineFeed.rawValue))
                 } catch { }
 
                 let importer = CSVImporter<[String: String]>(path: path, lineEnding: .newLine)    // wrong
@@ -427,7 +427,7 @@ class CSVImporterSpec: QuickSpec { // swiftlint:disable:this type_body_length
         if let path = pathForResourceFile("Teams.csv") {
             do {
                 let string = try String(contentsOfFile: path)
-                expect(string.contains(LineEnding.carriageReturnLineFeed.rawValue)).to(beTrue())
+                expect(string).to(contain(LineEnding.carriageReturnLineFeed.rawValue))
                 let crString = string.replacingOccurrences(of: LineEnding.carriageReturnLineFeed.rawValue, with: lineEnding.rawValue)
                 let tempPath = (NSTemporaryDirectory() as NSString).appendingPathComponent("TeamsNewLineEnding.csv")
                 try crString.write(toFile: tempPath, atomically: false, encoding: .utf8)
