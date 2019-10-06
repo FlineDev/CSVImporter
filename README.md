@@ -28,7 +28,7 @@
         <img src="https://img.shields.io/badge/PayPal-Donate-orange.svg"
              alt="PayPal: Donate">
     </a>
-    <a href="https://patreon.com/Dschee">
+    <a href="https://patreon.com/Jeehut">
         <img src="https://img.shields.io/badge/Patreon-Become a patron-orange.svg"
              alt="Patreon: Become a patron">
     </a>
@@ -195,7 +195,7 @@ Note: If a records values count doesn't match that of the first lines values cou
 
 ## Donation
 
-CSVImporter was brought to you by [Cihat Gündüz](https://github.com/Dschee) in his free time. If you want to thank me and support the development of this project, please make a small donation on [PayPal](https://paypal.me/Dschee/5EUR). In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Dschee), please consider motivating me by becoming a patron on [Patreon](https://www.patreon.com/Dschee).
+CSVImporter was brought to you by [Cihat Gündüz](https://github.com/Jeehut) in his free time. If you want to thank me and support the development of this project, please make a small donation on [PayPal](https://paypal.me/Dschee/5EUR). In case you also like my other [open source contributions](https://github.com/Flinesoft) and [articles](https://medium.com/@Jeehut), please consider motivating me by becoming a patron on [Patreon](https://www.patreon.com/Jeehut).
 
 Thank you very much for any donation, it really helps out a lot! 💯
 
