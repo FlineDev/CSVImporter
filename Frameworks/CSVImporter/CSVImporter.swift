@@ -176,7 +176,7 @@ public class CSVImporter<T> {
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(
-        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        structure structureClosure: @escaping (_ headerValues: [String]) -> [String],
         recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
     ) -> Self {
         workDispatchQueue.async {
@@ -185,8 +185,7 @@ public class CSVImporter<T> {
 
             let importedLinesWithSuccess = self.importLines { valuesInLine in
                 if recordStructure == nil {
-                    recordStructure = valuesInLine
-                    structureClosure(valuesInLine)
+                    recordStructure = structureClosure(valuesInLine)
                 } else {
                     if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
                         let newRecord = closure(structuredValuesInLine)
@@ -235,7 +234,7 @@ public class CSVImporter<T> {
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: The imported records array.
     public func importRecords(
-        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        structure structureClosure: @escaping (_ headerValues: [String]) -> [String],
         recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
     ) -> [T] {
         var recordStructure: [String]?
@@ -243,8 +242,7 @@ public class CSVImporter<T> {
 
         _ = self.importLines { valuesInLine in
             if recordStructure == nil {
-                recordStructure = valuesInLine
-                structureClosure(valuesInLine)
+                recordStructure = structureClosure(valuesInLine)
             } else {
                 if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
                     let newRecord = closure(structuredValuesInLine)
