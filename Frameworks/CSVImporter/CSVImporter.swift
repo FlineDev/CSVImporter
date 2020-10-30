@@ -142,22 +142,52 @@ public class CSVImporter<T> {
     }
 
     // MARK: - Instance Methods
+    /// Starts importing the records within the CSV file line by line. Fails if error is thrown.
+    ///
+    /// - Parameters:
+    ///   - mapper: A closure to map the data received in a line to your data structure.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
+    public func startImportingRecords(compactMapper closure: @escaping (_ recordValues: [String]) throws -> T?) -> Self {
+        workDispatchQueue.async {
+            var importedRecords = [T]()
+
+            do {
+                try self.importLines { valuesInLine in
+                    guard let newRecord = try closure(valuesInLine) else {
+                        return
+                    }
+                    importedRecords.append(newRecord)
+                    self.reportProgressIfNeeded(importedRecords)
+                }
+                self.reportFinish(importedRecords)
+            } catch {
+                self.reportFail(error)
+            }
+        }
+
+        return self
+    }
+
+    // MARK: - Instance Methods
     /// Starts importing the records within the CSV file line by line.
     ///
     /// - Parameters:
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> Self {
+    public func startImportingRecords(mapper closure: @escaping (_ recordValues: [String]) throws -> T) -> Self {
         workDispatchQueue.async {
             var importedRecords = [T]()
 
-            self.importLines { valuesInLine in
-                let newRecord = closure(valuesInLine)
-                importedRecords.append(newRecord)
-
-                self.reportProgressIfNeeded(importedRecords)
+            do {
+                try self.importLines { valuesInLine in
+                    let newRecord = try closure(valuesInLine)
+                    importedRecords.append(newRecord)
+                    self.reportProgressIfNeeded(importedRecords)
+                }
+                self.reportFinish(importedRecords)
+            } catch {
+                self.reportFail(error)
             }
-            self.reportFinish(importedRecords)
         }
 
         return self
@@ -171,24 +201,65 @@ public class CSVImporter<T> {
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(
         structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
-        recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
+        compactRecordMapper closure: @escaping (_ recordValues: [String: String]) throws -> T?
     ) -> Self {
         workDispatchQueue.async {
             var recordStructure: [String]?
             var importedRecords = [T]()
 
-            self.importLines { valuesInLine in
-                guard let titles = recordStructure else {
-                    recordStructure = valuesInLine
-                    structureClosure(valuesInLine)
-                    return
+            do {
+                try self.importLines { valuesInLine in
+                    guard let titles = recordStructure else {
+                        recordStructure = valuesInLine
+                        structureClosure(valuesInLine)
+                        return
+                    }
+                    let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
+                    guard let newRecord = try closure(structuredValues) else {
+                        return
+                    }
+                    importedRecords.append(newRecord)
+                    self.reportProgressIfNeeded(importedRecords)
                 }
-                let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
-                let newRecord = closure(structuredValues)
-                importedRecords.append(newRecord)
-                self.reportProgressIfNeeded(importedRecords)
+                self.reportFinish(importedRecords)
+            } catch {
+                self.reportFail(error)
             }
-            self.reportFinish(importedRecords)
+        }
+
+        return self
+    }
+
+    /// Starts importing the records within the CSV file line by line interpreting the first line as the data structure.
+    ///
+    /// - Parameters:
+    ///   - structure: A closure for doing something with the found structure within the first line of the CSV file.
+    ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
+    /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
+    public func startImportingRecords(
+        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        recordMapper closure: @escaping (_ recordValues: [String: String]) throws -> T
+    ) -> Self {
+        workDispatchQueue.async {
+            var recordStructure: [String]?
+            var importedRecords = [T]()
+
+            do {
+                try self.importLines { valuesInLine in
+                    guard let titles = recordStructure else {
+                        recordStructure = valuesInLine
+                        structureClosure(valuesInLine)
+                        return
+                    }
+                    let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
+                    let newRecord = try closure(structuredValues)
+                    importedRecords.append(newRecord)
+                    self.reportProgressIfNeeded(importedRecords)
+                }
+                self.reportFinish(importedRecords)
+            } catch {
+                self.reportFail(error)
+            }
         }
 
         return self
@@ -294,7 +365,6 @@ public class CSVImporter<T> {
                     components.remove(at: index + 1)
                     components[index] = elementsToMerge.joined(separator: delimiter)
                 } else {
-                    // Insert throw
                     print("Invalid CSV format in line, opening \" must be closed – line: \(line).")
                 }
             }

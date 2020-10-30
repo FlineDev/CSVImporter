@@ -24,7 +24,6 @@ class FileSource: Source {
             lineEnding = lineEndingForFile()
         }
 
-        // Throw here?
         guard let csvStreamReader = textFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return }
         try csvStreamReader.forEach(closure)
     }
