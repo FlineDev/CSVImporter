@@ -19,13 +19,14 @@ class FileSource: Source {
         self.lineEnding = lineEnding
     }
 
-    func forEach(_ closure: (String) -> Void) {
+    func forEach(_ closure: (String) throws -> Void) rethrows {
         if lineEnding == .unknown {
             lineEnding = lineEndingForFile()
         }
 
+        // Throw here?
         guard let csvStreamReader = textFile.streamReader(lineEnding: lineEnding, chunkSize: chunkSize) else { return }
-        csvStreamReader.forEach(closure)
+        try csvStreamReader.forEach(closure)
     }
 
     /// Determines the line ending for the CSV file

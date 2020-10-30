@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import HandySwift
 
 /// An enum to represent the possible line endings of CSV files.
 public enum LineEnding: String {
@@ -27,7 +26,7 @@ public class CSVImporter<T> {
 
     var progressClosure: ((_ importedDataLinesCount: Int) -> Void)?
     var finishClosure: ((_ importedRecords: [T]) -> Void)?
-    var failClosure: (() -> Void)?
+    var failClosure: ((Error) -> Void)?
 
     let workQosClass: DispatchQoS.QoSClass
     let callbacksQosClass: DispatchQoS.QoSClass?
@@ -152,18 +151,13 @@ public class CSVImporter<T> {
         workDispatchQueue.async {
             var importedRecords = [T]()
 
-            let importedLinesWithSuccess = self.importLines { valuesInLine in
+            self.importLines { valuesInLine in
                 let newRecord = closure(valuesInLine)
                 importedRecords.append(newRecord)
 
                 self.reportProgressIfNeeded(importedRecords)
             }
-
-            if importedLinesWithSuccess {
-                self.reportFinish(importedRecords)
-            } else {
-                self.reportFail()
-            }
+            self.reportFinish(importedRecords)
         }
 
         return self
@@ -183,27 +177,18 @@ public class CSVImporter<T> {
             var recordStructure: [String]?
             var importedRecords = [T]()
 
-            let importedLinesWithSuccess = self.importLines { valuesInLine in
-                if recordStructure == nil {
+            self.importLines { valuesInLine in
+                guard let titles = recordStructure else {
                     recordStructure = valuesInLine
                     structureClosure(valuesInLine)
-                } else {
-                    if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
-                        let newRecord = closure(structuredValuesInLine)
-                        importedRecords.append(newRecord)
-
-                        self.reportProgressIfNeeded(importedRecords)
-                    } else {
-                        print("Warning: Couldn't structurize line.")
-                    }
+                    return
                 }
+                let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
+                let newRecord = closure(structuredValues)
+                importedRecords.append(newRecord)
+                self.reportProgressIfNeeded(importedRecords)
             }
-
-            if importedLinesWithSuccess {
-                self.reportFinish(importedRecords)
-            } else {
-                self.reportFail()
-            }
+            self.reportFinish(importedRecords)
         }
 
         return self
@@ -216,11 +201,11 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: The imported records array.
-    public func importRecords(mapper closure: @escaping (_ recordValues: [String]) -> T) -> [T] {
+    public func importRecords(mapper closure: @escaping (_ recordValues: [String]) throws -> T) rethrows -> [T] {
         var importedRecords = [T]()
 
-        _ = self.importLines { valuesInLine in
-            let newRecord = closure(valuesInLine)
+        try self.importLines { valuesInLine in
+            let newRecord = try closure(valuesInLine)
             importedRecords.append(newRecord)
         }
 
@@ -236,23 +221,21 @@ public class CSVImporter<T> {
     /// - Returns: The imported records array.
     public func importRecords(
         structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
-        recordMapper closure: @escaping (_ recordValues: [String: String]) -> T
-    ) -> [T] {
+        recordMapper closure: @escaping (_ recordValues: [String: String]) throws -> T
+    ) rethrows -> [T] {
         var recordStructure: [String]?
         var importedRecords = [T]()
 
-        _ = self.importLines { valuesInLine in
-            if recordStructure == nil {
+        try self.importLines { valuesInLine in
+            guard let titles = recordStructure else {
                 recordStructure = valuesInLine
                 structureClosure(valuesInLine)
-            } else {
-                if let structuredValuesInLine = [String: String](keys: recordStructure!, values: valuesInLine) {
-                    let newRecord = closure(structuredValuesInLine)
-                    importedRecords.append(newRecord)
-                } else {
-                    print("CSVImporter – Warning: Couldn't structurize line.")
-                }
+                return
             }
+            let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
+            let newRecord = try closure(structuredValues)
+            importedRecords.append(newRecord)
+            self.reportProgressIfNeeded(importedRecords)
         }
 
         return importedRecords
@@ -263,18 +246,13 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - valuesInLine: The values found within a line.
     /// - Returns: `true` on finish or `false` if can't read file.
-    func importLines(_ closure: (_ valuesInLine: [String]) -> Void) -> Bool {
-        var anyLine = false
-
-        source.forEach { line in
-            anyLine = true
-            autoreleasepool {
+    func importLines(_ closure: (_ valuesInLine: [String]) throws -> Void) rethrows {
+        try source.forEach { line in
+            try autoreleasepool {
                 let valuesInLine = readValuesInLine(line)
-                closure(valuesInLine)
+                try closure(valuesInLine)
             }
         }
-
-        return anyLine
     }
 
     /// Reads the line and returns the fields found. Handles double quotes according to RFC 4180.
@@ -316,6 +294,7 @@ public class CSVImporter<T> {
                     components.remove(at: index + 1)
                     components[index] = elementsToMerge.joined(separator: delimiter)
                 } else {
+                    // Insert throw
                     print("Invalid CSV format in line, opening \" must be closed – line: \(line).")
                 }
             }
@@ -334,7 +313,7 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - closure: The closure to be called on failure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
-    public func onFail(_ closure: @escaping () -> Void) -> Self {
+    public func onFail(_ closure: @escaping (Error) -> Void) -> Self {
         self.failClosure = closure
         return self
     }
@@ -358,10 +337,10 @@ public class CSVImporter<T> {
         self.finishClosure = closure
     }
 
-    func reportFail() {
+    func reportFail(_ error: Error) {
         if let failClosure = self.failClosure {
             callbacksDispatchQueue.async {
-                failClosure()
+                failClosure(error)
             }
         }
     }

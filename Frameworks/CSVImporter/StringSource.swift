@@ -29,7 +29,7 @@ class StringSource: Source {
         lines = contentString.components(separatedBy: correctedLineEnding.rawValue)
     }
 
-    func forEach(_ closure: (String) -> Void) {
-        lines.forEach(closure)
+    func forEach(_ closure: (String) throws -> Void) rethrows {
+        try lines.forEach(closure)
     }
 }
