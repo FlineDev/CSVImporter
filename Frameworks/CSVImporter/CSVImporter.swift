@@ -200,7 +200,7 @@ public class CSVImporter<T> {
     ///   - compactRecordMapper: A closure to map the dictionary data interpreted from a line to your data structure. Nil values are omitted from results.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(
-        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        structure structureClosure: @escaping (_ headerValues: [String]) throws -> Void,
         compactRecordMapper closure: @escaping (_ recordValues: [String: String]) throws -> T?
     ) -> Self {
         workDispatchQueue.async {
@@ -211,7 +211,7 @@ public class CSVImporter<T> {
                 try self.importLines { valuesInLine in
                     guard let titles = recordStructure else {
                         recordStructure = valuesInLine
-                        structureClosure(valuesInLine)
+                        try structureClosure(valuesInLine)
                         return
                     }
                     let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
@@ -237,7 +237,7 @@ public class CSVImporter<T> {
     ///   - recordMapper: A closure to map the dictionary data interpreted from a line to your data structure.
     /// - Returns: `self` to enable consecutive method calls (e.g. `importer.startImportingRecords {...}.onProgress {...}`).
     public func startImportingRecords(
-        structure structureClosure: @escaping (_ headerValues: [String]) -> Void,
+        structure structureClosure: @escaping (_ headerValues: [String]) throws -> Void,
         recordMapper closure: @escaping (_ recordValues: [String: String]) throws -> T
     ) -> Self {
         workDispatchQueue.async {
@@ -248,7 +248,7 @@ public class CSVImporter<T> {
                 try self.importLines { valuesInLine in
                     guard let titles = recordStructure else {
                         recordStructure = valuesInLine
-                        structureClosure(valuesInLine)
+                        try structureClosure(valuesInLine)
                         return
                     }
                     let structuredValues = [String: String](uniqueKeysWithValues: zip(titles, valuesInLine))
@@ -272,7 +272,9 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - compactMapper: A closure to map the data received in a line to your data structure. Nil values are omitted from results.
     /// - Returns: The imported records array.
-    public func importRecords(compactMapper closure: @escaping (_ recordValues: [String]) throws -> T?) rethrows -> [T] {
+    public func importRecords(
+        compactMapper closure: @escaping (_ recordValues: [String]) throws -> T?
+    ) rethrows -> [T] {
         var importedRecords = [T]()
 
         try self.importLines { valuesInLine in
@@ -292,7 +294,9 @@ public class CSVImporter<T> {
     /// - Parameters:
     ///   - mapper: A closure to map the data received in a line to your data structure.
     /// - Returns: The imported records array.
-    public func importRecords(mapper closure: @escaping (_ recordValues: [String]) throws -> T) rethrows -> [T] {
+    public func importRecords(
+        mapper closure: @escaping (_ recordValues: [String]) throws -> T
+    ) rethrows -> [T] {
         var importedRecords = [T]()
 
         try self.importLines { valuesInLine in
