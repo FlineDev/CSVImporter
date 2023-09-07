@@ -1,34 +1,32 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "HandySwift",
-        "repositoryURL": "https://github.com/Flinesoft/HandySwift.git",
-        "state": {
-          "branch": null,
-          "revision": "4225d7654f87886b09dddf52761fc898e4bfd137",
-          "version": "3.0.0"
-        }
-      },
-      {
-        "package": "Nimble",
-        "repositoryURL": "https://github.com/Quick/Nimble.git",
-        "state": {
-          "branch": null,
-          "revision": "43304bf2b1579fd555f2fdd51742771c1e4f2b98",
-          "version": "8.0.1"
-        }
-      },
-      {
-        "package": "Quick",
-        "repositoryURL": "https://github.com/Quick/Quick.git",
-        "state": {
-          "branch": null,
-          "revision": "94df9b449508344667e5afc7e80f8bcbff1e4c37",
-          "version": "2.1.0"
-        }
+  "pins" : [
+    {
+      "identity" : "handyswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flinesoft/HandySwift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2f054f427a73f78835e8d7327e3d1eb3ff169ad8"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "nimble",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Nimble.git",
+      "state" : {
+        "revision" : "43304bf2b1579fd555f2fdd51742771c1e4f2b98",
+        "version" : "8.0.1"
+      }
+    },
+    {
+      "identity" : "quick",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Quick/Quick.git",
+      "state" : {
+        "revision" : "94df9b449508344667e5afc7e80f8bcbff1e4c37",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
 }
