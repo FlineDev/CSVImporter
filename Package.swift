@@ -15,12 +15,18 @@ let package = Package(
    targets: [
       .target(
          name: "CSVImporter",
-         dependencies: ["HandySwift"],
+         dependencies: [
+            .product(name: "HandySwift", package: "HandySwift"),
+         ],
          path: "Frameworks/CSVImporter"
       ),
       .testTarget(
          name: "CSVImporterTests",
-         dependencies: ["CSVImporter", "Quick", "Nimble"]
+         dependencies: [
+            "CSVImporter",
+            .product(name: "Quick", package: "Quick"),
+            .product(name: "Nimble", package: "Nimble"),
+         ]
       )
    ]
 )
